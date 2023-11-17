@@ -12,7 +12,7 @@ public class EjemploController {
 	@GetMapping(value = "/")
 	public String mostrarSaludo(Model model) {
 		// Agregar datos al modelo
-		model.addAttribute("mensaje", "Hola desde GIT");
+		model.addAttribute("mensaje", "Hola desde GIT2");
 
 		// Devolver el nombre de la vista (sin extensión)
 		return "HolaMundo";
