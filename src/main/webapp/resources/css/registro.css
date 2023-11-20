@@ -54,11 +54,67 @@ section::before {
 	left: 5%;
 	background: #222;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+	height: 31%;
 	border-bottom: 2px solid #0f0;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	max-width: 1320px;
+	bottom: 1px;
+	position: absolute;
+	left: 20%;
+}
+
+.navegacion {
+	margin-top: 5%;
 }
 
 .yacuenta {
 	margin-left: 35%;
+}
+
+.inicioboton {
+	margin-top: 20%;
+}
+
+.contenedor-carrito {
+	display: flex;
+	width: 40%;
+	padding-left: 15%;
+}
+
+.enlace-cesta {
+	margin-top: 4%;
+	margin-left: 15px;
+}
+
+.cesta-articulo {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	bottom: -15px;
+	right: 15px;
+	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+	background-color: #ff073a;
+}
+
+.registroboton {
+	margin-top: 35%;
+}
+
+.icon-carrito {
+	font-size: 40px;
+	color: white;
+}
+
+.icon-carrito:hover {
+	transform: scale(1.1);
+	color: #0f0;
 }
 
 .iniciasession {
@@ -70,12 +126,19 @@ section::before {
 	z-index: 1000;
 	width: 90%;
 	position: absolute;
+	bottom: 0;
 	left: 5%;
-	bottom: -58%;
 	background: #222;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 	border-top: 2px solid #0f0;
-	height: 9%;
+	height: 5%;
+}
+
+.copy {
+	width: 25%;
+	height: 32%;
+	background: #222;
+	color: aliceblue;
 }
 
 section span {
@@ -100,7 +163,7 @@ section .signin {
 	padding: 40px;
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-	top: 30%;
+	top: 32%;
 }
 
 section .signin .content {
@@ -141,6 +204,7 @@ section .signin .content .form .inputBox {
 	border-color: #0f0;
 	font-weight: 600;
 }
+
 .inicioboton:hover {
 	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 	transform: scale(1.1);
@@ -216,7 +280,7 @@ p {
 .error {
 	width: 100%;
 	height: 100%;
-	color: red;
+	color: #ff073a;
 	background: #222;
 }
 

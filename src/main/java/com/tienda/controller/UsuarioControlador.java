@@ -29,12 +29,14 @@ public class UsuarioControlador {
 	}
 
 	@PostMapping("/insertarUsuario")
-	public String insertarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado) {
+	public String insertarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado, Model modelo) {
 
 		System.out.println(usuario);
 		 System.out.println("Errores: " + resultado.getAllErrors());
 		if (resultado.hasErrors()) {
-
+			
+			modelo.addAttribute("bindingErrors", resultado);
+			
 			return "registro";
 		}
 
