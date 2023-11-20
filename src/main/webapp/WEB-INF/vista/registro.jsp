@@ -17,7 +17,8 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 	crossorigin="anonymous"></script>
-	<script src="${pageContext.request.contextPath}/resources/js/registro.js" defer></script>
+<script
+	src="${pageContext.request.contextPath}/resources/js/registro.js" defer></script>
 <meta charset="UTF-8">
 <title>Formulario Registro</title>
 </head>
@@ -81,6 +82,8 @@
 		<span></span> <span></span> <span></span> <span></span> <span></span>
 		<span></span> <span></span> <span></span> <span></span> <span></span>
 		<span></span> <span></span> <span></span>
+	</section>
+	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
@@ -165,7 +168,7 @@
 
 		</div>
 		<%@ include file="fragmentos/footer.jsp"%>
-	</section>
 
+	</div>
 </body>
 </html>

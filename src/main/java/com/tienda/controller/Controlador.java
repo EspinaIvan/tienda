@@ -1,5 +1,7 @@
 package com.tienda.controller;
 
+
+
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -19,7 +21,7 @@ public class Controlador {
 	@Autowired
     static Logger logger = LogManager.getRootLogger();
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "")
 	public String mostrarSaludo(Model model) {
 		// Agregar datos al modelo
 		model.addAttribute("mensaje", "Hola desde GIT");

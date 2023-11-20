@@ -1,10 +1,10 @@
 package com.tienda.dao.usuario;
 
+
+
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -37,8 +37,8 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 		
 		Session session=entityManager.unwrap(Session.class);
 		System.out.println("Usario insertado");
-//		session.persist(usuario);
-//		
+		session.persist(usuario);
+		
 	}
 
 

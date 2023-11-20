@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
+import com.tienda.dao.usuario.UsuarioInterfaceDAO;
+import com.tienda.servicios.ValidacionContraseña;
 
 import jakarta.validation.Valid;
 
@@ -31,19 +33,24 @@ public class UsuarioControlador {
 	@PostMapping("/insertarUsuario")
 	public String insertarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado, Model modelo) {
 
-		System.out.println(usuario);
-		 System.out.println("Errores: " + resultado.getAllErrors());
 		if (resultado.hasErrors()) {
-			
-			modelo.addAttribute("bindingErrors", resultado);
 			
 			return "registro";
 		}
-
+		
+		if (ValidacionContraseña.validarContraseña(usuario)) {
+			
+			usuario = ValidacionContraseña.encriptarContraseña(usuario);
+			
+		} else {
+			
+			return "/registro";
+		}
+		
 		usuarioDAO.insertarUsuario(usuario);
 		return "redirect:/";
 	}
 
 	@Autowired
-	private UsuarioDAO usuarioDAO;
+	private UsuarioInterfaceDAO usuarioDAO;
 }
