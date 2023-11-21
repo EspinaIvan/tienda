@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}resources/css/prueba.css">
+	href="${pageContext.request.contextPath}resources/css/inicio.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
@@ -80,11 +80,16 @@
 	</section>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
-		<h2>llegado bien</h2>
-		<c:forEach var="usuarioTemp" items="${lista}">
-			<p>${usuarioTemp.nombre }</p>
-			<p>${usuarioTemp.fecha_alta}
-		</c:forEach>
+		<div class="signin">
+			<h2>llegado bien</h2>
+		
+			
+			<c:forEach var="usuarioTemp" items="${lista}">
+				<p>${usuarioTemp.nombre }</p>
+				<p>${usuarioTemp.fecha_alta}</p>
+				<p>${mensaje }</p>
+			</c:forEach>
+		</div>
 		<%@ include file="fragmentos/footer.jsp"%>
 	</div>
 </body>

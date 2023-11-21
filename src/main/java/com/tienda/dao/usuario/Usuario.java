@@ -1,5 +1,6 @@
 package com.tienda.dao.usuario;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -92,7 +93,7 @@ public class Usuario {
 	private boolean baja;
 	
 	@Column (name="fecha_alta")
-	private Date fecha_alta;
+	private LocalDate fecha_alta;
 
 	public int getId() {
 		return id;
@@ -222,12 +223,21 @@ public class Usuario {
 		this.baja = baja;
 	}
 
-	public Date getFecha_alta() {
+	public LocalDate getFecha_alta() {
 		return fecha_alta;
 	}
 
-	public void setFecha_alta(Date fecha_alta) {
+	public void setFecha_alta(LocalDate fecha_alta) {
 		this.fecha_alta = fecha_alta;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", id_rol=" + id_rol + ", usuario=" + usuario + ", email=" + email + ", clave="
+				+ clave + ", repetirClave=" + repetirClave + ", nombre=" + nombre + ", apellido1=" + apellido1
+				+ ", apellido2=" + apellido2 + ", direccion=" + direccion + ", provincia=" + provincia + ", localidad="
+				+ localidad + ", telefono=" + telefono + ", dni=" + dni + ", imagen=" + imagen + ", baja=" + baja
+				+ ", fecha_alta=" + fecha_alta + "]";
 	}
 
 	

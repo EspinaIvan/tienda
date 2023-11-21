@@ -11,10 +11,13 @@
 					<li><a href="#" class="nav-link px-2 text-white">About</a></li>
 				</ul>
 				<div class="text-end contenedor-carrito">
-					<a href="login.jsp"><button type="button"
-							class="btn btn-outline-light me-2 inicioboton">Iniciar Session</button></a> <a
-						href="usuario/registro"><button type="button"
-							class="btn btn-warning registroboton">Registro</button></a> <a href="#" class="enlace-cesta"><i
+					<a href="${pageContext.request.contextPath}/usuario/login"><button type="button"
+							class="btn btn-outline-light me-2 inicioboton">Iniciar Session</button></a> 
+					<c:if test="${ not mostrarBotonRegistro}">
+							<a href="usuario/registro"><button type="button"
+							class="btn btn-warning registroboton">Registro</button></a>
+					</c:if> 
+							<a href="#" class="enlace-cesta"><i
 						class="bi bi-cart4 icon-carrito"></i></a> <span class="cesta-articulo">
 					</span>
 				</div>

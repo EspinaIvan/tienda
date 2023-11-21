@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 * {
 	margin: 0;
@@ -19,6 +18,7 @@ body {
 section {
 	position: absolute;
 	width: 100vw;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,96 +46,6 @@ section::before {
 	}
 }
 
-.contenedor {
-	position: relative;
-	z-index: 1000;
-	width: 100vw;
-	height: 146vh;
-	background-color: rgba(173, 216, 230, 0);
-	display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-}
-
-.cabecera {
-
-    width: 90%;
-    top: 0;
-    left: 5%;
-    background: #222;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-    border-bottom: 2px solid #0f0;
-}
-
-.yacuenta {
-	margin-left: 28%;
-}
-
-.inicioboton {
-	margin-top: 20%;
-}
-
-.contenedor-carrito {
-	display: flex;
-	padding-left: 50%;
-}
-
-.enlace-cesta {
-	margin-top: 6%;
-	margin-left: 15px;
-}
-
-.cesta-articulo {
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	bottom: -22px;
-	right: 15px;
-	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
-	background-color: #ff073a;
-	position: relative;
-}
-
-.registroboton {
-	margin-top: 34%;
-}
-
-.icon-carrito {
-	font-size: 40px;
-	color: white;
-}
-
-.icon-carrito:hover {
-	transform: scale(1.1);
-	color: #0f0;
-}
-
-.iniciasession {
-
-	margin-right: 35%;
-}
-
-.pie {
-    position: relative;
-    z-index: 1000;
-    width: 90%;
-    background: #222;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-    border-top: 2px solid #0f0;
-    top: 2%;
-}
-
-.contenedorcopy {
-    width: 40%;
-}
-.copy {
-	width: 25%;
-	height: 32%;
-	background: #222;
-	color: aliceblue;
-}
-
 section span {
 	position: relative;
 	display: block;
@@ -146,66 +56,53 @@ section span {
 	transition: 1.5s;
 }
 
-.contenedor .signin {
-	position: relative;
-	width: 90%;
-	height: auto;
+section span:hover {
+	background: #0f0;
+	transition: 0s;
+}
+
+section .signin {
+	position: absolute;
+	width: 400px;
 	background: #222;
 	z-index: 1000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 40px;
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-	top: 2%;
 }
 
-.contenedor .signin .content {
+section .signin .content {
 	position: relative;
-	width: 60%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	gap: 40px;
-	height: 100%;
-	padding: 40px;
-	top: 0%;
 }
 
-.contenedor .signin .content h2 {
+section .signin .content h2 {
 	font-size: 2em;
 	color: #0f0;
 	text-transform: uppercase;
 }
 
-.contenedor .signin .content .form {
+section .signin .content .form {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
 }
 
-.contenedor .signin .content .form .inputBox {
+section .signin .content .form .inputBox {
 	position: relative;
 	width: 100%;
-
 }
 
-.inicioboton {
-	padding: 10px;
-	background: #0f0;
-	color: #000;
-	border-color: #0f0;
-	font-weight: 600;
-}
-
-.inicioboton:hover {
-	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
-	transform: scale(1.1);
-}
-
-.contenedor .signin .content .form .inputBox input {
+section .signin .content .form .inputBox input {
 	position: relative;
 	width: 100%;
 	background: #333;
@@ -218,23 +115,14 @@ section span {
 	font-size: 1em;
 }
 
-.contenedor .signin .content .form .inputBox i {
+section .signin .content .form .inputBox i {
 	position: absolute;
 	left: 0;
-	top:0;
 	padding: 15px 10px;
 	font-style: normal;
 	color: #aaa;
 	transition: 0.5s;
 	pointer-events: none;
-}
-
-p {
-	color: white;
-}
-
-.botonregistro {
-	margin-left: 10%;
 }
 
 .signin .content .form .inputBox input:focus~i,
@@ -252,8 +140,9 @@ p {
 }
 
 .signin .content .form .links a {
-	color: #fff;
+	color: #ff073a;
 	text-decoration: none;
+	margin-left: 6rem;
 }
 
 .signin .content .form .links a:nth-child(2) {
@@ -261,45 +150,33 @@ p {
 	font-weight: 600;
 }
 
+p {
+	color: white;
+}
 .signin .content .form .inputBox input[type="submit"] {
 	padding: 10px;
 	background: #0f0;
 	color: #000;
-	width: 400px;
 	font-weight: 600;
 	font-size: 1.35em;
 	letter-spacing: 0.05em;
 	cursor: pointer;
-	margin-left: 15%;
-}
-
-.error {
-	width: 100%;
-	height: 100%;
-	color: #ff073a;
-	background: #222;
 }
 
 input[type="submit"]:active {
 	opacity: 0.6;
 }
 
-input[type="submit"]:hover {
-	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
-	transform: scale(1.1);
-}
-
 @media (max-width: 900px) {
 	section span {
 		width: calc(10vw - 2px);
 		height: calc(10vw - 2px);
-
 	}
+}
 
-	@media (max-width: 600px) {
-		section span {
-			width: calc(20vw - 2px);
-			height: calc(20vw - 2px);
-		}
-
+@media (max-width: 600px) {
+	section span {
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
 	}
+}

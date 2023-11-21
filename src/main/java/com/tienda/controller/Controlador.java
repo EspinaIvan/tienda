@@ -22,13 +22,14 @@ public class Controlador {
     static Logger logger = LogManager.getRootLogger();
 	
 	@GetMapping(value = "")
-	public String mostrarSaludo(Model model) {
+	public String mostrarSaludo(Model modelo) {
 		// Agregar datos al modelo
-		model.addAttribute("mensaje", "Hola desde GIT");
+		modelo.addAttribute("mensaje", "Hola desde GIT");
 		List<Usuario> listaUsuario = usuarioDAO.getUsuarios();
-
-		model.addAttribute("lista",listaUsuario);
+		modelo.addAttribute("lista",listaUsuario);
 		// Devolver el nombre de la vista (sin extensión)
+		
+		System.out.println();
 		return "index";
 	}
 	
