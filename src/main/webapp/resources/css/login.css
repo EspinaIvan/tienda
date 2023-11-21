@@ -139,6 +139,9 @@ section .signin .content .form .inputBox i {
 	justify-content: space-between;
 }
 
+.errorLogin {
+	color: #ff073a;
+}
 .signin .content .form .links a {
 	color: #ff073a;
 	text-decoration: none;

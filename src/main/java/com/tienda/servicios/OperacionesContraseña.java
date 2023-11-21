@@ -28,4 +28,16 @@ public class OperacionesContraseña {
 		
 		return usuario;
 	}
+	
+	public static boolean desencriptarContraseña(Usuario usuario, Usuario usuarioBD) {
+		
+		if (usuario.getClave().equals(usuarioBD.getClave())) {
+			
+			System.out.println("Contraseñas coinciden");
+			
+			return true;
+		}
+		
+		return false;
+	}
 }

@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}resources/css/inicio.css">
+	href="${pageContext.request.contextPath}/resources/css/inicio.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
@@ -84,9 +84,9 @@
 			<h2>llegado bien</h2>
 		
 			
-			<c:forEach var="usuarioTemp" items="${lista}">
-				<p>${usuarioTemp.nombre }</p>
-				<p>${usuarioTemp.fecha_alta}</p>
+			<c:forEach var="productoTemp" items="${catalogo}">
+				<p>${productoTemp.nombre }</p>
+				<p>${productoTemp.precio}</p>
 				<p>${mensaje }</p>
 			</c:forEach>
 		</div>

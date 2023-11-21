@@ -84,16 +84,21 @@
 				<h2>Inicio de Sesion</h2>
 				<form:form class="form" action="iniciarSesion"
 					modelAttribute="usuario" method="POST" id="loginForm">
+					<c:if test="${not empty errorInicio}">
+						<p class="errorLogin">${errorInicio }</p>
+					</c:if>
 					<div class="inputBox">
-						<form:input path="usuario" type="text"/>
+						<form:input path="usuario" type="text" />
 						<i>Usuario</i>
 					</div>
 					<div class="inputBox">
-						<form:input path="clave" type="password"/>
+						<form:input path="clave" type="password" />
 						<i>Contraseña</i>
 					</div>
 					<div class="links">
-						<p>¿No tienes cuenta? <a href=registro>Registrate</a></p>
+						<p>
+							¿No tienes cuenta? <a href=registro>Registrate</a>
+						</p>
 					</div>
 					<div class="inputBox">
 						<input type="submit" value="Login">

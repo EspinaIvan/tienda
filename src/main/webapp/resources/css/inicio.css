@@ -74,7 +74,7 @@ section::before {
 
 .contenedor-carrito {
 	display: flex;
-	padding-left: 42%;
+	padding-left: 40%;
 }
 
 .enlace-cesta {
