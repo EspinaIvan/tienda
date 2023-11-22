@@ -31,7 +31,9 @@ public class OperacionesContraseña {
 	
 	public static boolean desencriptarContraseña(Usuario usuario, Usuario usuarioBD) {
 		
-		if (usuario.getClave().equals(usuarioBD.getClave())) {
+		StrongPasswordEncryptor encriptado = new StrongPasswordEncryptor();
+		
+		if (encriptado.checkPassword(usuario.getClave(), usuarioBD.getClave())) {
 			
 			System.out.println("Contraseñas coinciden");
 			

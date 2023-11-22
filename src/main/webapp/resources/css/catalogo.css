@@ -260,6 +260,27 @@ p {
 	font-weight: 600;
 }
 
+.avatar {
+	height: 2rem;
+	border-radius: 50%;
+	margin-top: 1.5rem;
+}
+
+.enlacecerrarsesion {
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+.cerrarsesion {
+	font-size: 2rem;
+    color: red;
+}
+.cerrarsesion:hover {
+	font-size: 2rem;
+    color: #0f0;
+    transform: scale(1.1);
+    
+}
 .signin .content .form .inputBox input[type="submit"] {
 	padding: 10px;
 	background: #0f0;
@@ -277,6 +298,22 @@ p {
 	height: 100%;
 	color: #ff073a;
 	background: #222;
+}
+
+.botoncesta {
+	background-color: #0f0;
+	border-color: #0f0;
+	color: #000;
+	font-weight: 600;
+}
+
+.botoncesta:hover {
+	background-color: #0f0;
+	border-color: #0f0;
+	color: #000;
+	font-weight: 600;
+	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+	transform: scale(1.1);
 }
 
 .contenedor .signin {
@@ -302,28 +339,89 @@ input[type="submit"]:hover {
 	transform: scale(1.1);
 }
 
-.avatar {
-	height: 2rem;
-	border-radius: 50%;
-	margin-top: 1.5rem;
+.contenedorcarta {
+	flex-wrap: wrap;
 }
 
+.catalogo {
 
-.enlacecerrarsesion {
-	margin-top: 1rem;
-	margin-left: 1rem;
+	flex: 0 0 calc(33.333% - 30px);
+	max-width: calc(33.333% - 30px);
+	margin-right: 15px;
+	margin-bottom: 0;
+	margin-left: 15px;
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.cerrarsesion {
-	font-size: 2rem;
-	color: red;
+.enlaceimagen {
+	display: flex;
+	justify-content: center;
 }
 
-.cerrarsesion:hover {
-	font-size: 2rem;
-	color: #0f0;
+.img-catalogo {
+	width: 70%;
+	min-width: 250px;
+}
+
+.card-img-top {
+	border-bottom-left-radius: var(--bs-card-inner-border-radius);
+	border-bottom-right-radius: var(--bs-card-inner-border-radius);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-img-top:hover {
+
 	transform: scale(1.1);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 
+}
+
+h5 {
+	color: ghostwhite;
+}
+
+.cantidad-valor {
+
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	line-height: 0;
+	display: inline-block;
+}
+
+.cantidad-menos,
+.cantidad-mas {
+	margin-right: 2px;
+	margin-left: 2px;
+	position: relative;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	transition: background-color 0.3s;
+	top: 4px
+}
+
+.icono-menos,
+.icono-mas {
+	position: absolute;
+	top: -8px;
+	display: inline-block;
+}
+
+.card-body {
+	width: 70%;
+	min-width: 250px;
 }
 
 @media (max-width: 900px) {

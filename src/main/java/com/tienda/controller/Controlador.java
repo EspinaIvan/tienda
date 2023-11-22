@@ -20,24 +20,30 @@ import com.tienda.dao.productos.Productos;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
 
-@Controller
-@SessionAttributes({"cesta", "usuario"})
-public class Controlador {
+import jakarta.servlet.http.HttpSession;
 
-	@ModelAttribute("cesta")
-    public Map<Integer, Cesta> initArticulosMap() {
-		
-        return new HashMap<>();
-    
-	}
+@Controller
+public class Controlador {
 	
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();
-
+	
 	@GetMapping(value = "")
-	public String mostrarSaludo(Model modelo) {
+	public String mostrarSaludo(HttpSession session, Model modelo) {
 		// Agregar datos al modelo
 		modelo.addAttribute("mensaje", "Hola desde GIT");
+		Map<Integer, Cesta> cesta;
+		
+		if(session.getAttribute("cesta") == null) {
+			
+			cesta = new HashMap<>();
+			
+		} else {
+			
+			cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
+			
+		}
+		session.setAttribute("cesta", cesta);
 		List<Productos> catalogo = productosDAO.catalogoCompleto();
 		modelo.addAttribute("catalogo", catalogo);
 		// Devolver el nombre de la vista (sin extensión)

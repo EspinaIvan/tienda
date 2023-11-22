@@ -1,5 +1,7 @@
 package com.tienda.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,13 +17,16 @@ import com.tienda.dao.usuario.UsuarioInterfaceDAO;
 import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesUsuario;
 
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller
-@SessionAttributes({"cesta", "usuario"})
 @RequestMapping("/usuario")
 public class UsuarioControlador {
 
+	@Autowired
+	static Logger logger = LogManager.getRootLogger();
+	
 	@RequestMapping("/registro")
 	public String formularioRegistro(Model modelo) {
 
@@ -86,7 +91,7 @@ public class UsuarioControlador {
 	}
 
 	@RequestMapping("/login")
-	public String vistaLogin(Model modelo) {
+	public String vistaLogin(HttpSession session, Model modelo) {
 
 		Usuario usuario = new Usuario();
 		modelo.addAttribute("usuario", usuario);
@@ -95,7 +100,7 @@ public class UsuarioControlador {
 	}
 
 	@PostMapping("/iniciarSesion")
-	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, Model modelo) {
+	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, HttpSession session, Model modelo) {
 
 		Usuario usuarioBD = opeUsuario.buscarUsuarioNick(usuario);
 		System.out.println("Usuario base de datos: " + usuarioBD + " usuario mandado " + usuario);
@@ -103,17 +108,25 @@ public class UsuarioControlador {
 
 			if (OperacionesContraseña.desencriptarContraseña(usuario, usuarioBD)) {
 
-				 modelo.addAttribute("usuario", usuarioBD);
+				session.setAttribute("usuario", usuarioBD);
 				return "redirect:/";
 
 			}
-			
+
 			modelo.addAttribute("errorInicio", "Contraseña y/o usuario incorrecto");
 			return "login";
 		}
 
 		modelo.addAttribute("errorInicio", "Contraseña y/o usuario incorrecto");
 		return "login";
+	}
+	
+	@RequestMapping("/cerrarsesion")
+	public String cerrarSession(HttpSession session) {
+		
+		session.invalidate();
+		
+		return "redirect:/";
 	}
 
 	@Autowired
