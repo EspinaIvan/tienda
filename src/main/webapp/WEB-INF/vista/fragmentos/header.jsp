@@ -41,7 +41,7 @@
 						</c:otherwise>
 					</c:choose>
 				</c:if>
-				<a href="#" class="enlace-cesta"><i
+				<a href="${pageContext.request.contextPath}/cesta/vercesta" class="enlace-cesta"><i
 					class="bi bi-cart4 icon-carrito"></i></a>
 				<c:if test="${fn:length(cesta) > 0}">
 					<span class="cesta-articulo">${fn:length(sessionScope.cesta)}</span>

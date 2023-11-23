@@ -17,6 +17,7 @@ import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.productos.ProductoInterfaceDAO;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesCesta;
 
 import jakarta.servlet.http.HttpSession;
@@ -26,13 +27,14 @@ import jakarta.servlet.http.HttpSession;
 public class CatalogoControlador {
 
 	@Autowired
-	private ProductoInterfaceDAO productosDAO;
+	private OperacionesCatalogo opeCatalogo;
 	
 	@GetMapping("/vercatalogo")
 	public String mostarCatalogo(HttpSession session, Model modelo) {
 		
+	
 		Cesta productoCesta = new Cesta();
-		List<Producto> catalogo = productosDAO.catalogoCompleto();
+		List<Producto> catalogo = opeCatalogo.catalogoCompletoServicio();
 		modelo.addAttribute("catalogo", catalogo);
 		modelo.addAttribute("producto", productoCesta);
 		

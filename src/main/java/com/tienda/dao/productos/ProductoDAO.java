@@ -7,6 +7,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.usuario.Usuario;
 
 import jakarta.persistence.EntityManager;
@@ -31,4 +32,20 @@ public class ProductoDAO  implements ProductoInterfaceDAO {
 		return catalogo;
 	}
 
+	@Override
+	public Producto getProductoId(int idProducto) {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+		Producto producto = session.get(Producto.class, idProducto);
+		
+		System.out.println("producto: " + producto + idProducto);
+		
+		return producto;
+		
+	}
+
+
+
+	
 }

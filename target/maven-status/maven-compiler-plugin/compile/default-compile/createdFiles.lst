@@ -1,0 +1,16 @@
+com\tienda\controller\CatalogoControlador.class
+com\tienda\dao\productos\Producto.class
+com\tienda\dao\productos\ProductoInterfaceDAO.class
+com\tienda\dao\usuario\UsuarioInterfaceDAO.class
+com\tienda\controller\UsuarioControlador.class
+com\tienda\dao\productos\ProductoDAO.class
+com\tienda\dao\cesta\CestaInterfaceDAO.class
+com\tienda\servicios\OperacionesContraseña.class
+com\tienda\dao\cesta\CestaDAO.class
+com\tienda\TiendaApplication.class
+com\tienda\dao\usuario\Usuario.class
+com\tienda\servicios\OperacionesUsuario.class
+com\tienda\controller\Controlador.class
+com\tienda\dao\usuario\UsuarioDAO.class
+com\tienda\servicios\OperacionesCesta.class
+com\tienda\dao\cesta\Cesta.class

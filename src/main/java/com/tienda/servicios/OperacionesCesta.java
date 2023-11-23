@@ -4,13 +4,13 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.cesta.CestaInterfaceDAO;
 import com.tienda.dao.usuario.Usuario;
 
-@Service
+@Repository
 public class OperacionesCesta {
 
 	@Autowired
