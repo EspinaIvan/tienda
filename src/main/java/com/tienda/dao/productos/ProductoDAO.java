@@ -13,19 +13,19 @@ import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
 @Repository
-public class ProductosDAO  implements ProductoInterfaceDAO {
+public class ProductoDAO  implements ProductoInterfaceDAO {
 
 	@Autowired
 	private EntityManager entityManager;
 	
 	@Override
 	@Transactional
-	public List<Productos> catalogoCompleto() {
+	public List<Producto> catalogoCompleto() {
 		
 		Session session = entityManager.unwrap(Session.class);
 
-		Query<Productos> consulta = session.createQuery("from Productos", Productos.class);
-		List<Productos> catalogo = consulta.getResultList();
+		Query<Producto> consulta = session.createQuery("from Producto", Producto.class);
+		List<Producto> catalogo = consulta.getResultList();
 
 
 		return catalogo;

@@ -10,12 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tienda.dao.productos.Cesta;
+import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.productos.ProductoInterfaceDAO;
-import com.tienda.dao.productos.Productos;
+import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.OperacionesCesta;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -24,37 +26,53 @@ import jakarta.servlet.http.HttpSession;
 public class CatalogoControlador {
 
 	@Autowired
-	static Logger logger = LogManager.getRootLogger();
-	@Autowired
 	private ProductoInterfaceDAO productosDAO;
 	
 	@GetMapping("/vercatalogo")
 	public String mostarCatalogo(HttpSession session, Model modelo) {
 		
-		
-		List<Productos> catalogo = productosDAO.catalogoCompleto();
+		Cesta productoCesta = new Cesta();
+		List<Producto> catalogo = productosDAO.catalogoCompleto();
 		modelo.addAttribute("catalogo", catalogo);
+		modelo.addAttribute("producto", productoCesta);
+		
 		
 		
 		return "catalogo";
 	}
 	
-	@GetMapping("/añadirProducto")
-	public String añadirProducto(@ModelAttribute ("cesta") Cesta cesta, HttpSession session, Model modelo) {
+	@PostMapping("/añadirProducto")
+	public String añadirProducto(@ModelAttribute ("producto") Cesta producto, HttpSession session, Model modelo) {
 		
-		Map<Integer, Cesta> cestaSesion = (Map<Integer, Cesta>) session.getAttribute("cesta");
+		Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
 		
-		if (cesta.getProductos()!= null) {
+		if (producto.getProducto()!= null) {
 			
-			if(cestaSesion.containsKey(cesta.getProductos().getId())) {
-				//TODO Retocar la logica
-				Cesta cestass = cestaSesion.get(cesta.getProductos().getId());
-				int cantidadCestaSesion = cestass.getCantidad();
-				//int cantidadCestaSesion = (Integer.parseUnsignedInt(cestaSesion.get(cesta.getProductos().getId())));
-				//cestaSesion.put(cesta.getProductos().getId(), cestaSesioañadirPron.() )
+			if(cesta.containsKey(producto.getProducto().getId())) {
+				
+				Cesta cestaRecuperada = cesta.get(producto.getProducto().getId());
+				int cantidadCesta = cestaRecuperada.getCantidad();
+				cestaRecuperada.setCantidad(cestaRecuperada.getCantidad() + producto.getCantidad());
+				cesta.put(producto.getProducto().getId(), cestaRecuperada);
+				
+			} else {
+				
+				cesta.put(producto.getProducto().getId(), producto);
+				
 			}
 		}
 		
+		//INSERTAR EL PRODUCTO EN LA CESTA DE LA BD
+		
+//		if (session.getAttribute("usuario") != null ) {
+//			
+//			Usuario usuario = (Usuario) session.getAttribute("usuario");
+//			
+//			OperacionesCesta opeCesta = new OperacionesCesta();
+//			
+//			opeCesta.insertarArticuloCesta(producto, usuario);
+//		}
+		session.setAttribute("cesta", cesta);
 		return "redirect:/catalogo/vercatalogo";
 	}
 	

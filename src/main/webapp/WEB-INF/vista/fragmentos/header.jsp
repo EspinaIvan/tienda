@@ -35,7 +35,7 @@
 							</a>
 						</c:when>
 						<c:otherwise>
-							<a href="${pageContext.request.contextPath}/usuario/cerrarsesion">
+							<a class ="enlacecerrarsesion" href="${pageContext.request.contextPath}/usuario/cerrarsesion">
 								<i class="bi bi-box-arrow-right cerrarsesion"></i>
 							</a>
 						</c:otherwise>

@@ -1,9 +1,12 @@
 package com.tienda.servicios;
 
 import org.jasypt.util.password.StrongPasswordEncryptor;
+import org.springframework.stereotype.Service;
 
 import com.tienda.dao.usuario.Usuario;
 
+
+@Service
 public class OperacionesContraseña {
 
 	

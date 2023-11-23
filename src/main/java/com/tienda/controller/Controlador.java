@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.tienda.dao.productos.Cesta;
+import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.productos.ProductoInterfaceDAO;
-import com.tienda.dao.productos.Productos;
+import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
 
@@ -38,13 +38,15 @@ public class Controlador {
 			
 			cesta = new HashMap<>();
 			
+			logger.info("Creacion de la cesta al dectectar que no exite");
+			System.out.println("Creacion de la cesta al dectectar que no exite desde Sysout");
 		} else {
 			
 			cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
 			
 		}
 		session.setAttribute("cesta", cesta);
-		List<Productos> catalogo = productosDAO.catalogoCompleto();
+		List<Producto> catalogo = productosDAO.catalogoCompleto();
 		modelo.addAttribute("catalogo", catalogo);
 		// Devolver el nombre de la vista (sin extensión)
 

@@ -1,5 +1,7 @@
 package com.tienda.controller;
 
+import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
+import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesUsuario;
 
@@ -23,9 +27,6 @@ import jakarta.validation.Valid;
 @Controller
 @RequestMapping("/usuario")
 public class UsuarioControlador {
-
-	@Autowired
-	static Logger logger = LogManager.getRootLogger();
 	
 	@RequestMapping("/registro")
 	public String formularioRegistro(Model modelo) {
@@ -109,6 +110,18 @@ public class UsuarioControlador {
 			if (OperacionesContraseña.desencriptarContraseña(usuario, usuarioBD)) {
 
 				session.setAttribute("usuario", usuarioBD);
+				Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
+				
+				
+					//RECUPERAR LA CESTA SI TIENE UNA GUARDADA EN LA BD
+//				if(cesta != null) {
+//					
+//					OperacionesCesta opeCesta = new OperacionesCesta();
+//					opeCesta.insertarCesta(cesta, usuarioBD);
+//					
+//					
+//					
+//				}
 				return "redirect:/";
 
 			}

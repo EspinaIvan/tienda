@@ -4,11 +4,12 @@ import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
 
-@Repository
+@Service
 public class OperacionesUsuario {
 	
 	@Autowired

@@ -86,7 +86,7 @@ section .signin .content {
 
 section .signin .content h2 {
 	font-size: 2em;
-	color: #0f0;
+	color: #5d9536;
 	text-transform: uppercase;
 }
 
@@ -142,6 +142,7 @@ section .signin .content .form .inputBox i {
 .errorLogin {
 	color: #ff073a;
 }
+
 .signin .content .form .links a {
 	color: #ff073a;
 	text-decoration: none;
@@ -149,21 +150,31 @@ section .signin .content .form .inputBox i {
 }
 
 .signin .content .form .links a:nth-child(2) {
-	color: #0f0;
+	color: #5d9536;
 	font-weight: 600;
 }
 
 p {
 	color: white;
 }
+
 .signin .content .form .inputBox input[type="submit"] {
 	padding: 10px;
-	background: #0f0;
+	background: #5d9536;
 	color: #000;
 	font-weight: 600;
 	font-size: 1.35em;
 	letter-spacing: 0.05em;
 	cursor: pointer;
+}
+
+.signin .content .form .inputBox input[type="submit"]:hover {
+	background-color: #5d9536;
+	border-color: #5d9536;
+	color: #000;
+	font-weight: 600;
+	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+	transform: scale(1.1);
 }
 
 input[type="submit"]:active {

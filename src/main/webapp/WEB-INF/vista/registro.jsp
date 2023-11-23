@@ -113,7 +113,7 @@
 						<form:errors path="apellido2" cssClass="error" />
 					</div>
 					<div class="inputBox">
-						<form:input path="dni" type="text" />
+						<form:input path="dni" type="text" maxlength="9"/>
 						<i>DNI</i>
 						<form:errors path="dni" cssClass="error" />
 					</div>
@@ -136,7 +136,7 @@
 						<div id="repetirClaveError" class="error-message"></div>
 					</div>
 					<div class="inputBox">
-						<form:input path="telefono" type="text" />
+						<form:input path="telefono" type="text" maxlength="9"/>
 						<i>Telefono</i>
 						<form:errors path="telefono" cssClass="error" />
 					</div>

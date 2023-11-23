@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface ProductoInterfaceDAO {
 
-	public List<Productos> catalogoCompleto();
+	public List<Producto> catalogoCompleto();
 }

@@ -1,7 +1,8 @@
-package com.tienda.dao.productos;
+package com.tienda.dao.cesta;
 
 import java.time.LocalDate;
 
+import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
 
 import jakarta.persistence.Column;
@@ -33,7 +34,7 @@ public class Cesta {
 
 	@ManyToOne
 	@JoinColumn(name = "id_producto", referencedColumnName = "id")
-	private Productos productos;
+	private Producto producto;
 
 	private int cantidad;
 
