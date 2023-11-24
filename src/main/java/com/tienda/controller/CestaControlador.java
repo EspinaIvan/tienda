@@ -9,12 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.pedido.Pedido;
+import com.tienda.dao.pedido.PedidoInterfaceDAO;
 import com.tienda.dao.productos.Producto;
+import com.tienda.dao.usuario.Usuario;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesCesta;
 
@@ -27,7 +31,8 @@ public class CestaControlador {
 	@Autowired
 	private OperacionesCatalogo opeCatalogo;
 	
-	@Autowired OperacionesCesta opeCesta;
+	@Autowired 
+	private OperacionesCesta opeCesta;
 
 	@GetMapping("/vercesta")
 	public String verCesta(HttpSession session, Model modelo) {
@@ -116,4 +121,46 @@ public class CestaControlador {
 		
 		return "redirect:/cesta/vercesta";
 	}
+	
+	@PostMapping("/procesarpago")
+	public String procesarPago(@ModelAttribute("pedido") Pedido pedido, HttpSession session, Model modelo) {
+		
+		Usuario usuario = (Usuario)session.getAttribute("usuario");
+		Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
+		
+		if(usuario == null) {
+			
+			modelo.addAttribute("comprando", "si");
+			
+			return "redirect:/usuario/login";
+			
+		}
+		
+		
+		Collection<Cesta> articulos = cesta.values();
+		
+		for (Cesta articulo : articulos) {
+			
+			Producto producto = opeCatalogo.getProductoId(articulo);
+			
+			if (articulo.getCantidad() > producto.getStock()) {
+				
+				modelo.addAttribute("noStock", "El producto " + producto.getNombre() + " no tiene suficiente stock (" + producto.getStock() + ")" );
+				
+				return "redirect:/cesta/vercesta";
+				
+			}
+		}
+		
+		//TODO meter la logica de restar stock y poner en la vista el mensaje y de carrito vacio
+		
+		opeCesta.finalizarCompra(pedido, usuario);
+		session.removeAttribute("cesta");
+		opeCesta.agregarUltimoDetallesPedido(cesta);
+		
+		
+		return "finalizarcompra";
+	}
+	
+
 }

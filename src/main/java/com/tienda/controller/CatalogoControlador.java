@@ -68,11 +68,11 @@ public class CatalogoControlador {
 		
 		//INSERTAR EL PRODUCTO EN LA CESTA DE LA BD
 		
-		if (session.getAttribute("usuario") != null ) {
-			
-			Usuario usuario = (Usuario) session.getAttribute("usuario");
-			opeCesta.insertarArticuloCesta(producto, usuario);
-		}
+//		if (session.getAttribute("usuario") != null ) {
+//			
+//			Usuario usuario = (Usuario) session.getAttribute("usuario");
+//			opeCesta.insertarArticuloCesta(producto, usuario);
+//		}
 		session.setAttribute("cesta", cesta);
 		return "redirect:/catalogo/vercatalogo";
 	}

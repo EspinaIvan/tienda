@@ -1,8 +1,8 @@
-package com.tienda.dao.pedido;
+package com.tienda.dao.detallespedido;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
 
@@ -22,8 +22,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="pedido")
-public class Pedido {
+@Table(name="detalles_pedido")
+public class DetallesPedido {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,17 +31,19 @@ public class Pedido {
 	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_usuario", referencedColumnName = "id")
-	private Usuario usuario;
+	@JoinColumn(name = "id_pedido", referencedColumnName = "id")
+	private Pedido pedido;
 	
-	private LocalDateTime fecha;
+	@ManyToOne
+	@JoinColumn(name = "id_producto", referencedColumnName = "id")
+	private Producto producto;
 	
-	private String metodo_pago;
+	private int unidades;
 	
-	private String estado;
+	private double precio_unidad;
 	
-	private String num_factura;
+	private double impuesto;
 	
 	private double total;
-
+	
 }

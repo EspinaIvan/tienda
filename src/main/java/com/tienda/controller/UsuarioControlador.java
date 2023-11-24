@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.cesta.CestaInterfaceDAO;
+import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
@@ -109,7 +110,7 @@ public class UsuarioControlador {
 	}
 
 	@PostMapping("/iniciarSesion")
-	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, HttpSession session, Model modelo) {
+	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, @ModelAttribute("comprando") String comprando, HttpSession session, Model modelo) {
 
 		Usuario usuarioBD = opeUsuario.buscarUsuarioNick(usuario);
 		System.out.println("Usuario base de datos: " + usuarioBD + " usuario mandado " + usuario);
@@ -122,14 +123,19 @@ public class UsuarioControlador {
 				
 				
 					//RECUPERAR LA CESTA SI TIENE UNA GUARDADA EN LA BD
-				if(cesta != null) {
+//				if(cesta != null) {
+//					
+//					opeCesta.insertarCesta(cesta, usuarioBD);
+//				
+//				}
+				
+				if(comprando != null) {
 					
 					
-					opeCesta.insertarCesta(cesta, usuarioBD);
-					
-					
-					
+					return "redirect:/cesta/vercesta";
 				}
+				
+				
 				return "redirect:/";
 
 			}

@@ -70,7 +70,7 @@
 			</div>
 			<div class="pagototal">
 				<form:form modelAttribute="pedido" method="post"
-					action="/procesarpago">
+					action="${pageContext.request.contextPath}/cesta/procesarpago">
 
 					<label for="metodoPago">Método de Pago:</label>
 					<form:select path="metodo_pago" id="metodoPago">
