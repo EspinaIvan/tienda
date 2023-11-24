@@ -1,12 +1,18 @@
-package com.tienda.dao.productos;
+package com.tienda.dao.pedido;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import com.tienda.dao.productos.Producto;
+import com.tienda.dao.usuario.Usuario;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,31 +23,25 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name="producto")
-public class Producto {
+public class Pedido {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
-	private Integer id_categoria;
+	@ManyToOne
+	@JoinColumn(name = "id_usuario", referencedColumnName = "id")
+	private Usuario usuario;
 	
-	private Integer id_plataforma;
+	private LocalDateTime fecha;
 	
-	private String nombre;
+	private String metodo_pago;
 	
-	private String descripcion;
+	private String estado;
 	
-	private double precio;
+	private String num_factura;
 	
-	private int stock;
-	
-	private double impuesto;
-	
-	private String imagen;
-	
-	private boolean baja;
-	
-	private LocalDate fecha_alta;
-	
+	private double total;
+
 }

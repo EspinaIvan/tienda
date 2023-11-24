@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.tienda.dao.cesta.Cesta;
+import com.tienda.dao.cesta.CestaInterfaceDAO;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
@@ -27,6 +28,13 @@ import jakarta.validation.Valid;
 @Controller
 @RequestMapping("/usuario")
 public class UsuarioControlador {
+	
+	@Autowired
+	private OperacionesUsuario opeUsuario;
+	
+	@Autowired
+	private OperacionesCesta opeCesta;
+	
 	
 	@RequestMapping("/registro")
 	public String formularioRegistro(Model modelo) {
@@ -114,14 +122,14 @@ public class UsuarioControlador {
 				
 				
 					//RECUPERAR LA CESTA SI TIENE UNA GUARDADA EN LA BD
-//				if(cesta != null) {
-//					
-//					OperacionesCesta opeCesta = new OperacionesCesta();
-//					opeCesta.insertarCesta(cesta, usuarioBD);
-//					
-//					
-//					
-//				}
+				if(cesta != null) {
+					
+					
+					opeCesta.insertarCesta(cesta, usuarioBD);
+					
+					
+					
+				}
 				return "redirect:/";
 
 			}
@@ -142,6 +150,5 @@ public class UsuarioControlador {
 		return "redirect:/";
 	}
 
-	@Autowired
-	private OperacionesUsuario opeUsuario;
+
 }

@@ -24,66 +24,7 @@
 <title>Formulario Registro</title>
 </head>
 <body>
-	<section>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span>
-	</section>
+	<%@ include file="fragmentos/span.jsp"%>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
@@ -113,7 +54,7 @@
 						<form:errors path="apellido2" cssClass="error" />
 					</div>
 					<div class="inputBox">
-						<form:input path="dni" type="text" maxlength="9"/>
+						<form:input path="dni" type="text" maxlength="9" />
 						<i>DNI</i>
 						<form:errors path="dni" cssClass="error" />
 					</div>
@@ -136,7 +77,7 @@
 						<div id="repetirClaveError" class="error-message"></div>
 					</div>
 					<div class="inputBox">
-						<form:input path="telefono" type="text" maxlength="9"/>
+						<form:input path="telefono" type="text" maxlength="9" />
 						<i>Telefono</i>
 						<form:errors path="telefono" cssClass="error" />
 					</div>

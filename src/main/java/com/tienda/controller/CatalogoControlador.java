@@ -28,6 +28,8 @@ public class CatalogoControlador {
 
 	@Autowired
 	private OperacionesCatalogo opeCatalogo;
+	@Autowired
+	private OperacionesCesta opeCesta;
 	
 	@GetMapping("/vercatalogo")
 	public String mostarCatalogo(HttpSession session, Model modelo) {
@@ -66,14 +68,11 @@ public class CatalogoControlador {
 		
 		//INSERTAR EL PRODUCTO EN LA CESTA DE LA BD
 		
-//		if (session.getAttribute("usuario") != null ) {
-//			
-//			Usuario usuario = (Usuario) session.getAttribute("usuario");
-//			
-//			OperacionesCesta opeCesta = new OperacionesCesta();
-//			
-//			opeCesta.insertarArticuloCesta(producto, usuario);
-//		}
+		if (session.getAttribute("usuario") != null ) {
+			
+			Usuario usuario = (Usuario) session.getAttribute("usuario");
+			opeCesta.insertarArticuloCesta(producto, usuario);
+		}
 		session.setAttribute("cesta", cesta);
 		return "redirect:/catalogo/vercatalogo";
 	}

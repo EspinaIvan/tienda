@@ -1,6 +1,8 @@
 package com.tienda.servicios;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.cesta.CestaInterfaceDAO;
+import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
 
 @Repository
@@ -15,25 +18,33 @@ public class OperacionesCesta {
 
 	@Autowired
 	private CestaInterfaceDAO cestaDAO;
-	
+
 	public void insertarCesta(Map<Integer, Cesta> cesta, Usuario usuario) {
-		
+
 		Collection<Cesta> articulos = cesta.values();
 
-        for (Cesta articulo : articulos) {
-        	
-        	articulo.setUsuario(usuario);
-            System.out.println("Cesta: " + articulo);
-            cestaDAO.insertarCestaBD(articulo);
-        }
+		for (Cesta articulo : articulos) {
+
+			articulo.setUsuario(usuario);
+			System.out.println("Cesta: " + articulo);
+			cestaDAO.insertarCestaBD(articulo);
+		}
 	}
-	
+
 	public void insertarArticuloCesta(Cesta articulo, Usuario usuario) {
-		
+
 		System.out.println("en el servicio para insertar la cesta por un articulo");
-		
+
 		articulo.setUsuario(usuario);
 		cestaDAO.insertarCestaBD(articulo);
-		
+
 	}
+
+	public double calcularImpuestosPorProducto(double precio, int cantidad, double impuesto) {
+
+		return (precio * cantidad * impuesto) / 100.0;
+
+	}
+
+	
 }

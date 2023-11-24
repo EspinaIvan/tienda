@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
@@ -10,118 +11,96 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/catalogo.css">
+	href="${pageContext.request.contextPath}/resources/css/verCesta.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
 </script>
-<script
-	src="${pageContext.request.contextPath}/resources/js/Catalogo.js" defer></script>
+
 <meta charset="UTF-8">
 <title>Inicio</title>
 </head>
 <body>
-	<section>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span>
-	</section>
+	<%@ include file="fragmentos/span.jsp"%>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
-			<h2>Detalle de la Cesta</h2>
+			<div class="contenedor-cards">
+				<c:forEach var="producto" items="${vercesta}">
+					<div class="card mb-3 contenedortarjeta">
+						<div class="card-body">
+							<div class="d-flex justify-content-between">
+								<div class="d-flex flex-row align-items-center">
+									<div style="width: 50%;">
+										<img src="${producto.imagen}" class="img-fluid rounded-3"
+											alt="${producto.imagen}">
+									</div>
+									<div class="ms-3">
+										<h5>${producto.nombre}</h5>
+									</div>
+								</div>
+								<div class="d-flex flex-row align-items-center">
+									<div style="width: 100px;">
+										<button class="cantidad-menos" type="button">
+											<span class="icono-menos"><a
+												href="${pageContext.request.contextPath}/cesta/modificarcantidad?id=${producto.id}&valor=restar">-</a></span>
+										</button>
+										<input path="cantidad" class="cantidad-valor" type="text"
+											id="cantidad${producto.id}" name="cantidad"
+											value="${sessionScope.cesta[producto.id].cantidad}" />
+										<button class="cantidad-mas" type="button">
+											<span class="icono-mas"><a
+												href="${pageContext.request.contextPath}/cesta/modificarcantidad?id=${producto.id}&valor=sumar">+</a></span>
+										</button>
+									</div>
+									<div style="width: 80px; color: white">
+										<c:set var="sumatotal"
+											value="${producto.precio * sessionScope.cesta[producto.id].cantidad} " />
+										<fmt:formatNumber value="${sumatotal}" type="currency"
+											currencyCode="EUR" pattern="#,##€0.00" />
+									</div>
+									<a
+										href="${pageContext.request.contextPath}/cesta/modificarcantidad?id=${producto.id}"
+										style="color: #cecece;"><i class="bi bi-trash papelera"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</c:forEach>
+			</div>
+			<div class="pagototal">
+				<form:form modelAttribute="pedido" method="post"
+					action="/procesarpago">
 
-			<table>
-				<thead>
-					<tr>
-						<th>Imagen</th>
-						<th>Título</th>
-						<th>Precio Unidad</th>
-						<th>Cantidad</th>
-						<th>Precio Total</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="producto" items="${vercesta}">
-						<tr>
-							<td><img src="${producto.imagen}" alt="${producto.imagen}"
-								width="50" height="50"></td>
-							<td>${producto.nombre}</td>
-							<td>${producto.precio}</td>
-							<td>
-								<button class="cantidad-menos" type="button"
-									onclick="quitarCantidad(${ producto.id})">
-									<span class="icono-menos">-</span>
-								</button> <input path="cantidad" class="cantidad-valor" type="text"
-									id="cantidad${ producto.id}" name="cantidad" value="${sessionScope.cesta[producto.id].cantidad}" />
-								<button class="cantidad-mas" type="button"
-									onclick="sumarCantidad(${ producto.id})">
-									<span class="icono-mas">+</span>
-								</button>
-							</td>
-							<c:set var="subtotal"
-								value="${producto.precio * sessionScope.cesta[producto.id].cantidad}" />
-							<td><fmt:formatNumber value="${subtotal}" type="currency"
-									currencyCode="EUR" pattern="#,##0.00" /></td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+					<label for="metodoPago">Método de Pago:</label>
+					<form:select path="metodo_pago" id="metodoPago">
+						<form:option value="EFECTIVO" label="Efectivo" />
+						<form:option value="TARJETA_CREDITO" label="Tarjeta de Crédito" />
+						<form:option value="TRANSFERENCIA" label="Transferencia Bancaria" />
+						<form:option value="PAYPAL" label="PayPal" />
+
+					</form:select>
+					<div>
+						Subtotal:
+						<fmt:formatNumber value="${subtotal}" type="currency"
+							currencyCode="EUR" pattern="#,##€0.00" />
+					</div>
+					<div>
+						Impuestos:
+						<fmt:formatNumber value="${impuestos }" type="currency"
+							currencyCode="EUR" pattern="#,##€0.00" />
+					</div>
+					<hr><c:set var="total"
+						value="${subtotal + impuestos }" />
+					<div>Total: <fmt:formatNumber value="${total}" type="currency"
+							currencyCode="EUR" pattern="#,##€0.00" /></div>
+					<c:set var="total"
+						value="${subtotal + impuestos }" />
+					<form:hidden path="total" id="total" value="${total }"/>
+
+					<input type="submit" value="Enviar" />
+				</form:form>
+			</div>
 		</div>
 		<%@ include file="fragmentos/footer.jsp"%>
 	</div>

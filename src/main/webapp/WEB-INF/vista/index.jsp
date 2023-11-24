@@ -18,66 +18,7 @@
 <title>Inicio</title>
 </head>
 <body>
-	<section>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span> <span></span> <span></span>
-		<span></span> <span></span> <span></span>
-	</section>
+<%@ include file="fragmentos/span.jsp" %>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
