@@ -13,7 +13,7 @@
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/registro.css">
+	href="${pageContext.request.contextPath}/resources/css/editarperfil.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -21,7 +21,7 @@
 <script
 	src="${pageContext.request.contextPath}/resources/js/registro.js" defer></script>
 <meta charset="UTF-8">
-<title>Formulario Registro</title>
+<title>Perfil</title>
 </head>
 <body>
 	<%@ include file="fragmentos/span.jsp"%>
@@ -29,8 +29,8 @@
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
-				<h2>Registro</h2>
-				<form:form class="form" action="insertarUsuario"
+				<div><h2>Editar foto de perfil</h2></div>
+				<form:form class="form" action="actualizarusuario"
 					modelAttribute="usuario" method="POST" id="registroForm">
 					<div class="inputBox">
 						<form:input path="usuario" type="text" />
@@ -65,18 +65,6 @@
 						<div id="usuarioError" class="error-message">${ExisteEmail}</div>
 					</div>
 					<div class="inputBox">
-						<form:input path="clave" type="password" />
-						<i>Contraseña</i>
-						<form:errors path="clave" cssClass="error" />
-						<div id="claveError" class="error-message"></div>
-					</div>
-					<div class="inputBox">
-						<form:input path="repetirClave" type="password" />
-						<i>Repetir Contraseña</i>
-						<form:errors path="repetirClave" cssClass="error" />
-						<div id="repetirClaveError" class="error-message"></div>
-					</div>
-					<div class="inputBox">
 						<form:input path="telefono" type="text" maxlength="9" />
 						<i>Telefono</i>
 						<form:errors path="telefono" cssClass="error" />
@@ -93,18 +81,12 @@
 						<form:input path="direccion" type="text" />
 						<i>Direccion</i>
 					</div>
-					<div class="inputBox">
-						<form:input path="roles" type="hidden" value="1" />
-					</div>
-					<div class="inputBox">
-						<form:input path="baja" type="hidden" value="false" />
-					</div>
 					<div class="links">
-						<p class="yacuenta">¿Ya Tienes Cuenta?</p>
-						<a class="iniciasession" href="login">Inicia Sesión</a>
+						<p class="yacuenta">¿Deseas cambiar, la conntraseña?</p>
+						<a class="iniciasession" href="${pageContext.request.contextPath}/usuario/cambiarclave">Cambiar Contraseña</a>
 					</div>
 					<div class="inputBox botonregistro">
-						<input type="submit" value="Registrarse">
+						<input type="submit" value="Actuarlizar Datos">
 					</div>
 				</form:form>
 			</div>

@@ -21,37 +21,46 @@
 <title>Catalogo</title>
 </head>
 <body>
-<%@ include file="fragmentos/span.jsp" %>
+	<%@ include file="fragmentos/span.jsp"%>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="card-deck contenedorcarta">
 				<c:forEach var="productoTemp" items="${catalogo}">
 					<div class="catalogo" style="width: 15rem; margin-bottom: 10px;">
-						<a href="#" class="enlaceimagen"><img
-							class="card-img-top img-catalogo" src="${ productoTemp.imagen}"
-							alt="Card image cap" width=""></a>
+						<a
+							href="${pageContext.request.contextPath}/catalogo/verproducto?id=${productoTemp.id}"
+							class="enlaceimagen"><img class="card-img-top img-catalogo"
+							src="${ productoTemp.imagen}" alt="Card image cap" width=""></a>
 						<div class="card-body">
 							<h5 class="card-title titulo">${ productoTemp.nombre}</h5>
 							<p class="card-text">${ productoTemp.precio}&euro;</p>
-							<form:form class="form" action="añadirProducto"
-								modelAttribute="producto" method="POST">
-								<div class="control-cantidad">
-									<form:hidden path="producto.id" value="${ productoTemp.id}"/>
-									<button class="cantidad-menos" type="button"
-										onclick="quitarCantidad(${ productoTemp.id})">
-										<span class="icono-menos">-</span>
-									</button>
-									<form:input path="cantidad" class="cantidad-valor" type="text"
-										id="cantidad${ productoTemp.id}" name="cantidad" value="1" />
-									<button class="cantidad-mas" type="button"
-										onclick="sumarCantidad(${ productoTemp.id})">
-										<span class="icono-mas">+</span>
-									</button>
-									<button type="submit" class="btn btn-primary botoncesta">Añadir
-										Cesta</button>
-								</div>
-							</form:form>
+							<c:choose>
+								<c:when test="${productoTemp.stock eq 0}">
+									<span class="sinsctok">¡Sin stock!</span>
+								</c:when>
+								<c:otherwise>
+									<form:form class="form" action="añadirProducto"
+										modelAttribute="producto" method="POST">
+										<div class="control-cantidad">
+											<form:hidden path="producto.id" value="${ productoTemp.id}" />
+											<button class="cantidad-menos" type="button"
+												onclick="quitarCantidad(${ productoTemp.id})">
+												<span class="icono-menos">-</span>
+											</button>
+											<form:input path="cantidad" class="cantidad-valor"
+												type="text" id="cantidad${ productoTemp.id}" name="cantidad"
+												value="1" />
+											<button class="cantidad-mas" type="button"
+												onclick="sumarCantidad(${ productoTemp.id})">
+												<span class="icono-mas">+</span>
+											</button>
+											<button type="submit" class="btn btn-primary botoncesta">Añadir
+												Cesta</button>
+										</div>
+									</form:form>
+								</c:otherwise>
+							</c:choose>
 						</div>
 					</div>
 				</c:forEach>

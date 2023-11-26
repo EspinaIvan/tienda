@@ -1,10 +1,9 @@
-package com.tienda.dao.pedido;
+package com.tienda.dao.menusopciones;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import com.tienda.dao.productos.Producto;
-import com.tienda.dao.usuario.Usuario;
+import com.tienda.dao.roles.Roles;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,28 +17,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="pedido")
-public class Pedido {
+@Table(name = "opciones_menu")
+public class OpcionesMenu {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
 	
-	private int id_usuario;
+	private int id_rol;
 	
-	private LocalDateTime fecha;
+	private String nombre_opcion;
 	
-	private String metodo_pago;
+	private String url_opcion;
 	
-	private String estado;
-	
-	private String num_factura;
-	
-	private double total;
-
 }

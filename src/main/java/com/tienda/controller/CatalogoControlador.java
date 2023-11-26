@@ -1,5 +1,6 @@
 package com.tienda.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.productos.ProductoInterfaceDAO;
@@ -27,6 +29,9 @@ import jakarta.servlet.http.HttpSession;
 public class CatalogoControlador {
 
 	@Autowired
+	static Logger logger = LogManager.getRootLogger();
+	
+	@Autowired
 	private OperacionesCatalogo opeCatalogo;
 	@Autowired
 	private OperacionesCesta opeCesta;
@@ -34,10 +39,23 @@ public class CatalogoControlador {
 	@GetMapping("/vercatalogo")
 	public String mostarCatalogo(HttpSession session, Model modelo) {
 		
+		Map<Integer, Cesta> cesta;
+		
+		if(session.getAttribute("cesta") == null) {
+			
+			cesta = new HashMap<>();
+			
+		} else {
+			
+			cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
+			
+		}
+		
+		session.setAttribute("cesta", cesta);
 	
-		Cesta productoCesta = new Cesta();
 		List<Producto> catalogo = opeCatalogo.catalogoCompletoServicio();
 		modelo.addAttribute("catalogo", catalogo);
+		Cesta productoCesta = new Cesta();
 		modelo.addAttribute("producto", productoCesta);
 		
 		
@@ -73,9 +91,19 @@ public class CatalogoControlador {
 //			Usuario usuario = (Usuario) session.getAttribute("usuario");
 //			opeCesta.insertarArticuloCesta(producto, usuario);
 //		}
+		
 		session.setAttribute("cesta", cesta);
 		return "redirect:/catalogo/vercatalogo";
 	}
 	
-	
+	@GetMapping("/verproducto")
+	public String verProducto(HttpSession session, Model modelo, @RequestParam ("id") int id) {
+		
+		Cesta productoCesta = new Cesta();
+		modelo.addAttribute("producto", productoCesta);
+		Producto producto = opeCatalogo.getProductoPorId(id);
+		modelo.addAttribute("productoBD", producto);
+		
+		return "detalleproducto";
+	}
 }

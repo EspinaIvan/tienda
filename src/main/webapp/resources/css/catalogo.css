@@ -58,6 +58,11 @@ section::before {
 	flex-direction: column;
 }
 
+.sinsctok {
+	color: #ff073a;
+	font-weight: 600;
+}
+
 .cabecera {
 
 	width: 90%;

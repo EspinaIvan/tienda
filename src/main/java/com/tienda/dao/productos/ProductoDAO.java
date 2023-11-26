@@ -33,6 +33,7 @@ public class ProductoDAO  implements ProductoInterfaceDAO {
 	}
 
 	@Override
+	@Transactional
 	public Producto getProductoId(int idProducto) {
 		// TODO Auto-generated method stub
 		
@@ -42,6 +43,17 @@ public class ProductoDAO  implements ProductoInterfaceDAO {
 		System.out.println("producto: " + producto + idProducto);
 		
 		return producto;
+		
+	}
+
+	@Override
+	@Transactional
+	public void actualizarProducto(Producto producto) {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+
+		session.merge(producto);
 		
 	}
 

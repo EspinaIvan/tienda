@@ -26,6 +26,11 @@
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="contenedor-cards">
+				<c:if test="${fn:length(vercesta) == 0}">
+					<div class="cestavacia">
+						${cestavacia} <i class="bi bi-cart-x iconocestavacia"></i>
+					</div>
+				</c:if>
 				<c:forEach var="producto" items="${vercesta}">
 					<div class="card mb-3 contenedortarjeta">
 						<div class="card-body">
@@ -60,7 +65,7 @@
 											currencyCode="EUR" pattern="#,##€0.00" />
 									</div>
 									<a
-										href="${pageContext.request.contextPath}/cesta/modificarcantidad?id=${producto.id}"
+										href="${pageContext.request.contextPath}/cesta/borrararticulo?id=${producto.id}"
 										style="color: #cecece;"><i class="bi bi-trash papelera"></i></a>
 								</div>
 							</div>
@@ -71,7 +76,7 @@
 			<div class="pagototal">
 				<form:form modelAttribute="pedido" method="post"
 					action="${pageContext.request.contextPath}/cesta/procesarpago">
-
+					<div class="mensajestock">${noStock }</div>
 					<label for="metodoPago">Método de Pago:</label>
 					<form:select path="metodo_pago" id="metodoPago">
 						<form:option value="EFECTIVO" label="Efectivo" />
@@ -90,13 +95,15 @@
 						<fmt:formatNumber value="${impuestos }" type="currency"
 							currencyCode="EUR" pattern="#,##€0.00" />
 					</div>
-					<hr><c:set var="total"
-						value="${subtotal + impuestos }" />
-					<div>Total: <fmt:formatNumber value="${total}" type="currency"
-							currencyCode="EUR" pattern="#,##€0.00" /></div>
-					<c:set var="total"
-						value="${subtotal + impuestos }" />
-					<form:hidden path="total" id="total" value="${total }"/>
+					<hr>
+					<c:set var="total" value="${subtotal + impuestos }" />
+					<div>
+						Total:
+						<fmt:formatNumber value="${total}" type="currency"
+							currencyCode="EUR" pattern="#,##€0.00" />
+					</div>
+					<c:set var="total" value="${subtotal + impuestos }" />
+					<form:hidden path="total" id="total" value="${total }" />
 
 					<input type="submit" value="Enviar" />
 				</form:form>

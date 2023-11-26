@@ -42,7 +42,7 @@ public class Controlador {
 			cesta = new HashMap<>();
 			
 			logger.info("Creacion de la cesta al dectectar que no exite");
-			System.out.println("Creacion de la cesta al dectectar que no exite desde Sysout");
+		
 			
 		} else {
 			
@@ -59,7 +59,7 @@ public class Controlador {
 		return "index";
 	}
 
-	@RequestMapping("/catalogo")
+	@GetMapping("/catalogo")
 	public String mostrarCatalogo(Model modelo) {
 		
 		return "catalogo";

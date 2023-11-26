@@ -1,3 +1,4 @@
+@charset "ISO-8859-1";
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
@@ -120,6 +121,7 @@ section::before {
 
 	margin-right: 35%;
 }
+
 .cestavacia {
 	color: #ff073a;
 	font-size: larger;
@@ -127,10 +129,11 @@ section::before {
 	text-transform: uppercase;
 	display: contents;
 }
+
 .iconocestavacia {
 	color: white;
-  font-size: 20rem;
-  margin-right: 14rem;
+	font-size: 20rem;
+	margin-right: 14rem;
 }
 
 .pie {
@@ -152,6 +155,9 @@ section::before {
 	height: 32%;
 	background: #222;
 	color: aliceblue;
+}
+.tabla {
+	color: white;
 }
 
 section span {
@@ -213,7 +219,7 @@ section span {
 }
 
 .img-fluid {
-	max-width: 70%;
+	max-width: 30%;
 	height: auto;
 	border-radius: 10px;
 }
@@ -381,10 +387,8 @@ input[type="submit"]:hover {
 
 .contenedortarjeta {
 	background-color: #333;
-	flex: 1;
-	/* Para que los cards se expandan para ocupar el espacio disponible */
 	margin: 0 10px 10px 0;
-	/* Ajusta los márgenes entre los cards */
+	height: 15rem;
 }
 
 

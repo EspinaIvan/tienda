@@ -77,13 +77,6 @@ section::before {
 	padding-left: 40%;
 }
 
-.mensajestock {
-	color: #ff073a;
-	font-size: larger;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
 .enlace-cesta {
 	margin-top: 1rem;
 	margin-left: 1rem;
@@ -119,18 +112,6 @@ section::before {
 .iniciasession {
 
 	margin-right: 35%;
-}
-.cestavacia {
-	color: #ff073a;
-	font-size: larger;
-	font-weight: 600;
-	text-transform: uppercase;
-	display: contents;
-}
-.iconocestavacia {
-	color: white;
-  font-size: 20rem;
-  margin-right: 14rem;
 }
 
 .pie {
@@ -172,30 +153,10 @@ section span {
 	z-index: 1000;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 	top: 2%;
-	align-items: flex-start;
-}
-
-.pagototal {
-	background-color: #5d9536;
-	width: 60%;
-}
-
-.contenedor-cards {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
-
-
-.papelera {
-	font-size: 25px;
-}
-
-.papelera:hover {
-	color: #ff073a;
 }
 
 .contenedor .signin .content {
@@ -209,13 +170,6 @@ section span {
 	height: 100%;
 	padding: 40px;
 	top: 0%;
-
-}
-
-.img-fluid {
-	max-width: 70%;
-	height: auto;
-	border-radius: 10px;
 }
 
 .contenedor .signin .content h2 {
@@ -308,29 +262,6 @@ p {
 	font-weight: 600;
 }
 
-.avatar {
-	height: 4rem;
-	border-radius: 50%;
-	margin-top: 0.8rem;
-}
-
-.enlacecerrarsesion {
-	margin-top: 1rem;
-	margin-left: 1rem;
-}
-
-.cerrarsesion {
-	font-size: 2rem;
-	color: red;
-}
-
-.cerrarsesion:hover {
-	font-size: 2rem;
-	color: #0f0;
-	transform: scale(1.1);
-
-}
-
 .signin .content .form .inputBox input[type="submit"] {
 	padding: 10px;
 	background: #5d9536;
@@ -350,20 +281,18 @@ p {
 	background: #222;
 }
 
-.botoncesta {
-	background-color: #5d9536;
-	border-color: #5d9536;
-	color: #000;
-	font-weight: 600;
-}
-
-.botoncesta:hover {
-	background-color: #5d9536;
-	border-color: #5d9536;
-	color: #000;
-	font-weight: 600;
-	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
-	transform: scale(1.1);
+.contenedor .signin {
+	position: relative;
+	width: 90%;
+	height: auto;
+	background: #222;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+	top: 2%;
 }
 
 input[type="submit"]:active {
@@ -375,98 +304,43 @@ input[type="submit"]:hover {
 	transform: scale(1.1);
 }
 
-.contenedorcarta {
-	flex-wrap: wrap;
-}
-
-.contenedortarjeta {
-	background-color: #333;
-	flex: 1;
-	/* Para que los cards se expandan para ocupar el espacio disponible */
-	margin: 0 10px 10px 0;
-	/* Ajusta los márgenes entre los cards */
-}
-
-
-.catalogo {
-
-	flex: 0 0 calc(33.333% - 30px);
-	max-width: calc(33.333% - 30px);
-	margin-right: 15px;
-	margin-bottom: 0;
-	margin-left: 15px;
-	margin-top: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.enlaceimagen {
-	display: flex;
-	justify-content: center;
-}
-
-.img-catalogo {
-	width: 70%;
-	min-width: 250px;
-}
-
-.card-img-top {
-	border-bottom-left-radius: var(--bs-card-inner-border-radius);
-	border-bottom-right-radius: var(--bs-card-inner-border-radius);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card-img-top:hover {
-
-	transform: scale(1.1);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-
-}
-
-h5 {
-	color: ghostwhite;
-}
-
-.cantidad-valor {
-
-	width: 30px;
-	height: 20px;
-	text-align: center;
-	line-height: 0;
-	display: inline-block;
-}
-
-.cantidad-menos,
-.cantidad-mas {
-	margin-right: 2px;
-	margin-left: 2px;
-	position: relative;
+.avatar {
+	height: 4rem;
 	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 20px;
-	height: 20px;
-	font-size: 20px;
-	background-color: rgb(255, 255, 255);
-	color: rgb(0, 0, 0);
-	cursor: pointer;
-	transition: background-color 0.3s;
-	top: 4px
+	margin-top: 0.8rem;
 }
 
-.icono-menos,
-.icono-mas {
-	position: absolute;
-	top: -8px;
-	display: inline-block;
+
+.enlacecerrarsesion {
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
-.card-body {
-	width: 70%;
-	min-width: 250px;
+table {
+	width: 100%;
+	color: white;
+	border-spacing: 10px;
+	border-collapse: collapse;
+
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #dddddd
+}
+
+.cerrarsesion {
+	font-size: 2rem;
+	color: red;
+}
+
+.cerrarsesion:hover {
+	font-size: 2rem;
+	color: #0f0;
+	transform: scale(1.1);
+
 }
 
 @media (max-width: 900px) {

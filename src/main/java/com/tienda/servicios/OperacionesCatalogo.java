@@ -1,6 +1,8 @@
 package com.tienda.servicios;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,5 +32,27 @@ public class OperacionesCatalogo {
 		Producto productoBD = productoDAO.getProductoId(idProducto);
 		
 		return productoBD;
+	}
+	
+	public void modificarStock(Map<Integer, Cesta> cesta) {
+		
+		Collection<Cesta> articulos = cesta.values();
+		
+		for (Cesta articulo : articulos) {
+
+			Producto producto = productoDAO.getProductoId(articulo.getProducto().getId());
+			producto.setStock(producto.getStock() - articulo.getCantidad());
+			productoDAO.actualizarProducto(producto);
+			
+		}
+		
+	}
+
+	public Producto getProductoPorId(int id) {
+		// TODO Auto-generated method stub
+		
+		Producto producto = productoDAO.getProductoId(id);
+		
+		return producto;
 	}
 }

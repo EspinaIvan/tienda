@@ -1,21 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-	var form = document.getElementById("registroForm");
+	var form = document.getElementById("cambiarclave");
 
 	form.addEventListener("submit", function(event) {
 		var isValid = true;
 
-		// Validar el campo de usuario
-		var usuarioInput = document.querySelector("input[name='usuario']");
-		var usuarioError = document.getElementById("usuarioError");
-		if (usuarioInput.value.trim() === "") {
-			isValid = false;
-			setInvalidInput(usuarioInput, usuarioError, "El campo Usuario es obligatorio");
-		} else {
-			setValidInput(usuarioInput, usuarioError);
-		}
-
 		// Validar el campo de contraseña
-		var claveInput = document.querySelector("input[name='clave']");
+		var claveInput = document.querySelector("input[name='nuevaclave']");
 		var claveError = document.getElementById("claveError");
 		if (claveInput.value.trim() === "") {
 			isValid = false;
@@ -25,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		// Validar el campo de repetir contraseña
-		var repetirClaveInput = document.querySelector("input[name='repetirClave']");
+		var repetirClaveInput = document.querySelector("input[name='repetirnuevaclave']");
 		var repetirClaveError = document.getElementById("repetirClaveError");
 		if (repetirClaveInput.value.trim() === "") {
 			isValid = false;

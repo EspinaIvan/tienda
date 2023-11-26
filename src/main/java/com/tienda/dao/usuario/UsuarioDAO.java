@@ -44,6 +44,7 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 	}
 
 	@Override
+	@Transactional
 	public Usuario buscarUsuarioConUsuario(String nombreUsuario) {
 		// TODO Auto-generated method stub
 
@@ -60,6 +61,7 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 	}
 
 	@Override
+	@Transactional
 	public Usuario buscarEmailUsuario(String emailUsuario) {
 		
 		Session session = entityManager.unwrap(Session.class);
@@ -73,5 +75,16 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 		return usuario;
 
 	}
+
+	@Override
+	@Transactional
+	public void actualizarUsuario(Usuario usuario) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		session.merge(usuario);
+		
+		System.out.println("usuario Editado con exito");
+	}
+
 
 }

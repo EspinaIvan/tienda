@@ -8,4 +8,5 @@ public interface ProductoInterfaceDAO {
 
 	public List<Producto> catalogoCompleto();
 	public Producto getProductoId (int idProducto);
+	public void actualizarProducto(Producto producto);
 }

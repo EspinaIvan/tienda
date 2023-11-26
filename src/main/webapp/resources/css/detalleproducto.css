@@ -45,6 +45,10 @@ section::before {
 		transform: translateY(100%);
 	}
 }
+.sinsctok {
+	color:#ff073a;
+	font-weight: 600;
+}
 
 .contenedor {
 	position: relative;
@@ -56,6 +60,9 @@ section::before {
 	align-items: center;
 	justify-content: start;
 	flex-direction: column;
+}
+.descripcion {
+	color: white;
 }
 
 .cabecera {
@@ -75,13 +82,6 @@ section::before {
 .contenedor-carrito {
 	display: flex;
 	padding-left: 40%;
-}
-
-.mensajestock {
-	color: #ff073a;
-	font-size: larger;
-	font-weight: 600;
-	text-transform: uppercase;
 }
 
 .enlace-cesta {
@@ -119,18 +119,6 @@ section::before {
 .iniciasession {
 
 	margin-right: 35%;
-}
-.cestavacia {
-	color: #ff073a;
-	font-size: larger;
-	font-weight: 600;
-	text-transform: uppercase;
-	display: contents;
-}
-.iconocestavacia {
-	color: white;
-  font-size: 20rem;
-  margin-right: 14rem;
 }
 
 .pie {
@@ -172,30 +160,10 @@ section span {
 	z-index: 1000;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 	top: 2%;
-	align-items: flex-start;
-}
-
-.pagototal {
-	background-color: #5d9536;
-	width: 60%;
-}
-
-.contenedor-cards {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
-
-
-.papelera {
-	font-size: 25px;
-}
-
-.papelera:hover {
-	color: #ff073a;
 }
 
 .contenedor .signin .content {
@@ -209,13 +177,6 @@ section span {
 	height: 100%;
 	padding: 40px;
 	top: 0%;
-
-}
-
-.img-fluid {
-	max-width: 70%;
-	height: auto;
-	border-radius: 10px;
 }
 
 .contenedor .signin .content h2 {
@@ -250,6 +211,9 @@ section span {
 .inicioboton:hover {
 	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 	transform: scale(1.1);
+}
+h3 {
+	color: white;
 }
 
 .contenedor .signin .content .form .inputBox input {
@@ -366,6 +330,20 @@ p {
 	transform: scale(1.1);
 }
 
+.contenedor .signin {
+	position: relative;
+	width: 90%;
+	height: auto;
+	background: #222;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+	top: 2%;
+}
+
 input[type="submit"]:active {
 	opacity: 0.6;
 }
@@ -377,16 +355,8 @@ input[type="submit"]:hover {
 
 .contenedorcarta {
 	flex-wrap: wrap;
+	justify-content: center;
 }
-
-.contenedortarjeta {
-	background-color: #333;
-	flex: 1;
-	/* Para que los cards se expandan para ocupar el espacio disponible */
-	margin: 0 10px 10px 0;
-	/* Ajusta los márgenes entre los cards */
-}
-
 
 .catalogo {
 

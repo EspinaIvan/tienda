@@ -3,6 +3,7 @@ package com.tienda.dao.usuario;
 import java.time.LocalDate;
 import java.util.Date;
 
+import com.tienda.dao.roles.Roles;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -27,8 +28,9 @@ public class Usuario {
 	@Column(name="id")
 	private int id;
 	
-	@Column (name="id_rol")
-	private int id_rol;
+	@OneToOne
+	@JoinColumn(name = "id_rol", referencedColumnName = "id")
+	private Roles roles;
 	
 	@Column (name="usuario")
 	@NotBlank(message = "El campo Usuario no puede estar en blanco")

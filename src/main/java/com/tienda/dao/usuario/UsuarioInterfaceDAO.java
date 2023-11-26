@@ -8,4 +8,5 @@ public interface UsuarioInterfaceDAO {
 	public void insertarUsuario(Usuario usuario);
 	public Usuario buscarUsuarioConUsuario(String usuario);
 	public Usuario buscarEmailUsuario(String email);
+	public void actualizarUsuario(Usuario usuario);
 }

@@ -1,5 +1,7 @@
 package com.tienda.dao.pedido;
 
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -43,5 +45,41 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 		
 		return pedido;
 		
+	}
+
+	@Override
+	@Transactional
+	public List<Pedido> listaPedidos(int idUsuario, String ordenarFecha) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		
+		 String hql = "FROM Pedido p WHERE p.id_usuario = :idusuario ORDER BY p.fecha " + ordenarFecha;
+	        Query<Pedido> query = session.createQuery(hql, Pedido.class);
+	        query.setParameter("idusuario", idUsuario);
+	        
+	        List<Pedido> pedidos = query.getResultList();
+	        
+	        return pedidos;
+	}
+
+	@Override
+	@Transactional
+	public void cancelarPedido(int idPedido) {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+		Pedido pedido = session.find(Pedido.class, idPedido);
+		logger.info("recuperamos el pedido a editar:" + pedido);
+		pedido.setEstado("P.C.");
+		session.merge(pedido);
+	}
+
+	@Override
+	@Transactional
+	public Pedido getPedidoID(int idPedido) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		Pedido pedido = session.find(Pedido.class, idPedido);
+		return pedido;
 	}
 }

@@ -60,12 +60,12 @@ public class OperacionesCesta {
 
 	}
 
-	public void finalizarCompra(Pedido pedido, Usuario usuario) {
+	public void finalizarCompra(Pedido pedido, int idUsuario) {
 
 		BigDecimal bigDecimal = new BigDecimal(pedido.getTotal());
 		BigDecimal resultado = (bigDecimal.setScale(2, RoundingMode.HALF_UP));
 		pedido.setTotal(resultado.doubleValue());
-		pedido.setUsuario(usuario);
+		pedido.setId_usuario(idUsuario);
 		pedido.setFecha(LocalDateTime.now());
 		pedido.setEstado("P.E.");
 		pedidoDAO.insertarPedidoBD(pedido);
