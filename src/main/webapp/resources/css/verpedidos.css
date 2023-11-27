@@ -144,7 +144,15 @@ section span {
 	z-index: 2;
 	transition: 1.5s;
 }
+.ordenarfecha {
+  color: white;
+  font-weight: 600;
+  margin-top: 15px;
 
+}
+h2 {
+	color:#ff073a
+}
 .contenedor .signin {
 	position: relative;
 	width: 90%;
@@ -157,6 +165,7 @@ section span {
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 	top: 2%;
+	flex-direction: column;
 }
 
 .contenedor .signin .content {

@@ -39,26 +39,6 @@
 						<div id="usuarioError" class="error-message">${ExisteUsuario}</div>
 					</div>
 					<div class="inputBox">
-						<form:input path="nombre" type="text" />
-						<i>Nombre</i>
-						<form:errors path="nombre" cssClass="error" />
-					</div>
-					<div class="inputBox">
-						<form:input path="apellido1" type="text" />
-						<i>Primer Apellido</i>
-						<form:errors path="apellido1" cssClass="error" />
-					</div>
-					<div class="inputBox">
-						<form:input path="apellido2" type="text" />
-						<i>Segundo Apellido</i>
-						<form:errors path="apellido2" cssClass="error" />
-					</div>
-					<div class="inputBox">
-						<form:input path="dni" type="text" maxlength="9" />
-						<i>DNI</i>
-						<form:errors path="dni" cssClass="error" />
-					</div>
-					<div class="inputBox">
 						<form:input path="email" type="text" />
 						<i>Email</i>
 						<form:errors path="email" cssClass="error" />
@@ -75,29 +55,6 @@
 						<i>Repetir Contraseña</i>
 						<form:errors path="repetirClave" cssClass="error" />
 						<div id="repetirClaveError" class="error-message"></div>
-					</div>
-					<div class="inputBox">
-						<form:input path="telefono" type="text" maxlength="9" />
-						<i>Telefono</i>
-						<form:errors path="telefono" cssClass="error" />
-					</div>
-					<div class="inputBox">
-						<form:input path="provincia" type="text" />
-						<i>Provincia</i>
-					</div>
-					<div class="inputBox">
-						<form:input path="localidad" type="text" />
-						<i>Localidad</i>
-					</div>
-					<div class="inputBox">
-						<form:input path="direccion" type="text" />
-						<i>Direccion</i>
-					</div>
-					<div class="inputBox">
-						<form:input path="roles" type="hidden" value="1" />
-					</div>
-					<div class="inputBox">
-						<form:input path="baja" type="hidden" value="false" />
 					</div>
 					<div class="links">
 						<p class="yacuenta">¿Ya Tienes Cuenta?</p>

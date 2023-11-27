@@ -36,7 +36,7 @@
 								<h5>${detalles.producto.nombre}</h5>
 							</td>
 							<td>
-								${detalles.precio_unidad } &euro
+								${detalles.precio_unidad }€
 							</td>
 							<td>
 								${detalles.unidades }uds

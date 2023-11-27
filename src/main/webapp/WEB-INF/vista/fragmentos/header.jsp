@@ -19,7 +19,7 @@
 					<ul
 						class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 navegacion">
 
-						<c:forEach var="menu" 
+						<c:forEach var="menu"
 							items="${ sessionScope.usuario.roles.opcionesMenu}">
 							<li><a href="${menu.url_opcion}"
 								class="nav-link px-2 text-secondary">${menu.nombre_opcion }</a></li>
@@ -57,12 +57,14 @@
 						</c:otherwise>
 					</c:choose>
 				</c:if>
-				<a href="${pageContext.request.contextPath}/cesta/vercesta"
-					class="enlace-cesta"><i class="bi bi-cart4 icon-carrito"></i></a>
-				<c:if test="${fn:length(cesta) > 0}">
-					<span class="cesta-articulo">${fn:length(sessionScope.cesta)}</span>
+				<c:if test="${sessionScope.usuario.roles.id == 1 or (empty usuario)}">
+					<a href="${pageContext.request.contextPath}/cesta/vercesta"
+						class="enlace-cesta"><i class="bi bi-cart4 icon-carrito"></i></a>
+					<c:if test="${fn:length(cesta) > 0}">
+						<span class="cesta-articulo">${fn:length(sessionScope.cesta)}</span>
+					</c:if>
 				</c:if>
+				<div></div>
 			</div>
 		</div>
-	</div>
 </header>

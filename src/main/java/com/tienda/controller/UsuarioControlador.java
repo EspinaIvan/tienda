@@ -144,8 +144,14 @@ public class UsuarioControlador {
 					return "redirect:/cesta/vercesta";
 				}
 
-				return "redirect:/";
+				if (usuarioBD.getRoles().getId() == 1) {
 
+					return "redirect:/";
+
+				} else {
+
+					return "redirect:/administrador/verlistausuarios";
+				}
 			}
 
 			modelo.addAttribute("errorInicio", "Contraseña y/o usuario incorrecto");
@@ -191,7 +197,7 @@ public class UsuarioControlador {
 		Usuario comprobarEmail = opeUsuario.buscarUsuarioEmail(usuario);
 
 		if (usuarioSesion.getUsuario().equals(usuario.getUsuario())) {
-			System.out.println("bandera -1");
+
 		} else {
 
 			if (comprobarUsuario != null) {
@@ -204,7 +210,6 @@ public class UsuarioControlador {
 
 		if (usuarioSesion.getEmail().equals(usuario.getEmail())) {
 
-			
 		} else {
 
 			if (comprobarEmail != null) {
@@ -217,8 +222,7 @@ public class UsuarioControlador {
 		}
 
 		if (validado) {
-			System.out.println("bandera -2");
-			 usuario = opeUsuario.actualizarUsuarioService(usuario, usuarioSesion);
+			usuario = opeUsuario.actualizarUsuarioService(usuario, usuarioSesion);
 			session.setAttribute("usuario", usuario);
 
 			return "editarperfil";
@@ -256,45 +260,46 @@ public class UsuarioControlador {
 			return "redirect:/usuario/verperfil";
 
 		}
-		
+
 		return "redirect:/usuario/cambiarclave";
 	}
-	
+
 	@GetMapping("/verpedidos")
-	public String verPedidos(@RequestParam(name = "ordenarFecha", defaultValue = "DESC") String ordenarFecha, Model modelo, HttpSession session) {
-		
-		
+	public String verPedidos(@RequestParam(name = "ordenarFecha", defaultValue = "DESC") String ordenarFecha,
+			Model modelo, HttpSession session) {
+
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
-		
+
 		if (ordenarFecha.equals("DESC")) {
-			
+
 		} else {
-			
+
 			ordenarFecha = "ASC";
-			
+
 		}
 		logger.info("Llega hasta mandar la id al servicio");
 		List<Pedido> pedidos = opeUsuario.sacarListaPedidos(usuario.getId(), ordenarFecha);
-		
+
 		modelo.addAttribute("pedidos", pedidos);
-		
+
+		logger.info("Vemos que contiene la lista de ver pedidos: " + pedidos);
 		return "verpedidos";
 	}
 
 	@GetMapping("/cancelarpedido")
 	public String cancelarPedido(@RequestParam("idpedido") int idPedido, Model modelo, HttpSession session) {
-		
+
 		opeUsuario.cancelarPedidoServicio(idPedido);
-		
+
 		return "redirect:/usuario/verpedidos";
 	}
-	
+
 	@GetMapping("/detallespedido")
 	public String detallesPedido(@RequestParam("idpedido") int idPedido, Model modelo, HttpSession session) {
-		
-		List<DetallesPedido>  listaDetallesPedido = opeUsuario.getDetallesPedido(idPedido);
+
+		List<DetallesPedido> listaDetallesPedido = opeUsuario.getDetallesPedido(idPedido);
 		modelo.addAttribute("listaDetallesPedido", listaDetallesPedido);
-		
+
 		return "detallespedido";
 	}
 }

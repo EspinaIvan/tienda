@@ -45,6 +45,7 @@ public class Usuario {
 	
 	@Column (name="clave")
 	@Size (min = 8, message ="La Contraseña debe tener minimo 8 letras")
+//	@Pattern(regexp = "^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$", message = "La Contraseña debe contener al menos un número y un carácter especial") 
 	private String clave;
 	
 	@Transient 
@@ -52,22 +53,16 @@ public class Usuario {
 	private String repetirClave;
 	
 	@Column (name="nombre")
-	@NotBlank(message = "El campo Nombre no puede estar en blanco")
-	@NotNull(message = "El campo Nombre no puede estar en blanco")
 	@Size (min = 3, message ="El campo Nombre debe tener minimo 3 letras")
 	@Pattern(regexp = "^[a-zA-Z]+$", message = "El campo Nombre solo puede contener letras")
 	private String nombre;
 	
 	@Column (name="apellido1")
-	@NotBlank(message = "El campo Primer Apellido no puede estar en blanco")
-	@NotNull(message = "El campo Primer Apellido no puede estar en blanco")
 	@Size (min = 3, message ="El campo Primer Apellido debe tener minimo 3 letras")
 	@Pattern(regexp = "^[a-zA-Z]+$", message = "El campo Nombre solo puede contener letras")
 	private String apellido1;
 	
 	@Column (name="apellido2")
-	@NotBlank(message = "El campo Segundo Apellido no puede estar en blanco")
-	@NotNull(message = "El campo Segundo Apellido no puede estar en blanco")
 	@Size (min = 3, message ="El campo Segundo Apellido debe tener minimo 3 letras")
 	@Pattern(regexp = "^[a-zA-Z]+$", message = "El campo Nombre solo puede contener letras")
 	private String apellido2;
@@ -82,15 +77,11 @@ public class Usuario {
 	private String localidad;
 	
 	@Column (name="telefono")
-	@NotBlank(message = "El campo Telefono no puede estar en blanco")
-	@NotNull(message = "El campo Telefono no puede estar en blanco")
 	@Pattern(regexp = "\\d{9}", message = "El teléfono debe contener exactamente 9 dígitos")
 	private String telefono;
 	
 	@Column (name="dni")
 	@Pattern(regexp = "\\d{8}[A-Za-z]{1}", message = "El DNI debe tener 8 dígitos y la letra")
-	@NotBlank(message = "El campo DNI no puede estar en blanco")
-	@NotNull(message = "El campo DNI no puede estar en blanco")
 	private String dni;
 	
 	@Column (name="imagen")

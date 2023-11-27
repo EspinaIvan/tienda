@@ -9,6 +9,8 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.tienda.dao.roles.Roles;
+
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
@@ -85,6 +87,5 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 		
 		System.out.println("usuario Editado con exito");
 	}
-
 
 }

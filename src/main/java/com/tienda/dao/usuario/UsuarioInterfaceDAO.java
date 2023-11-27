@@ -2,6 +2,8 @@ package com.tienda.dao.usuario;
 
 import java.util.List;
 
+import com.tienda.dao.roles.Roles;
+
 public interface UsuarioInterfaceDAO {
 
 	public List<Usuario> getUsuarios();

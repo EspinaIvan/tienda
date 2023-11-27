@@ -1,6 +1,8 @@
 package com.tienda.servicios;
 
 import java.time.LocalDate;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,6 +15,8 @@ import com.tienda.dao.detallespedido.DetallesPedido;
 import com.tienda.dao.detallespedido.DetallesPedidoInterfaceDao;
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.pedido.PedidoInterfaceDAO;
+import com.tienda.dao.roles.Roles;
+import com.tienda.dao.roles.RolesInterfaceDAO;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
 
@@ -28,10 +32,16 @@ public class OperacionesUsuario {
 	@Autowired
 	private DetallesPedidoInterfaceDao detallesPedidoDAO;
 	@Autowired
+	private RolesInterfaceDAO rolesDAO;
+	@Autowired
 	static Logger logger = LogManager.getRootLogger();
 	
 	public void insertarUsuarioPorDAO(Usuario usuario) {
 		
+		Roles rol = rolesDAO.getRol(1);
+		usuario.setRoles(rol);
+		usuario.setBaja(false);
+		usuario.setImagen("https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png");
 		usuario.setFecha_alta(LocalDate.now());
 		usuarioDAO.insertarUsuario(usuario);
 		
@@ -100,6 +110,14 @@ public class OperacionesUsuario {
 		List<DetallesPedido> listaDetallesPedido = detallesPedidoDAO.obtenerDetallesPedido(pedido);
 				
 		return listaDetallesPedido;
+	}
+
+	public List<Usuario> listaUsuario() {
+		// TODO Auto-generated method stub
+		List<Usuario> listaUsuarios = usuarioDAO.getUsuarios();
+		Collections.sort(listaUsuarios, Comparator.comparing(Usuario::getFecha_alta).reversed());
+
+		return listaUsuarios;
 	}
 	
 }
