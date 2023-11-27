@@ -11,4 +11,6 @@ public interface UsuarioInterfaceDAO {
 	public Usuario buscarUsuarioConUsuario(String usuario);
 	public Usuario buscarEmailUsuario(String email);
 	public void actualizarUsuario(Usuario usuario);
+	public void borrarUsuario(int idUsuario);
+	public Usuario getUsuarioId (int idUsuario);
 }

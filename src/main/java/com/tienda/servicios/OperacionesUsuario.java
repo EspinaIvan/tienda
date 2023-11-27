@@ -119,5 +119,16 @@ public class OperacionesUsuario {
 
 		return listaUsuarios;
 	}
+
+	public void borrarUsuarioID(int idUsuario) {
+		
+		usuarioDAO.borrarUsuario(idUsuario);
+	}
 	
+	public Usuario getUsuarioId (int idUsuario) {
+		
+		Usuario usuario = usuarioDAO.getUsuarioId(idUsuario);
+		
+		return usuario;
+	}
 }

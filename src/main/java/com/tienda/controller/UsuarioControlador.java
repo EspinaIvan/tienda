@@ -149,7 +149,7 @@ public class UsuarioControlador {
 					return "redirect:/";
 
 				} else {
-
+					
 					return "redirect:/administrador/verlistausuarios";
 				}
 			}
@@ -301,5 +301,20 @@ public class UsuarioControlador {
 		modelo.addAttribute("listaDetallesPedido", listaDetallesPedido);
 
 		return "detallespedido";
+	}
+
+	@GetMapping("/borrarusuario")
+	public String borrarUsuario(@RequestParam("idusuario") int idUsuario, Model modelo, HttpSession session) {
+
+		Usuario usuario = (Usuario) session.getAttribute("usuario");
+
+		opeUsuario.borrarUsuarioID(idUsuario);
+		if (usuario.getRoles().getId() == 1) {
+
+			cerrarSession(session);
+			return "redirect:/";
+		}
+		
+		return "redirect:/administrador/verlistausuarios";
 	}
 }

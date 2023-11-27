@@ -24,15 +24,15 @@
 <title>Perfil</title>
 </head>
 <body>
-	<%@ include file="fragmentos/span.jsp"%>
+	<%@ include file="../fragmentos/span.jsp"%>
 	<div class="contenedor">
-		<%@ include file="fragmentos/header.jsp"%>
+		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
 				<div>
 					<h2>Editar foto de perfil</h2>
 				</div>
-				<form:form class="form" action="actualizarusuario"
+				<form:form class="form" action="editarusuario"
 					modelAttribute="usuario" method="POST" id="registroForm">
 					<div class="inputBox">
 						<form:input path="usuario" type="text" />
@@ -83,27 +83,20 @@
 						<form:input path="direccion" type="text" />
 						<i>Direccion</i>
 					</div>
+					<form:hidden path="id" value="${usuario.id }"/>
 					<div class="links">
 						<p class="yacuenta">¿Deseas cambiar, la conntraseña?</p>
 						<a class="iniciasession"
-							href="${pageContext.request.contextPath}/usuario/cambiarclave">Cambiar
+							href="${pageContext.request.contextPath}/administrador/cambiarclaveadmin?idusuario=${usuario.id}">Cambiar
 							Contraseña</a>
 					</div>
 					<div class="inputBox botonregistro">
 						<input type="submit" value="Actuarlizar Datos">
 					</div>
 				</form:form>
-				<c:if test="${sessionScope.usuario.roles.id == 1}">
-					<div class="inputBox contenedorborrar">
-						<a href="borrarusuario?idusuario=${sessionScope.usuario.id }"><button type="button"
-								class="btn btn-outline-light me-2 botonborrar">Eliminar
-								Cuenta</button></a>
-					</div>
-				</c:if>
 			</div>
-
 		</div>
-		<%@ include file="fragmentos/footer.jsp"%>
+		<%@ include file="../fragmentos/footer.jsp"%>
 
 	</div>
 </body>

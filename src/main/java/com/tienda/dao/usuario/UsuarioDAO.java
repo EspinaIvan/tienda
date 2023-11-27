@@ -88,4 +88,26 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 		System.out.println("usuario Editado con exito");
 	}
 
+	@Override
+	@Transactional
+	public void borrarUsuario(int idUsuario) {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+		 Usuario usuario = getUsuarioId(idUsuario);
+		 usuario.setBaja(true);
+		 session.merge(usuario);
+		 
+	}
+
+	@Override
+	@Transactional
+	public Usuario getUsuarioId(int idUsuario) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		Usuario usuario = session.get(Usuario.class, idUsuario);
+		
+		return usuario;
+	}
+
 }

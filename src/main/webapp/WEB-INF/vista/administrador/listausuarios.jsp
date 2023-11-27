@@ -25,30 +25,34 @@
 			<table>
 				<thead>
 					<tr>
+						<th>Id</th>
 						<th>Usuario</th>
 						<th>Email</th>
 						<th>Fecha de Alta</th>
 						<th>Baja
-						<th>
+						<th></th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="usuario" items="${listausuarios}">
 						<c:if test="${usuario.roles.id == 1}">
 							<tr>
+								<td>${usuario.id }</td>
 								<td>${usuario.usuario}</td>
 								<td>${usuario.email}</td>
 								<td>${usuario.fecha_alta}</td>
-								<td>
-									<c:choose>
+								<td><c:choose>
 										<c:when test="${not usuario.baja}">
 											<span class="usuarioactivo"></span>
 										</c:when>
 										<c:otherwise>
 											<span class="usuariobaja"></span>
 										</c:otherwise>
-									</c:choose>
+									</c:choose></td>
+								<td><a href="${pageContext.request.contextPath}/administrador/verdetallesusuario?idusuario=${usuario.id }">Ver detalles</a></td>	
 								</td>
+								<td><a href="${pageContext.request.contextPath}/usuario/borrarusuario?idusuario=${usuario.id }">Dar de baja</a></td>
 							</tr>
 						</c:if>
 					</c:forEach>

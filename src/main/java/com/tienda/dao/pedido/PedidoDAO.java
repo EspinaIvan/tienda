@@ -82,4 +82,16 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 		Pedido pedido = session.find(Pedido.class, idPedido);
 		return pedido;
 	}
+
+	@Override
+	@Transactional
+	public List<Pedido> getListasPedidos() {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+
+		Query<Pedido> consulta = session.createQuery("from Pedido", Pedido.class);
+		List<Pedido> listaPedidos = consulta.getResultList();
+
+		return listaPedidos;
+	}
 }

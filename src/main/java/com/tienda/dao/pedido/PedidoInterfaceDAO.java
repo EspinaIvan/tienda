@@ -11,4 +11,5 @@ public interface PedidoInterfaceDAO {
 	public List<Pedido> listaPedidos(int idUsuario, String ordenarFecha);
 	public void cancelarPedido(int idPedido);
 	public Pedido getPedidoID(int idPedido);
+	public List<Pedido> getListasPedidos();
 }
