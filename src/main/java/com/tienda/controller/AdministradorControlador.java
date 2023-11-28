@@ -16,10 +16,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.pedido.PedidoInterfaceDAO;
+import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesPedidos;
 import com.tienda.servicios.OperacionesUsuario;
+import com.tienda.servicios.OpereacionesProducto;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -34,6 +37,10 @@ public class AdministradorControlador {
 	private OperacionesUsuario opeUsuario;
 	@Autowired
 	private OperacionesPedidos opePedidos;
+	@Autowired 
+	private OperacionesCatalogo opeCatalogo;
+	@Autowired
+	private OpereacionesProducto opeProducto;
 	
 	@GetMapping("/verlistausuarios")
 	public String verListaUsuarios(HttpSession session, Model modelo) {
@@ -142,5 +149,47 @@ public class AdministradorControlador {
 		System.out.println("Miramos la lista de pedidos: " + listaPedidos);
 		
 		return "administrador/listapedidos";
+	}
+	
+	@GetMapping("/enviarpedido")
+	public String pedidoEnviado(@RequestParam("idpedido") int idPedido, HttpSession session, Model modelo) {
+		
+		opePedidos.enviarPedido(idPedido);
+		
+		return "redirect:/administrador/listapedidos";
+	}
+	
+	@GetMapping("/listaproductos")
+	public String listaProductos(HttpSession session, Model modelo) {
+		
+		List<Producto> listaProductos = opeCatalogo.catalogoCompletoServicio();
+		modelo.addAttribute("listaproductos", listaProductos);
+		
+		return "administrador/listaproductos";
+	}
+	
+	@GetMapping("/bajaproducto")
+	public String bajaProducto (@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
+		
+		opeProducto.darBajaProducto(idProducto);
+		
+		return "redirect:/administrador/listaproductos";
+	}
+	
+	@GetMapping("/altaproducto")
+	public String altaProducto (@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
+		
+		opeProducto.darAltaProducto(idProducto);
+		
+		return "redirect:/administrador/listaproductos";
+	}
+	
+	@GetMapping("/editarproducto")
+	public String editarProducto (@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
+		
+		Producto producto = opeProducto.obtenerProducto(idProducto);
+		modelo.addAttribute("producto", producto);
+		
+		return "administrador/editarproducto";
 	}
 }

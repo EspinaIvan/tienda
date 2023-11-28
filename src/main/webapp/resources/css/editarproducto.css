@@ -27,6 +27,14 @@ section {
 	overflow: hidden;
 }
 
+.botonborrar {
+	background-color: #ff073a;
+	color: #000;
+	font-weight: 600;
+	border-color: #ff073a;
+
+}
+
 section::before {
 	content: '';
 	position: absolute;
@@ -58,6 +66,7 @@ section::before {
 	flex-direction: column;
 }
 
+
 .cabecera {
 
 	width: 90%;
@@ -72,16 +81,13 @@ section::before {
 	margin-left: 28%;
 }
 
-.contenedor-carrito {
-	display: flex;
-	padding-left: 40%;
+.inicioboton {
+	margin-top: 20%;
 }
 
-.mensajestock {
-	color: #ff073a;
-	font-size: larger;
-	font-weight: 600;
-	text-transform: uppercase;
+.contenedor-carrito {
+	display: flex;
+	padding-left: 50%;
 }
 
 .enlace-cesta {
@@ -95,11 +101,15 @@ section::before {
 	border-radius: 50%;
 	bottom: -19px;
 	right: 10px;
-	padding-left: 5px;
+	padding-right: 7px;
 	padding-bottom: 24px;
 	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 	background-color: #ff073a;
 	position: relative;
+}
+
+.error-message {
+	color: #ff073a;
 }
 
 .registroboton {
@@ -117,22 +127,13 @@ section::before {
 }
 
 .iniciasession {
-
+	color: #ff073a;
 	margin-right: 35%;
 }
 
-.cestavacia {
-	color: #ff073a;
-	font-size: larger;
-	font-weight: 600;
-	text-transform: uppercase;
-	display: contents;
-}
-
-.iconocestavacia {
-	color: white;
-	font-size: 20rem;
-	margin-right: 14rem;
+.iniciasession:hover {
+	color: #0f8;
+	margin-right: 35%;
 }
 
 .pie {
@@ -156,10 +157,6 @@ section::before {
 	color: aliceblue;
 }
 
-.tabla {
-	color: white;
-}
-
 section span {
 	position: relative;
 	display: block;
@@ -178,39 +175,10 @@ section span {
 	z-index: 1000;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 	top: 2%;
-	align-items: flex-start;
-}
-
-.pagototal {
-	background-color: #5d9536;
-	width: 60%;
-}
-
-.contenedor-cards {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	width: 80%;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-tr {
-	margin-bottom: 10px;
-	border-bottom: 1px solid white;
-	border-top: 1px solid white;
-}
-
-
-.papelera {
-	font-size: 25px;
-}
-
-.papelera:hover {
-	color: #ff073a;
 }
 
 .contenedor .signin .content {
@@ -224,13 +192,6 @@ tr {
 	height: 100%;
 	padding: 40px;
 	top: 0%;
-
-}
-
-.img-fluid {
-	max-width: 30%;
-	height: auto;
-	border-radius: 10px;
 }
 
 .contenedor .signin .content h2 {
@@ -242,14 +203,14 @@ tr {
 .contenedor .signin .content .form {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 25px;
 }
 
 .contenedor .signin .content .form .inputBox {
 	position: relative;
-	width: 100%;
-
+	width: 35%;
+	flex: auto;
 }
 
 .inicioboton {
@@ -258,8 +219,6 @@ tr {
 	color: #000;
 	border-color: #5d9536;
 	font-weight: 600;
-	margin-top: 20%;
-	margin-right: 10px;
 }
 
 .inicioboton:hover {
@@ -323,11 +282,24 @@ p {
 	font-weight: 600;
 }
 
+.signin .content .form .inputBox input[type="submit"] {
+	padding: 10px;
+	background: #5d9536;
+	color: #000;
+	width: 400px;
+	font-weight: 600;
+	font-size: 1.35em;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+	margin-left: 17rem;
+}
+
 .avatar {
 	height: 4rem;
 	border-radius: 50%;
 	margin-top: 0.8rem;
 }
+
 
 .enlacecerrarsesion {
 	margin-top: 1rem;
@@ -346,39 +318,12 @@ p {
 
 }
 
-.signin .content .form .inputBox input[type="submit"] {
-	padding: 10px;
-	background: #5d9536;
-	color: #000;
-	width: 400px;
-	font-weight: 600;
-	font-size: 1.35em;
-	letter-spacing: 0.05em;
-	cursor: pointer;
-	margin-left: 15%;
-}
 
 .error {
 	width: 100%;
 	height: 100%;
 	color: #ff073a;
 	background: #222;
-}
-
-.botoncesta {
-	background-color: #5d9536;
-	border-color: #5d9536;
-	color: #000;
-	font-weight: 600;
-}
-
-.botoncesta:hover {
-	background-color: #5d9536;
-	border-color: #5d9536;
-	color: #000;
-	font-weight: 600;
-	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
-	transform: scale(1.1);
 }
 
 input[type="submit"]:active {
@@ -388,98 +333,6 @@ input[type="submit"]:active {
 input[type="submit"]:hover {
 	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 	transform: scale(1.1);
-}
-
-.contenedorcarta {
-	flex-wrap: wrap;
-}
-
-.contenedortarjeta {
-	background-color: #333;
-	margin: 0 10px 10px 0;
-	height: 15rem;
-}
-
-
-.catalogo {
-
-	flex: 0 0 calc(33.333% - 30px);
-	max-width: calc(33.333% - 30px);
-	margin-right: 15px;
-	margin-bottom: 0;
-	margin-left: 15px;
-	margin-top: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.enlaceimagen {
-	display: flex;
-	justify-content: center;
-}
-
-.img-catalogo {
-	width: 70%;
-	min-width: 250px;
-}
-
-.card-img-top {
-	border-bottom-left-radius: var(--bs-card-inner-border-radius);
-	border-bottom-right-radius: var(--bs-card-inner-border-radius);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card-img-top:hover {
-
-	transform: scale(1.1);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-
-}
-
-h5 {
-	color: ghostwhite;
-}
-
-.cantidad-valor {
-
-	width: 30px;
-	height: 20px;
-	text-align: center;
-	line-height: 0;
-	display: inline-block;
-}
-
-.cantidad-menos,
-.cantidad-mas {
-	margin-right: 2px;
-	margin-left: 2px;
-	position: relative;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 20px;
-	height: 20px;
-	font-size: 20px;
-	background-color: rgb(255, 255, 255);
-	color: rgb(0, 0, 0);
-	cursor: pointer;
-	transition: background-color 0.3s;
-	top: 4px
-}
-
-.icono-menos,
-.icono-mas {
-	position: absolute;
-	top: -8px;
-	display: inline-block;
-}
-
-.card-body {
-	width: 70%;
-	min-width: 250px;
 }
 
 @media (max-width: 900px) {

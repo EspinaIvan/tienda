@@ -64,18 +64,6 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 
 	@Override
 	@Transactional
-	public void cancelarPedido(int idPedido) {
-		// TODO Auto-generated method stub
-		
-		Session session = entityManager.unwrap(Session.class);
-		Pedido pedido = session.find(Pedido.class, idPedido);
-		logger.info("recuperamos el pedido a editar:" + pedido);
-		pedido.setEstado("P.C.");
-		session.merge(pedido);
-	}
-
-	@Override
-	@Transactional
 	public Pedido getPedidoID(int idPedido) {
 		// TODO Auto-generated method stub
 		Session session = entityManager.unwrap(Session.class);
@@ -93,5 +81,13 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 		List<Pedido> listaPedidos = consulta.getResultList();
 
 		return listaPedidos;
+	}
+
+	@Override
+	@Transactional
+	public void editarPedido(Pedido pedido) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		session.merge(pedido);
 	}
 }

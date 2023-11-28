@@ -101,7 +101,9 @@ public class OperacionesUsuario {
 
 	public void cancelarPedidoServicio(int idPedido) {
 		// TODO Auto-generated method stub
-		pedidoDAO.cancelarPedido(idPedido);
+		Pedido pedido = pedidoDAO.getPedidoID(idPedido);
+		pedido.setEstado("P.C.");
+		pedidoDAO.editarPedido(pedido);
 	}
 
 	public List <DetallesPedido> getDetallesPedido(int idPedido) {

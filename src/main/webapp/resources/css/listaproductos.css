@@ -57,7 +57,28 @@ section::before {
 	justify-content: start;
 	flex-direction: column;
 }
+.productobaja {
+	background-color: #ff073a;
+	width: 20px;
+	height: 20px;
+	display: block;
+	border-radius: 50%;
+	margin-left: 9px;
+}
 
+.productoactivo {
+	background-color: #0f0;
+	width: 20px;
+	height: 20px;
+	display: block;
+	border-radius: 50%;
+	margin-left: 9px;
+}
+
+.imagentabla {
+    width: 30%;
+    min-width: 400px;
+}
 .cabecera {
 
 	width: 90%;
@@ -496,4 +517,3 @@ h5 {
 		}
 
 	}
-}

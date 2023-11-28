@@ -64,7 +64,7 @@
 								</c:choose></td>
 							<td><c:if test="${pedido.estado eq 'P.E.'}">
 									<a
-										href="${pageContext.request.contextPath}/usuario/cancelarpedido?idpedido=${pedido.id}">Aceptar
+										href="${pageContext.request.contextPath}/administrador/enviarpedido?idpedido=${pedido.id}">Aceptar
 										Pedido</a>
 								</c:if></td>
 							<td><c:if test="${not empty pedido.num_factura}">
