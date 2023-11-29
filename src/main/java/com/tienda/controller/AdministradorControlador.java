@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -27,6 +28,7 @@ import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesPedidos;
 import com.tienda.servicios.OperacionesUsuario;
 import com.tienda.servicios.OpereacionesProducto;
+import com.tienda.servicios.SubirArchivos;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -199,30 +201,25 @@ public class AdministradorControlador {
 
 	@PostMapping("/procesarproducto")
 	public String procesarPedido(@ModelAttribute("producto") Producto producto,
-			@RequestParam("imagen") MultipartFile imagen, Model modelo) throws IOException {
+			@RequestParam("imagenproducto") MultipartFile imagen, Model modelo) throws IOException {
 
-		if (!imagen.isEmpty()) {
-	        // Procesar el archivo
-	        try {
-	            // Puedes guardar la imagen en un directorio específico
-	            String ruta = "/ruta/del/directorio/donde/guardar";
-	            byte[] bytes = imagen.getBytes();
-	            Path rutaCompleta = Paths.get(ruta + imagen.getOriginalFilename());
-	            Files.write(rutaCompleta, bytes);
+		// Todo el metodo que manda a la imagen
+		System.out.println("Que tiene imagen: " +imagen);
+		if (!imagen.getOriginalFilename().trim().isEmpty()) {
+			
+			String nombreArchivo = StringUtils.cleanPath(imagen.getOriginalFilename());
 
-	            // También puedes guardar el nombre del archivo en tu objeto Producto o en la base de datos
-	            producto.setImagen(imagen.getOriginalFilename());
+			producto.setImagen(nombreArchivo);
 
-	            // Lógica adicional para guardar el producto en la base de datos
-	            // productService.guardarProducto(producto);
+			String subirRuta = "src/main/webapp/resources/imagenes/productos";
 
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
+			SubirArchivos.guardarArchivo(subirRuta, nombreArchivo, imagen);
+		}
+		
+		// Fin de metodo de imagen
 
-		System.out.println("ver que contiene el producto editado en imagen: " + producto);
+		opeProducto.editarProducto(producto);
 
-		return "redirect:/administrador/editarproducto";
+		return "redirect:/administrador/listaproductos";
 	}
 }

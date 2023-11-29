@@ -30,8 +30,9 @@
 		<div class="signin">
 			<div class="content">
 				<h2>Registro</h2>
-				<form:form class="form" action="procesarproducto" modelAttribute="producto"
-					method="POST" enctype="multipart/form-data">
+				<form:form class="form" action="procesarproducto"
+					modelAttribute="producto" method="POST"
+					enctype="multipart/form-data">
 					<div class="inputBox">
 						<form:input path="nombre" type="text" />
 						<i>Nombre</i>
@@ -48,6 +49,7 @@
 						<form:input path="impuesto" type="text" />
 						<i>Impuestos</i>
 					</div>
+					<form:hidden path="id"/>
 					<div class="selecttextbox">
 						<div class="inputBox">
 							<label for="plataforma.id">Plataforma</label>
@@ -61,7 +63,12 @@
 						<div class="inputBox">
 							<form:textarea path="descripcion" placeholder="Descripcion"></form:textarea>
 						</div>
-						<input name="imagen" type="file"/>
+						<div>
+							<c:if test="${not empty producto.imagen}">
+								<img class="imagenfile" alt="" src="${producto.imagen }">
+							</c:if>
+							<input name="imagenproducto" type="file" />
+						</div>
 					</div>
 					<div class="links">
 						<p class="yacuenta">¿Ya Tienes Cuenta?</p>

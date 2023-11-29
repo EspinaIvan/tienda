@@ -66,6 +66,10 @@ section::before {
 	flex-direction: column;
 }
 
+.imagenfile {
+	width: 100px;
+}
+
 
 .cabecera {
 

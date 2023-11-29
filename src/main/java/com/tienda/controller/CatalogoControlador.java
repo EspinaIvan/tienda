@@ -27,6 +27,7 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/catalogo")
 public class CatalogoControlador {
+	
 
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();

@@ -33,4 +33,16 @@ public class OpereacionesProducto {
 		
 		return producto;
 	}
+
+	public void editarProducto(Producto producto) {
+		// TODO Auto-generated method stub
+		Producto productoBD = productoDAO.getProductoId(producto.getId());
+		producto.setFecha_alta(productoBD.getFecha_alta());
+		if(producto.getImagen() == null) {
+			
+			producto.setImagen(productoBD.getImagen());
+			
+		}
+		productoDAO.actualizarProducto(producto);
+	}
 }

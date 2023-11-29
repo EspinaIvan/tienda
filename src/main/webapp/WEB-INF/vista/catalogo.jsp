@@ -31,7 +31,7 @@
 						<a
 							href="${pageContext.request.contextPath}/catalogo/verproducto?id=${productoTemp.id}"
 							class="enlaceimagen"><img class="card-img-top img-catalogo"
-							src="${ productoTemp.imagen}" alt="Card image cap" width=""></a>
+							src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoTemp.imagen}" alt="Card image cap" width=""></a>
 						<div class="card-body">
 							<h5 class="card-title titulo">${ productoTemp.nombre}</h5>
 							<p class="card-text">${ productoTemp.precio}&euro;</p>
