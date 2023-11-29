@@ -1,5 +1,9 @@
 package com.tienda.controller;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,9 +17,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.tienda.dao.pedido.Pedido;
-import com.tienda.dao.pedido.PedidoInterfaceDAO;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.servicios.OperacionesCatalogo;
@@ -37,11 +41,11 @@ public class AdministradorControlador {
 	private OperacionesUsuario opeUsuario;
 	@Autowired
 	private OperacionesPedidos opePedidos;
-	@Autowired 
+	@Autowired
 	private OperacionesCatalogo opeCatalogo;
 	@Autowired
 	private OpereacionesProducto opeProducto;
-	
+
 	@GetMapping("/verlistausuarios")
 	public String verListaUsuarios(HttpSession session, Model modelo) {
 
@@ -140,56 +144,85 @@ public class AdministradorControlador {
 		return "redirect:/administrador/verlistausuarios";
 
 	}
-	
+
 	@GetMapping("/listapedidos")
 	public String listaPedidos(HttpSession session, Model modelo) {
-		
+
 		List<Pedido> listaPedidos = opePedidos.listaPedidos();
 		modelo.addAttribute("listapedidos", listaPedidos);
 		System.out.println("Miramos la lista de pedidos: " + listaPedidos);
-		
+
 		return "administrador/listapedidos";
 	}
-	
+
 	@GetMapping("/enviarpedido")
 	public String pedidoEnviado(@RequestParam("idpedido") int idPedido, HttpSession session, Model modelo) {
-		
+
 		opePedidos.enviarPedido(idPedido);
-		
+
 		return "redirect:/administrador/listapedidos";
 	}
-	
+
 	@GetMapping("/listaproductos")
 	public String listaProductos(HttpSession session, Model modelo) {
-		
+
 		List<Producto> listaProductos = opeCatalogo.catalogoCompletoServicio();
 		modelo.addAttribute("listaproductos", listaProductos);
-		
+
 		return "administrador/listaproductos";
 	}
-	
+
 	@GetMapping("/bajaproducto")
-	public String bajaProducto (@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
-		
+	public String bajaProducto(@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
+
 		opeProducto.darBajaProducto(idProducto);
-		
+
 		return "redirect:/administrador/listaproductos";
 	}
-	
+
 	@GetMapping("/altaproducto")
-	public String altaProducto (@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
-		
+	public String altaProducto(@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
+
 		opeProducto.darAltaProducto(idProducto);
-		
+
 		return "redirect:/administrador/listaproductos";
 	}
-	
+
 	@GetMapping("/editarproducto")
-	public String editarProducto (@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
-		
+	public String editarProducto(@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
+
 		Producto producto = opeProducto.obtenerProducto(idProducto);
 		modelo.addAttribute("producto", producto);
-		
+
 		return "administrador/editarproducto";
+	}
+
+	@PostMapping("/procesarproducto")
+	public String procesarPedido(@ModelAttribute("producto") Producto producto,
+			@RequestParam("imagen") MultipartFile imagen, Model modelo) throws IOException {
+
+		if (!imagen.isEmpty()) {
+	        // Procesar el archivo
+	        try {
+	            // Puedes guardar la imagen en un directorio específico
+	            String ruta = "/ruta/del/directorio/donde/guardar";
+	            byte[] bytes = imagen.getBytes();
+	            Path rutaCompleta = Paths.get(ruta + imagen.getOriginalFilename());
+	            Files.write(rutaCompleta, bytes);
+
+	            // También puedes guardar el nombre del archivo en tu objeto Producto o en la base de datos
+	            producto.setImagen(imagen.getOriginalFilename());
+
+	            // Lógica adicional para guardar el producto en la base de datos
+	            // productService.guardarProducto(producto);
+
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+		System.out.println("ver que contiene el producto editado en imagen: " + producto);
+
+		return "redirect:/administrador/editarproducto";
 	}
 }

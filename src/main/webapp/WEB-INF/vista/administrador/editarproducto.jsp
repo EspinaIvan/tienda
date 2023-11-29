@@ -21,7 +21,7 @@
 <script
 	src="${pageContext.request.contextPath}/resources/js/registro.js" defer></script>
 <meta charset="UTF-8">
-<title>Perfil</title>
+<title>Formulario Registro</title>
 </head>
 <body>
 	<%@ include file="../fragmentos/span.jsp"%>
@@ -29,73 +29,53 @@
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
-				<div>
-					<h2>Editar foto de perfil</h2>
-				</div>
-				<form:form class="form" action="actualizarusuario"
-					modelAttribute="producto" method="POST" id="registroForm">
-					<div class="inputBox">
-						<form:input path="usuario" type="text" />
-						<i>Usuario</i>
-						<form:errors path="usuario" cssClass="error" />
-						<div id="usuarioError" class="error-message">${ExisteUsuario}</div>
-					</div>
+				<h2>Registro</h2>
+				<form:form class="form" action="procesarproducto" modelAttribute="producto"
+					method="POST" enctype="multipart/form-data">
 					<div class="inputBox">
 						<form:input path="nombre" type="text" />
 						<i>Nombre</i>
-						<form:errors path="nombre" cssClass="error" />
 					</div>
 					<div class="inputBox">
-						<form:input path="apellido1" type="text" />
-						<i>Primer Apellido</i>
-						<form:errors path="apellido1" cssClass="error" />
+						<form:input path="precio" type="text" />
+						<i>Precio</i>
 					</div>
 					<div class="inputBox">
-						<form:input path="apellido2" type="text" />
-						<i>Segundo Apellido</i>
-						<form:errors path="apellido2" cssClass="error" />
+						<form:input path="stock" type="text" />
+						<i>Stock</i>
 					</div>
 					<div class="inputBox">
-						<form:input path="dni" type="text" maxlength="9" />
-						<i>DNI</i>
-						<form:errors path="dni" cssClass="error" />
+						<form:input path="impuesto" type="text" />
+						<i>Impuestos</i>
 					</div>
-					<div class="inputBox">
-						<form:input path="email" type="text" />
-						<i>Email</i>
-						<form:errors path="email" cssClass="error" />
-						<div id="usuarioError" class="error-message">${ExisteEmail}</div>
-					</div>
-					<div class="inputBox">
-						<form:input path="telefono" type="text" maxlength="9" />
-						<i>Telefono</i>
-						<form:errors path="telefono" cssClass="error" />
-					</div>
-					<div class="inputBox">
-						<form:input path="provincia" type="text" />
-						<i>Provincia</i>
-					</div>
-					<div class="inputBox">
-						<form:input path="localidad" type="text" />
-						<i>Localidad</i>
-					</div>
-					<div class="inputBox">
-						<form:input path="direccion" type="text" />
-						<i>Direccion</i>
+					<div class="selecttextbox">
+						<div class="inputBox">
+							<label for="plataforma.id">Plataforma</label>
+							<form:select path="plataforma.id">
+								<form:option value="3">XboxX</form:option>
+								<form:option value="2">PlayStation5</form:option>
+								<form:option value="2">PC</form:option>
+								<form:option value="4">Swicht</form:option>
+							</form:select>
+						</div>
+						<div class="inputBox">
+							<form:textarea path="descripcion" placeholder="Descripcion"></form:textarea>
+						</div>
+						<input name="imagen" type="file"/>
 					</div>
 					<div class="links">
-						<p class="yacuenta">¿Deseas cambiar, la conntraseña?</p>
-						<a class="iniciasession"
-							href="${pageContext.request.contextPath}/usuario/cambiarclave">Cambiar
-							Contraseña</a>
+						<p class="yacuenta">¿Ya Tienes Cuenta?</p>
+						<a class="iniciasession" href="login">Inicia Sesión</a>
 					</div>
 					<div class="inputBox botonregistro">
-						<input type="submit" value="Actuarlizar Datos">
+						<input type="submit" value="Actualizar Producto">
 					</div>
 				</form:form>
 			</div>
+
 		</div>
 		<%@ include file="../fragmentos/footer.jsp"%>
+
 	</div>
 </body>
 </html>
