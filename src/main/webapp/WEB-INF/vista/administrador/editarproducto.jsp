@@ -29,8 +29,8 @@
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
-				<h2>Registro</h2>
-				<form:form class="form" action="procesarproducto"
+				<h2>Registro Producto</h2>
+				<form:form class="form" action="${producto.id == 0 ? 'ingresarProducto' : 'procesarproducto'}"
 					modelAttribute="producto" method="POST"
 					enctype="multipart/form-data">
 					<div class="inputBox">
@@ -65,17 +65,14 @@
 						</div>
 						<div>
 							<c:if test="${not empty producto.imagen}">
-								<img class="imagenfile" alt="" src="${producto.imagen }">
+								<img class="imagenfile" alt="" src="${pageContext.request.contextPath}/resources/imagenes/productos/${ producto.imagen}">
 							</c:if>
 							<input name="imagenproducto" type="file" />
 						</div>
 					</div>
-					<div class="links">
-						<p class="yacuenta">¿Ya Tienes Cuenta?</p>
-						<a class="iniciasession" href="login">Inicia Sesión</a>
-					</div>
 					<div class="inputBox botonregistro">
-						<input type="submit" value="Actualizar Producto">
+					
+						<input type="submit" value="${producto.id == 0 ? 'Registar Producto' : 'Actualizar Producto'}">
 					</div>
 				</form:form>
 			</div>

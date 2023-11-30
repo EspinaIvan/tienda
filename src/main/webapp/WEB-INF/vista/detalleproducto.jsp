@@ -27,7 +27,7 @@
 		<div class="signin">
 			<div class="card-deck contenedorcarta">
 				<div class="catalogo">
-					<img class="card-img-top img-catalogo" src="${ productoBD.imagen}"
+					<img class="card-img-top img-catalogo" src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoBD.imagen}"
 						alt="Card image cap" width="">
 					<div class="card-body">
 						<h3 class="card-title titulo">${ productoBD.nombre}</h3>

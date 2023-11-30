@@ -204,7 +204,7 @@ public class AdministradorControlador {
 			@RequestParam("imagenproducto") MultipartFile imagen, Model modelo) throws IOException {
 
 		// Todo el metodo que manda a la imagen
-		System.out.println("Que tiene imagen: " +imagen);
+		
 		if (!imagen.getOriginalFilename().trim().isEmpty()) {
 			
 			String nombreArchivo = StringUtils.cleanPath(imagen.getOriginalFilename());
@@ -221,5 +221,42 @@ public class AdministradorControlador {
 		opeProducto.editarProducto(producto);
 
 		return "redirect:/administrador/listaproductos";
+		
 	}
+	
+	@GetMapping("/añadirProducto")
+	public String agregarProducto(HttpSession session, Model modelo) {
+		
+		Producto producto = new Producto();
+		modelo.addAttribute(producto);
+		
+		return "administrador/editarproducto";
+		
+	}
+	
+	@PostMapping("/ingresarProducto")
+	public String registarProducto(@ModelAttribute("producto") Producto producto,
+			@RequestParam("imagenproducto") MultipartFile imagen, Model modelo) throws IOException {
+		
+
+		if (!imagen.getOriginalFilename().trim().isEmpty()) {
+			
+			String nombreArchivo = StringUtils.cleanPath(imagen.getOriginalFilename());
+
+			producto.setImagen(nombreArchivo);
+
+			String subirRuta = "src/main/webapp/resources/imagenes/productos";
+
+			SubirArchivos.guardarArchivo(subirRuta, nombreArchivo, imagen);
+			
+		}
+		
+		opeProducto.registarProducto(producto);
+
+		
+		return"redirect:/administrador/listaproductos";
+		
+	}
+	
+	
 }

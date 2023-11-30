@@ -16,41 +16,48 @@ public class OperacionesPedidos {
 
 	@Autowired
 	private PedidoInterfaceDAO pedidoDAO;
-	
+
 	public List<Pedido> listaPedidos() {
-		
+
 		List<Pedido> listaPedidos = pedidoDAO.getListasPedidos();
 		Collections.sort(listaPedidos, Comparator.comparing(Pedido::getFecha).reversed());
-		
+
 		return listaPedidos;
 	}
 
 	public void enviarPedido(int idPedido) {
 		// TODO Auto-generated method stub
 		Pedido pedido = pedidoDAO.getPedidoID(idPedido);
-		List <Pedido> listaPedidos = pedidoDAO.getListasPedidos();
-		
-		Pedido ultimoPedidoE = null;
+		List<Pedido> listaPedidos = pedidoDAO.getListasPedidos();
+
+		Pedido ultimoPedidoConFactura= null;
+		int numeroFacturaMasAlto = 0;
+
+		for (Pedido pedidoTemp : listaPedidos) {
+			if ("E.".equals(pedidoTemp.getEstado())) {
+
+				Integer numeroFacturaActual = Integer.parseInt(pedidoTemp.getNum_factura());
+				 
+				
+				if (numeroFacturaActual != null && numeroFacturaActual > numeroFacturaMasAlto) {
+			        ultimoPedidoConFactura = pedidoTemp;
+			        numeroFacturaMasAlto = numeroFacturaActual;
+			    }
+			}
+		}
+
+		if (ultimoPedidoConFactura == null) {
+
+			pedido.setNum_factura("2023000");
+
+		} else {
 
 		
-		for (Pedido pedidoTemp : listaPedidos) {
-		    if ("E.".equals(pedidoTemp.getEstado())) {
-		
-		        if (ultimoPedidoE == null || pedidoTemp.getFecha().compareTo(ultimoPedidoE.getFecha()) > 0) {
-		            ultimoPedidoE = pedidoTemp;
-		        }
-		    }
+			int numero = (numeroFacturaMasAlto + 1);
+			String factura = String.valueOf(numero);
+			pedido.setNum_factura(factura);
 		}
-		
-		if (ultimoPedidoE == null) {
-			
-			pedido.setNum_factura("2023000");
-			
-		}else {
-			
-			pedido.setNum_factura(ultimoPedidoE.getNum_factura() + 1);
-		}
-		
+
 		pedido.setEstado("E.");
 		pedidoDAO.editarPedido(pedido);
 	}

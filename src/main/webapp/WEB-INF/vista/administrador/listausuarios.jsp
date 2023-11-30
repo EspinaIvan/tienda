@@ -22,6 +22,7 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
+		<div class="agregarusuario"><a href="/usuario/registro">+ Agregar Nuevo Usuario</a></div>
 			<table>
 				<thead>
 					<tr>

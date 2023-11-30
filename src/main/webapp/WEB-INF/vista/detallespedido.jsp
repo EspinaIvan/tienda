@@ -30,8 +30,8 @@
 					<c:forEach var="detalles" items="${listaDetallesPedido}">
 						<tr>
 							<td style="width: 50%;"><img
-								src="${detalles.producto.imagen}" class="img-fluid rounded-3"
-								alt="${detalles.producto.imagen}"></td>
+								src="${pageContext.request.contextPath}/resources/imagenes/productos/${detalles.producto.imagen}" class="img-fluid rounded-3"
+								alt="${detalles.producto.nombre}"></td>
 							<td>
 								<h5>${detalles.producto.nombre}</h5>
 							</td>

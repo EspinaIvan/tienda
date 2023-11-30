@@ -25,6 +25,7 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
+		<div class="nuevoproducto"><a href="añadirProducto"> + Agregar Producto </a></div>
 			<div class="contenedor-cards">
 				<table class="tabla">
 					<thead>
@@ -45,8 +46,8 @@
 						<c:forEach var="producto" items="${listaproductos}">
 							<tr>
 								<td>${producto.fecha_alta }</td>
-								<td class="imagentabla"><img src="${producto.imagen}"
-									class="img-fluid rounded-3" alt="${producto.imagen}"></td>
+								<td class="imagentabla"><img src="${pageContext.request.contextPath}/resources/imagenes/productos/${producto.imagen}"
+									class="img-fluid rounded-3" alt="${producto.nombre}"></td>
 								<td>
 									<h5>${producto.nombre}</h5>
 								</td>

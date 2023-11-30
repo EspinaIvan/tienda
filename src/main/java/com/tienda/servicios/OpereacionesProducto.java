@@ -1,5 +1,7 @@
 package com.tienda.servicios;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,5 +46,14 @@ public class OpereacionesProducto {
 			
 		}
 		productoDAO.actualizarProducto(producto);
+	}
+
+	public void registarProducto(Producto producto) {
+		// TODO Auto-generated method stub
+		
+		producto.setFecha_alta(LocalDate.now());
+		producto.setBaja(false);
+		productoDAO.actualizarProducto(producto);
+		
 	}
 }

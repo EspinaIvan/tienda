@@ -98,8 +98,15 @@ public class UsuarioControlador {
 
 			opeUsuario.insertarUsuarioPorDAO(usuario);
 
+			if (usuario == null) {
+				
 			return "redirect:/";
 
+			} else {
+				
+				return "redirect:/administrador/verlistausuarios";
+			}
+			
 		} else {
 
 			modelo.addAttribute("mostrarBotonRegistro", true);
@@ -137,6 +144,12 @@ public class UsuarioControlador {
 //					opeCesta.insertarCesta(cesta, usuarioBD);
 //				
 //				}
+				
+				if(usuarioBD.isBaja()) {
+					
+					modelo.addAttribute("errorInicio", "Contraseña y/o usuario incorrecto");
+					return "login";
+				}
 
 				if (comprando != null) {
 
