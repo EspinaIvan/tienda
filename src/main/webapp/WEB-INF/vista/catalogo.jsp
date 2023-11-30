@@ -25,16 +25,39 @@
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
+			<div class="contenedorfiltro">
+				<form method="post"
+					action="${pageContext.request.contextPath}/catalogo/busquedapalabra">
+					<i class="bi bi-search lupa"></i><input name="busqueda"
+						type="search" placeholder="Buscar"> <input type="submit"
+						value="Buscar" />
+				</form>
+				<form method="post"
+					action="${pageContext.request.contextPath}/catalogo/busquedaselect">
+					<select name="idplataforma">
+						<option value="0" selected>Elige plataforma</option>
+						<option value="1">PlayStation 5</option>
+						<option value="3">Xbox X</option>
+						<option value="4">Nintendo Switch</option>
+						<option value="2">PC</option>
+					</select> <input type="submit" value="Buscar" />
+				</form>
+			</div>
 			<div class="card-deck contenedorcarta">
 				<c:forEach var="productoTemp" items="${catalogo}">
 					<div class="catalogo" style="width: 15rem; margin-bottom: 10px;">
 						<a
 							href="${pageContext.request.contextPath}/catalogo/verproducto?id=${productoTemp.id}"
 							class="enlaceimagen"><img class="card-img-top img-catalogo"
-							src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoTemp.imagen}" alt="Card image cap" width=""></a>
+							src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoTemp.imagen}"
+							alt="Card image cap" width=""></a>
 						<div class="card-body">
 							<h5 class="card-title titulo">${ productoTemp.nombre}</h5>
-							<p class="card-text">${ productoTemp.precio}&euro;</p>
+							<div class="contenedorprecioplataforma">
+								<p class="card-text">${ productoTemp.precio}&euro;</p>
+								<span><img class="imagenplataforma" alt=""
+									src="${productoTemp.plataforma.imagen }"></span>
+							</div>
 							<c:choose>
 								<c:when test="${productoTemp.stock eq 0}">
 									<span class="sinsctok">¡Sin stock!</span>

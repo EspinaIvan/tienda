@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tienda.dao.cesta.Cesta;
+import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.productos.ProductoInterfaceDAO;
 
@@ -54,5 +55,21 @@ public class OperacionesCatalogo {
 		Producto producto = productoDAO.getProductoId(id);
 		
 		return producto;
+	}
+
+	public List<Producto> servicioBusquedaPalabra(String busqueda) {
+		// TODO Auto-generated method stub
+		
+		List<Producto> listaBusqueda = productoDAO.busquedaPalabra(busqueda);
+		return listaBusqueda;
+	}
+
+	public List<Producto> servicioBusquedaPlataforma(int idPlataforma) {
+		// TODO Auto-generated method stub
+		Plataforma plataforma = new Plataforma();
+		plataforma.setId(idPlataforma);
+		List<Producto> listaBusqueda = productoDAO.busquedaPlataforma(plataforma);
+		
+		return listaBusqueda;
 	}
 }

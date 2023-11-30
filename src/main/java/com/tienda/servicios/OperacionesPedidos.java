@@ -1,5 +1,6 @@
 package com.tienda.servicios;
 
+import java.sql.Date;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tienda.dao.pedido.Pedido;
+import com.tienda.dao.pedido.PedidoDAO;
 import com.tienda.dao.pedido.PedidoInterfaceDAO;
 import com.tienda.dao.usuario.Usuario;
 
@@ -60,5 +62,19 @@ public class OperacionesPedidos {
 
 		pedido.setEstado("E.");
 		pedidoDAO.editarPedido(pedido);
+	}
+
+	public List<Pedido> servicioFiltrarFecha(int id, String fechaDesde, String fechaHasta) {
+		// TODO Auto-generated method stub
+		
+		List<Pedido> listaFecha = pedidoDAO.filtarFecha(id, fechaDesde, fechaHasta);
+		
+		return listaFecha;
+	}
+	
+	public static void main(String[] args) {
+		//PedidoInterfaceDAO pedidoDAO = new PedidoDAO();
+		OperacionesPedidos op = new OperacionesPedidos();
+		op.servicioFiltrarFecha(19, "2023-11-24", "2023-11-27");
 	}
 }

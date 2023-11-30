@@ -1,5 +1,6 @@
 package com.tienda.dao.pedido;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -21,30 +22,30 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 	private EntityManager entityManager;
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();
-	
+
 	@Override
 	@Transactional
 	public void insertarPedidoBD(Pedido pedido) {
 		// TODO Auto-generated method stub
 		Session session = entityManager.unwrap(Session.class);
 		session.persist(pedido);
-		
+
 		logger.info("Pedido insertado en la BD");
 	}
-	
+
 	@Override
 	@Transactional
 	public Pedido getUltimoPedido() {
-		
+
 		Session session = entityManager.unwrap(Session.class);
-		
+
 		Query<Pedido> consulta = session.createQuery("FROM Pedido ORDER BY id DESC", Pedido.class);
 		consulta.setMaxResults(1);
-		
+
 		Pedido pedido = consulta.uniqueResult();
-		
+
 		return pedido;
-		
+
 	}
 
 	@Override
@@ -52,14 +53,14 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 	public List<Pedido> listaPedidos(int idUsuario, String ordenarFecha) {
 		// TODO Auto-generated method stub
 		Session session = entityManager.unwrap(Session.class);
-		
-		 String hql = "FROM Pedido p WHERE p.id_usuario = :idusuario ORDER BY p.fecha " + ordenarFecha;
-	        Query<Pedido> query = session.createQuery(hql, Pedido.class);
-	        query.setParameter("idusuario", idUsuario);
-	        
-	        List<Pedido> pedidos = query.getResultList();
-	        
-	        return pedidos;
+
+		String hql = "FROM Pedido p WHERE p.id_usuario = :idusuario ORDER BY p.fecha " + ordenarFecha;
+		Query<Pedido> query = session.createQuery(hql, Pedido.class);
+		query.setParameter("idusuario", idUsuario);
+
+		List<Pedido> pedidos = query.getResultList();
+
+		return pedidos;
 	}
 
 	@Override
@@ -89,5 +90,18 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 		// TODO Auto-generated method stub
 		Session session = entityManager.unwrap(Session.class);
 		session.merge(pedido);
+	}
+
+	@Override
+	@Transactional
+	public List<Pedido> filtarFecha(int id, String fechaDesde, String fechaHasta) {
+		// TODO Auto-generated method stub
+
+		Session session = entityManager.unwrap(Session.class);
+		String hql = "FROM Pedido p WHERE p.id_usuario = :id AND p.fecha BETWEEN :fechaDesde AND :fechaHasta";
+		List<Pedido> listaPedidos = session.createQuery(hql, Pedido.class).setParameter("id", id)
+				.setParameter("fechaDesde", fechaDesde).setParameter("fechaHasta", fechaHasta).getResultList();
+
+		return listaPedidos;
 	}
 }

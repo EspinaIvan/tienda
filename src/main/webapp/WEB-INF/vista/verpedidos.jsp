@@ -36,7 +36,13 @@
 							</select>
 							<button type="submit">Ordenar</button>
 						</form>
-
+						<form action="filtarfecha" method="POST">
+							<label>Desde:</label>
+							<input type="date" name="fechaDesde">
+							<label>Hasta:</label>
+							<input type="date" name="fechaHasta">
+							<button type="submit">Buscar</button>
+						</form>
 					</div>
 					<table>
 						<thead>

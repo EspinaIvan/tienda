@@ -1,5 +1,6 @@
 package com.tienda.controller;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +27,7 @@ import com.tienda.dao.usuario.UsuarioDAO;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
 import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OperacionesContraseña;
+import com.tienda.servicios.OperacionesPedidos;
 import com.tienda.servicios.OperacionesUsuario;
 
 import io.micrometer.common.util.StringUtils;
@@ -42,6 +44,9 @@ public class UsuarioControlador {
 	@Autowired
 	private OperacionesCesta opeCesta;
 
+	@Autowired 
+	private OperacionesPedidos opePedido;
+	
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();
 
@@ -330,4 +335,15 @@ public class UsuarioControlador {
 		
 		return "redirect:/administrador/verlistausuarios";
 	}
+	
+	@PostMapping("/filtarfecha")
+	public String filtrarFecha (@RequestParam("fechaDesde") String fechaDesde, @RequestParam("fechaHasta") String fechaHasta, Model modelo, HttpSession session, RedirectAttributes redirigir) {
+		
+		Usuario usuario = (Usuario) session.getAttribute("usuario");
+		
+		List<Pedido> listaFecha = opePedido.servicioFiltrarFecha(usuario.getId(), fechaDesde, fechaHasta );
+		
+		return "redirect:/usuario/verpedidos";
+	}
+
 }
