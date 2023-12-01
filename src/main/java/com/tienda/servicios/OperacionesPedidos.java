@@ -1,6 +1,8 @@
 package com.tienda.servicios;
 
-import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -9,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tienda.dao.pedido.Pedido;
-import com.tienda.dao.pedido.PedidoDAO;
 import com.tienda.dao.pedido.PedidoInterfaceDAO;
-import com.tienda.dao.usuario.Usuario;
 
 @Service
 public class OperacionesPedidos {
@@ -64,17 +64,15 @@ public class OperacionesPedidos {
 		pedidoDAO.editarPedido(pedido);
 	}
 
-	public List<Pedido> servicioFiltrarFecha(int id, String fechaDesde, String fechaHasta) {
+	public List<Pedido> servicioFiltrarFecha(int id, LocalDate  fechaDesde, LocalDate  fechaHasta) {
 		// TODO Auto-generated method stub
 		
-		List<Pedido> listaFecha = pedidoDAO.filtarFecha(id, fechaDesde, fechaHasta);
+		LocalDateTime fechaDesdeInicio = fechaDesde.atStartOfDay();
+	    LocalDateTime fechaHastaFin = fechaHasta.atTime(LocalTime.MAX);
+	    
+		List<Pedido> listaFecha = pedidoDAO.filtarFecha(id, fechaDesdeInicio, fechaHastaFin);
 		
 		return listaFecha;
 	}
 	
-	public static void main(String[] args) {
-		//PedidoInterfaceDAO pedidoDAO = new PedidoDAO();
-		OperacionesPedidos op = new OperacionesPedidos();
-		op.servicioFiltrarFecha(19, "2023-11-24", "2023-11-27");
-	}
 }

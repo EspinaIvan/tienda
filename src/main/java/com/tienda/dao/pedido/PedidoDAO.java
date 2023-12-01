@@ -1,6 +1,6 @@
 package com.tienda.dao.pedido;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -9,8 +9,6 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.tienda.dao.usuario.Usuario;
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
@@ -94,13 +92,13 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 
 	@Override
 	@Transactional
-	public List<Pedido> filtarFecha(int id, String fechaDesde, String fechaHasta) {
+	public List<Pedido> filtarFecha(int id, LocalDateTime fechaDesdeInicio, LocalDateTime fechaHastaFin) {
 		// TODO Auto-generated method stub
 
 		Session session = entityManager.unwrap(Session.class);
-		String hql = "FROM Pedido p WHERE p.id_usuario = :id AND p.fecha BETWEEN :fechaDesde AND :fechaHasta";
+		String hql = "FROM Pedido p WHERE p.id_usuario = :id AND p.fecha BETWEEN :fechaDesde AND :fechaHasta ORDER BY p.fecha DESC";
 		List<Pedido> listaPedidos = session.createQuery(hql, Pedido.class).setParameter("id", id)
-				.setParameter("fechaDesde", fechaDesde).setParameter("fechaHasta", fechaHasta).getResultList();
+				.setParameter("fechaDesde", fechaDesdeInicio).setParameter("fechaHasta", fechaHastaFin).getResultList();
 
 		return listaPedidos;
 	}

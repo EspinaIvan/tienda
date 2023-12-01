@@ -1,6 +1,7 @@
 package com.tienda.controller;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -288,6 +289,16 @@ public class UsuarioControlador {
 
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
 
+		if (modelo.getAttribute("listafecha") != null) {
+			
+			List<Pedido> pedidos = (List<Pedido>) modelo.getAttribute("listafecha");
+			
+			modelo.addAttribute("pedidos", pedidos);
+
+			logger.info("Vemos que contiene la lista de ver pedidos: " + pedidos);
+			return "verpedidos";
+			
+		}
 		if (ordenarFecha.equals("DESC")) {
 
 		} else {
@@ -336,12 +347,14 @@ public class UsuarioControlador {
 		return "redirect:/administrador/verlistausuarios";
 	}
 	
-	@PostMapping("/filtarfecha")
-	public String filtrarFecha (@RequestParam("fechaDesde") String fechaDesde, @RequestParam("fechaHasta") String fechaHasta, Model modelo, HttpSession session, RedirectAttributes redirigir) {
+	@PostMapping("/filtrarfecha")
+	public String filtrarFecha (@RequestParam("fechaDesde") LocalDate  fechaDesde, @RequestParam("fechaHasta") LocalDate  fechaHasta, Model modelo, HttpSession session, RedirectAttributes redirigir) {
 		
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
 		
 		List<Pedido> listaFecha = opePedido.servicioFiltrarFecha(usuario.getId(), fechaDesde, fechaHasta );
+		
+		redirigir.addFlashAttribute("listafecha", listaFecha);
 		
 		return "redirect:/usuario/verpedidos";
 	}
