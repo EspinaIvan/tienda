@@ -38,9 +38,9 @@
 						</form>
 						<form action="filtrarfecha" method="POST">
 							<label>Desde:</label>
-							<input type="date" name="fechaDesde">
+							<input type="date" name="fechaDesde" required>
 							<label>Hasta:</label>
-							<input type="date" name="fechaHasta">
+							<input type="date" name="fechaHasta" required>
 							<button type="submit">Buscar</button>
 						</form>
 					</div>

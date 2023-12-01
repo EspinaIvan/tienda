@@ -26,6 +26,7 @@ import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.dao.usuario.UsuarioDAO;
 import com.tienda.dao.usuario.UsuarioInterfaceDAO;
+import com.tienda.servicios.EnviarCorreo;
 import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesPedidos;
@@ -40,14 +41,17 @@ import jakarta.validation.Valid;
 public class UsuarioControlador {
 
 	@Autowired
+	private EnviarCorreo servicioEmail;
+
+	@Autowired
 	private OperacionesUsuario opeUsuario;
 
 	@Autowired
 	private OperacionesCesta opeCesta;
 
-	@Autowired 
+	@Autowired
 	private OperacionesPedidos opePedido;
-	
+
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();
 
@@ -105,14 +109,14 @@ public class UsuarioControlador {
 			opeUsuario.insertarUsuarioPorDAO(usuario);
 
 			if (usuario == null) {
-				
-			return "redirect:/";
+
+				return "redirect:/";
 
 			} else {
-				
+
 				return "redirect:/administrador/verlistausuarios";
 			}
-			
+
 		} else {
 
 			modelo.addAttribute("mostrarBotonRegistro", true);
@@ -150,9 +154,9 @@ public class UsuarioControlador {
 //					opeCesta.insertarCesta(cesta, usuarioBD);
 //				
 //				}
-				
-				if(usuarioBD.isBaja()) {
-					
+
+				if (usuarioBD.isBaja()) {
+
 					modelo.addAttribute("errorInicio", "Contraseña y/o usuario incorrecto");
 					return "login";
 				}
@@ -168,7 +172,7 @@ public class UsuarioControlador {
 					return "redirect:/";
 
 				} else {
-					
+
 					return "redirect:/administrador/verlistausuarios";
 				}
 			}
@@ -290,14 +294,14 @@ public class UsuarioControlador {
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
 
 		if (modelo.getAttribute("listafecha") != null) {
-			
+
 			List<Pedido> pedidos = (List<Pedido>) modelo.getAttribute("listafecha");
-			
+
 			modelo.addAttribute("pedidos", pedidos);
 
 			logger.info("Vemos que contiene la lista de ver pedidos: " + pedidos);
 			return "verpedidos";
-			
+
 		}
 		if (ordenarFecha.equals("DESC")) {
 
@@ -343,20 +347,37 @@ public class UsuarioControlador {
 			cerrarSession(session);
 			return "redirect:/";
 		}
-		
+
 		return "redirect:/administrador/verlistausuarios";
 	}
-	
+
 	@PostMapping("/filtrarfecha")
-	public String filtrarFecha (@RequestParam("fechaDesde") LocalDate  fechaDesde, @RequestParam("fechaHasta") LocalDate  fechaHasta, Model modelo, HttpSession session, RedirectAttributes redirigir) {
-		
+	public String filtrarFecha(@RequestParam("fechaDesde") LocalDate fechaDesde,
+			@RequestParam("fechaHasta") LocalDate fechaHasta, Model modelo, HttpSession session,
+			RedirectAttributes redirigir) {
+
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
-		
-		List<Pedido> listaFecha = opePedido.servicioFiltrarFecha(usuario.getId(), fechaDesde, fechaHasta );
-		
+
+		List<Pedido> listaFecha = opePedido.servicioFiltrarFecha(usuario.getId(), fechaDesde, fechaHasta);
+
 		redirigir.addFlashAttribute("listafecha", listaFecha);
-		
+
 		return "redirect:/usuario/verpedidos";
 	}
 
+	@GetMapping("/contactanos")
+	public String contactanos() {
+
+		return "contactanos";
+	}
+
+	@PostMapping("/enviarCorreo")
+	public String enviarCorreo(@RequestParam String destinatario, @RequestParam("asunto") String asunto,
+			@RequestParam("cuerpo") String cuerpo, HttpSession session) {
+
+		Usuario usuario = (Usuario) session.getAttribute("usuario");
+		servicioEmail.enviarEmail( "proyectotiendaserbatic@gmail.com", "proyectotiendaserbatic@gmail.com", asunto, cuerpo);
+
+		return "redirect:/usuario/contactanos?enviado=true";
+	}
 }
