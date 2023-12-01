@@ -36,10 +36,9 @@
 					action="${pageContext.request.contextPath}/catalogo/busquedaselect">
 					<select name="idplataforma">
 						<option value="0" selected>Elige plataforma</option>
-						<option value="1">PlayStation 5</option>
-						<option value="3">Xbox X</option>
-						<option value="4">Nintendo Switch</option>
-						<option value="2">PC</option>
+						<c:forEach var="plataforma" items="${listaplataformas}">
+							<option value="${plataforma.id}">${plataforma.nombre}</option>
+						</c:forEach>
 					</select> <input type="submit" value="Buscar" />
 				</form>
 			</div>

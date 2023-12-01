@@ -10,14 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 
 import com.tienda.dao.cesta.Cesta;
-import com.tienda.dao.productos.ProductoInterfaceDAO;
-import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.dao.productos.Producto;
-
+import com.tienda.servicios.OperacionesCatalogo;
+import com.tienda.servicios.ServicioOperacionesConfiguracion;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -27,13 +24,20 @@ public class Controlador {
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();
 	@Autowired
-	private ProductoInterfaceDAO productosDAO;
-	@Autowired
 	private OperacionesCatalogo opeCatalogo;
+	@Autowired
+	private ServicioOperacionesConfiguracion opeConfiguracion;
 	
 	@GetMapping(value = "")
 	public String mostrarSaludo(HttpSession session, Model modelo) {
 		// Agregar datos al modelo
+		
+		session.setAttribute("nombre", opeConfiguracion.servicioGetNombre());
+		session.setAttribute("logo", opeConfiguracion.servicioGetLogo());
+		session.setAttribute("direccion", opeConfiguracion.servicioGetDireccion());
+		session.setAttribute("CIF", opeConfiguracion.servicioGetCIF());
+		
+		System.out.println("Miramos logo: " + opeConfiguracion.servicioGetLogo());
 		modelo.addAttribute("mensaje", "Hola desde GIT");
 		Map<Integer, Cesta> cesta;
 		

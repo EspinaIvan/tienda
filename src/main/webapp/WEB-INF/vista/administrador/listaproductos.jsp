@@ -25,7 +25,9 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
-		<div class="nuevoproducto"><a href="añadirProducto"> + Agregar Producto </a></div>
+		<div class="nuevoproducto"><a href="añadirProducto"> + Agregar Producto </a>
+		<span><a href="añadirPlataforma"> Lista Plataformas </a></span>
+		</div>
 			<div class="contenedor-cards">
 				<table class="tabla">
 					<thead>

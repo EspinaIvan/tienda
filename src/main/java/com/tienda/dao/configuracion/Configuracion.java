@@ -1,6 +1,4 @@
-package com.tienda.dao.pedido;
-
-import java.time.LocalDateTime;
+package com.tienda.dao.configuracion;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,24 +14,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="pedido")
-public class Pedido {
+@Table(name="configuracion")
+public class Configuracion {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
-	private int id_usuario;
+	private String clave;
 	
-	private LocalDateTime fecha;
+	private String valor;
 	
-	private String metodo_pago;
+	private String tipo;
 	
-	private String estado;
-	
-	private String num_factura;
-	
-	private double total;
-
 }

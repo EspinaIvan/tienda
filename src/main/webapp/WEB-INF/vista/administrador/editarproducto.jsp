@@ -54,10 +54,7 @@
 						<div class="inputBox">
 							<label for="plataforma.id">Plataforma</label>
 							<form:select path="plataforma.id">
-								<form:option value="3">XboxX</form:option>
-								<form:option value="1">PlayStation5</form:option>
-								<form:option value="2">PC</form:option>
-								<form:option value="4">Swicht</form:option>
+								<form:options items="${listaplataforma}" itemValue="id" itemLabel="nombre" />
 							</form:select>
 						</div>
 						<div class="inputBox">

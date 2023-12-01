@@ -112,17 +112,12 @@ public class UsuarioControlador {
 
 				return "redirect:/";
 
-			} else {
-
-				return "redirect:/administrador/verlistausuarios";
 			}
 
-		} else {
-
-			modelo.addAttribute("mostrarBotonRegistro", true);
-			return "registro";
 		}
 
+		modelo.addAttribute("mostrarBotonRegistro", true);
+		return "registro";
 	}
 
 	@GetMapping("/login")
@@ -372,12 +367,12 @@ public class UsuarioControlador {
 	}
 
 	@PostMapping("/enviarCorreo")
-	public String enviarCorreo(@RequestParam String destinatario, @RequestParam("asunto") String asunto,
+	public String enviarCorreo(@RequestParam("remitente") String remitente, @RequestParam("asunto") String asunto,
 			@RequestParam("cuerpo") String cuerpo, HttpSession session) {
 
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
-		servicioEmail.enviarEmail( "proyectotiendaserbatic@gmail.com", "proyectotiendaserbatic@gmail.com", asunto, cuerpo);
-
+		servicioEmail.enviarEmail(remitente, asunto, cuerpo);
+		servicioEmail.llegadaMensaje(asunto, usuario);
 		return "redirect:/usuario/contactanos?enviado=true";
 	}
 }

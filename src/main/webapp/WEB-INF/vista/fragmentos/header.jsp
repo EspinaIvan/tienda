@@ -57,7 +57,8 @@
 						</c:otherwise>
 					</c:choose>
 				</c:if>
-				<c:if test="${sessionScope.usuario.roles.id == 1 or (empty usuario)}">
+				<c:if
+					test="${sessionScope.usuario.roles.id == 1 or (empty usuario)}">
 					<a href="${pageContext.request.contextPath}/cesta/vercesta"
 						class="enlace-cesta"><i class="bi bi-cart4 icon-carrito"></i></a>
 					<c:if test="${fn:length(cesta) > 0}">
@@ -67,4 +68,5 @@
 				<div></div>
 			</div>
 		</div>
+	</div>
 </header>

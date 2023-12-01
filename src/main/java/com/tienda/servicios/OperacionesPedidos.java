@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.pedido.PedidoInterfaceDAO;
+import com.tienda.dao.usuario.Usuario;
+import com.tienda.dao.usuario.UsuarioInterfaceDAO;
 
 @Service
 public class OperacionesPedidos {
@@ -19,6 +21,12 @@ public class OperacionesPedidos {
 	@Autowired
 	private PedidoInterfaceDAO pedidoDAO;
 
+	@Autowired
+	private UsuarioInterfaceDAO usuarioDAO;
+	
+	@Autowired
+	private EnviarCorreo servicioEmail;
+	
 	public List<Pedido> listaPedidos() {
 
 		List<Pedido> listaPedidos = pedidoDAO.getListasPedidos();
@@ -60,6 +68,8 @@ public class OperacionesPedidos {
 			pedido.setNum_factura(factura);
 		}
 
+		Usuario usuario = usuarioDAO.getUsuarioId(pedido.getId_usuario());
+		servicioEmail.enviadoPedido(pedido, usuario);
 		pedido.setEstado("E.");
 		pedidoDAO.editarPedido(pedido);
 	}

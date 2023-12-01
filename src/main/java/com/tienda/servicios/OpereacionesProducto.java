@@ -1,10 +1,13 @@
 package com.tienda.servicios;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tienda.dao.plataforma.Plataforma;
+import com.tienda.dao.plataforma.PlataformaInterfaceDAO;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.productos.ProductoInterfaceDAO;
 
@@ -13,6 +16,8 @@ public class OpereacionesProducto {
 
 	@Autowired
 	private ProductoInterfaceDAO productoDAO;
+	@Autowired
+	private PlataformaInterfaceDAO plataformaDAO;
 
 	public void darBajaProducto(int idProducto) {
 
@@ -54,6 +59,14 @@ public class OpereacionesProducto {
 		producto.setFecha_alta(LocalDate.now());
 		producto.setBaja(false);
 		productoDAO.actualizarProducto(producto);
+		
+	}
+	
+	public List<Plataforma> servicioListaPlataformas() {
+		
+		List<Plataforma> listaPlataformas = plataformaDAO.listaPlataformas();
+		
+		return listaPlataformas;
 		
 	}
 }

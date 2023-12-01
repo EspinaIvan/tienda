@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/inicio.css">
+	href="${pageContext.request.contextPath}/resources/css/contactanos.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
@@ -21,13 +21,17 @@
 	<%@ include file="fragmentos/span.jsp"%>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
-		
 		<div class="signin">
+			<c:if test="${param.enviado == 'true'}">
+				<p class="enviocorrecto">Mensaje Enviado Correctamente</p>
+			</c:if>
 			<form action="enviarCorreo" method="post">
 				<label for="destinatario">Tu Email:</label> <input type="text"
-					id="destinatario" name="destinatario" value="proyectotiendaserbatic@gmail.com" readonly="readonly"> <br> <label
-					for="asunto">Asunto:</label> <input type="text" id="asunto"
-					name="asunto" required> <br> <label for="cuerpo">Cuerpo:</label>
+					id="destinatario" name="remitente"
+					value="${sessionScope.usuario.email }" readonly="readonly">
+				<br> <label for="asunto">Asunto:</label> <input type="text"
+					id="asunto" name="asunto" required> <br> <label
+					for="cuerpo">Cuerpo:</label>
 				<textarea id="cuerpo" name="cuerpo" required></textarea>
 				<br>
 				<button type="submit">Enviar Correo</button>

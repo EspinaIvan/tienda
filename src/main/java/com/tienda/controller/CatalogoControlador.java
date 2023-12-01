@@ -12,17 +12,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tienda.dao.cesta.Cesta;
-import com.tienda.dao.productos.ProductoInterfaceDAO;
+import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
-import com.tienda.dao.usuario.Usuario;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesCesta;
+import com.tienda.servicios.OpereacionesProducto;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -37,6 +36,8 @@ public class CatalogoControlador {
 	private OperacionesCatalogo opeCatalogo;
 	@Autowired
 	private OperacionesCesta opeCesta;
+	@Autowired
+	private OpereacionesProducto opeProducto;
 
 	@GetMapping("/vercatalogo")
 	public String mostarCatalogo(HttpSession session, Model modelo) {
@@ -67,9 +68,12 @@ public class CatalogoControlador {
 
 		}
 
+		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
 		Cesta productoCesta = new Cesta();
 		modelo.addAttribute("producto", productoCesta);
+		modelo.addAttribute("listaplataformas", listaPlataformas);
 
+		System.out.println("Lista de plataformas: " + listaPlataformas);
 		return "catalogo";
 	}
 

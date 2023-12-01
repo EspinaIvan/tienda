@@ -1,9 +1,6 @@
 package com.tienda.controller;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -21,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.tienda.dao.pedido.Pedido;
+import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
 import com.tienda.servicios.OperacionesCatalogo;
@@ -193,9 +191,10 @@ public class AdministradorControlador {
 	@GetMapping("/editarproducto")
 	public String editarProducto(@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
 
+		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
 		Producto producto = opeProducto.obtenerProducto(idProducto);
 		modelo.addAttribute("producto", producto);
-
+		modelo.addAttribute("listaplataforma", listaPlataformas);
 		return "administrador/editarproducto";
 	}
 
@@ -258,5 +257,13 @@ public class AdministradorControlador {
 		
 	}
 	
+	@GetMapping("/añadirPlataforma") 
+	public String listaPlataformas (Model modelo) {
+		
+		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
+		modelo.addAttribute("listaplataformas", listaPlataformas);
+		
+		return "administrador/listaplataformas";
+	}
 	
 }
