@@ -94,4 +94,12 @@ public class OperacionesCesta {
 			System.out.println( "Articulo desde el for "+ articulo);
 		}
 	}
+
+	public List<Cesta> recuperarCesta(int id) {
+		// TODO Auto-generated method stub
+		
+		List<Cesta> cestaBD = cestaDAO.getCesta(id);
+		
+		return cestaBD;
+	}
 }

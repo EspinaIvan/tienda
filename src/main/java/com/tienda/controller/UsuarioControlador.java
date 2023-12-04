@@ -1,7 +1,6 @@
 package com.tienda.controller;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -17,17 +16,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tienda.dao.cesta.Cesta;
-import com.tienda.dao.cesta.CestaInterfaceDAO;
 import com.tienda.dao.detallespedido.DetallesPedido;
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.usuario.Usuario;
-import com.tienda.dao.usuario.UsuarioDAO;
-import com.tienda.dao.usuario.UsuarioInterfaceDAO;
 import com.tienda.servicios.EnviarCorreo;
 import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OperacionesContraseña;
@@ -35,7 +30,6 @@ import com.tienda.servicios.OperacionesPedidos;
 import com.tienda.servicios.OperacionesUsuario;
 import com.tienda.servicios.SubirArchivos;
 
-import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
@@ -145,8 +139,8 @@ public class UsuarioControlador {
 				session.setAttribute("usuario", usuarioBD);
 				Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
 
-				System.out.println("Ver todo lo que contiene el usuario al incioar sesion: " + usuarioBD);
 				// RECUPERAR LA CESTA SI TIENE UNA GUARDADA EN LA BD
+
 //				if(cesta != null) {
 //					
 //					opeCesta.insertarCesta(cesta, usuarioBD);
@@ -205,7 +199,7 @@ public class UsuarioControlador {
 			Model modelo, HttpSession session, @RequestParam("imagenavatar") MultipartFile imagen) throws IOException {
 
 		Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
-System.out.println("miramos el usuario al confirmar cambios perfil: " + usuarioSesion);
+		System.out.println("miramos el usuario al confirmar cambios perfil: " + usuarioSesion);
 		boolean validado = true;
 
 		if (resultado.hasErrors()) {
@@ -397,15 +391,15 @@ System.out.println("miramos el usuario al confirmar cambios perfil: " + usuarioS
 		servicioEmail.llegadaMensaje(asunto, usuario);
 		return "redirect:/usuario/contactanos?enviado=true";
 	}
-	
+
 	@GetMapping("/verfactura")
 	public String verFactura(@RequestParam("idpedido") int idPedido, Model modelo, HttpSession session) {
-		
+
 		Pedido pedido = opePedido.servicioGetPedido(idPedido);
 		modelo.addAttribute("pedido", pedido);
 		List<DetallesPedido> listaDetallesPedido = opeUsuario.getDetallesPedido(idPedido);
 		modelo.addAttribute("listaDetallesPedido", listaDetallesPedido);
-		
+
 		return "factura";
 	}
 }

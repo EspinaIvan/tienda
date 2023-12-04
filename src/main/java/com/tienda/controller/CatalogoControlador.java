@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
+import com.tienda.dao.usuario.Usuario;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OpereacionesProducto;

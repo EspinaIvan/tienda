@@ -153,8 +153,6 @@ public class CestaControlador {
 			}
 		}
 
-		// TODO meter la logica de restar stock y poner en la vista el mensaje y de
-		// carrito vacio
 		
 		opeCatalogo.modificarStock(cesta);
 		opeCesta.finalizarCompra(pedido, usuario.getId());

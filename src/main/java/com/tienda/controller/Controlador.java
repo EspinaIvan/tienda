@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,8 +19,7 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class Controlador {
 	
-	@Autowired
-	static Logger logger = LogManager.getRootLogger();
+	
 	@Autowired
 	private OperacionesCatalogo opeCatalogo;
 	@Autowired
@@ -42,8 +39,7 @@ public class Controlador {
 		if(session.getAttribute("cesta") == null) {
 			
 			cesta = new HashMap<>();
-			String mensaje= "Prueba de creacion de archivo logs";
-			logger.warn(mensaje);
+
 		
 			
 		} else {

@@ -1,10 +1,14 @@
 package com.tienda.dao.configuracion;
 
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import com.tienda.dao.pedido.Pedido;
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
@@ -83,4 +87,38 @@ Session session = entityManager.unwrap(Session.class);
 		return configuracion;
 	}
 
+	@Override
+	@Transactional
+	public List<Configuracion> getConfiguraciones() {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+	    
+	    List<Configuracion> configuraciones = session.createQuery("FROM Configuracion", Configuracion.class)
+	            .getResultList();
+	    
+		return configuraciones;
+	}
+
+	@Override
+	@Transactional
+	public Configuracion getConfiguracionID(int id) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		
+		Configuracion configuracion = session.find(Configuracion.class, id);
+		
+		return configuracion;
+	}
+
+	@Override
+	@Transactional
+	public void editarConfiguracion(Configuracion configuracion) {
+		// TODO Auto-generated method stub
+		
+			Session session = entityManager.unwrap(Session.class);
+			
+			session.merge(configuracion);
+			
+	}
 }

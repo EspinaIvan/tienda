@@ -143,7 +143,7 @@ public class OperacionesPedidos {
 	}
 
 	@Async
-	@Scheduled(fixedRate = 120000)
+	@Scheduled(initialDelay = 120000, fixedRate = 120000)
 	public void procesarPedidos() {
 		
 		if (ejecutarProcesamiento) {

@@ -1,5 +1,7 @@
 package com.tienda.servicios;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,5 +51,21 @@ public class ServicioOperacionesConfiguracion {
 		Configuracion configuracion = configuracionDAO.getEmail();
 		
 		return configuracion;
+	}
+	
+	public List<Configuracion> servicioGetConfiguraciones() {
+		
+		List<Configuracion> configuraciones = configuracionDAO.getConfiguraciones();
+		
+		return configuraciones;
+	}
+
+	public void servicioEditarConfiguracion(String valor, int id) {
+		// TODO Auto-generated method stub
+		
+		Configuracion configuracion = configuracionDAO.getConfiguracionID(id);
+		configuracion.setValor(valor);
+		configuracionDAO.editarConfiguracion(configuracion);
+		
 	}
 }

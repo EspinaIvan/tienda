@@ -99,3 +99,799 @@
 2023-12-03 23:38:34,993 INFO  [http-nio-8080-exec-2] Vemos que contiene la lista de ver pedidos: [Pedido(id=22, id_usuario=19, fecha=2023-12-03T23:26:19, metodo_pago=EFECTIVO, estado=E., num_factura=2023008, total=161.57), Pedido(id=21, id_usuario=19, fecha=2023-12-03T20:18:23, metodo_pago=EFECTIVO, estado=E., num_factura=2023007, total=209.96), Pedido(id=20, id_usuario=19, fecha=2023-12-03T20:14:32, metodo_pago=EFECTIVO, estado=E., num_factura=2023006, total=209.96), Pedido(id=19, id_usuario=19, fecha=2023-12-03T20:09:11, metodo_pago=EFECTIVO, estado=E., num_factura=2023005, total=104.98), Pedido(id=18, id_usuario=19, fecha=2023-11-30T13:25:40, metodo_pago=EFECTIVO, estado=E., num_factura=2023004, total=128.94), Pedido(id=15, id_usuario=19, fecha=2023-11-26T19:07:24, metodo_pago=EFECTIVO, estado=E., num_factura=2023001, total=368.16), Pedido(id=14, id_usuario=19, fecha=2023-11-25T16:09:10, metodo_pago=EFECTIVO, estado=E., num_factura=2023000, total=52.49)]
 2023-12-03 23:54:09,123 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(24)-127.0.0.1] Application shutdown requested.
 2023-12-03 23:54:09,139 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(24)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 12:51:31,563 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 12:51:31,963 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 21588 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 12:51:31,966 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 12:51:32,498 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 12:51:32,520 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-12-04 12:51:33,000 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 12:51:33,357 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1339 ms
+2023-12-04 12:51:33,914 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 12:51:34,800 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 12:51:34,809 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 12:51:34,812 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 12:51:34,814 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 12:51:34,855 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 12:51:34,861 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 12:51:34,868 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 12:51:34,909 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 12:51:34,915 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 12:51:34,920 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 12:51:34,921 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 12:51:34,951 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 12:51:35,071 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 12:51:35,239 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 12:51:35,246 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.621 seconds (process running for 4.407)
+2023-12-04 12:59:17,437 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(17)-127.0.0.1] Application shutdown requested.
+2023-12-04 12:59:17,454 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(17)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 12:59:19,692 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 12:59:20,088 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 17004 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 12:59:20,091 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 12:59:20,602 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 12:59:20,623 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 12:59:20,996 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 12:59:21,324 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1188 ms
+2023-12-04 12:59:21,829 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 12:59:22,705 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 12:59:22,715 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 12:59:22,718 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 12:59:22,719 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 12:59:22,760 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 12:59:22,767 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 12:59:22,773 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 12:59:22,812 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 12:59:22,817 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 12:59:22,823 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 12:59:22,824 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 12:59:22,853 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 12:59:22,972 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 12:59:23,134 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 12:59:23,143 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.384 seconds (process running for 4.15)
+2023-12-04 12:59:29,395 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 12:59:29,397 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-12-04 12:59:29,488 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:00:27,864 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(9)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:00:27,880 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(9)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:00:30,979 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:00:31,363 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 43928 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:00:31,365 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:00:31,854 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:00:31,875 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:00:32,261 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:00:32,584 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1181 ms
+2023-12-04 13:00:33,088 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:00:33,967 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:00:33,976 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:00:33,979 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:00:33,980 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:00:34,024 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:00:34,032 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:00:34,038 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:00:34,079 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:00:34,085 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:00:34,091 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:00:34,092 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:00:34,121 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:00:34,234 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:00:34,399 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:00:34,406 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.363 seconds (process running for 4.114)
+2023-12-04 13:00:46,962 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:00:46,963 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 13:00:47,045 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:01:56,946 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:01:56,963 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(10)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:01:59,137 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:01:59,539 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 57568 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:01:59,541 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:02:00,065 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:02:00,091 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:02:00,484 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:02:00,799 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1217 ms
+2023-12-04 13:02:01,333 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:02:02,232 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:02:02,241 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:02:02,243 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:02:02,245 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:02:02,285 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:02:02,292 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:02:02,298 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:02:02,336 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:02:02,341 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:02:02,346 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:02:02,347 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:02:02,375 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:02:02,494 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:02:02,658 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:02:02,665 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.465 seconds (process running for 4.21)
+2023-12-04 13:02:25,836 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:02:25,837 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:02:25,919 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:05:24,740 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(13)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:05:24,755 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(13)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:05:27,612 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:05:28,011 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 30644 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:05:28,014 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:05:28,516 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:05:28,539 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:05:28,933 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:05:29,261 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1205 ms
+2023-12-04 13:05:29,781 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:05:30,696 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:05:30,704 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:05:30,707 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:05:30,708 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:05:30,750 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:05:30,758 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:05:30,763 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:05:30,804 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:05:30,809 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:05:30,815 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:05:30,815 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:05:30,844 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:05:30,967 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:05:31,136 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:05:31,143 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.468 seconds (process running for 4.267)
+2023-12-04 13:05:44,499 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:05:44,499 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 13:05:44,583 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:06:13,937 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:06:13,951 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:06:16,952 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:06:17,356 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 35892 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:06:17,359 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:06:17,859 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:06:17,881 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:06:18,279 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:06:18,610 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1207 ms
+2023-12-04 13:06:19,119 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:06:20,038 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:06:20,047 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:06:20,049 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:06:20,051 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:06:20,092 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:06:20,100 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:06:20,105 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:06:20,147 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:06:20,157 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:06:20,163 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:06:20,165 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:06:20,196 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:06:20,310 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:06:20,483 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:06:20,491 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.473 seconds (process running for 4.245)
+2023-12-04 13:06:33,312 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:06:33,313 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:06:33,394 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:07:11,204 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2023-12-04 13:16:05,888 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(19)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:16:05,904 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(19)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:16:08,680 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:16:09,074 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 51532 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:16:09,077 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:16:09,549 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:16:09,571 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:16:09,962 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:16:10,279 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1164 ms
+2023-12-04 13:16:10,794 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:16:11,691 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:16:11,700 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:16:11,702 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:16:11,704 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:16:11,746 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:16:11,754 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:16:11,759 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:16:11,797 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:16:11,803 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:16:11,808 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:16:11,809 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:16:11,841 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:16:11,966 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:16:12,133 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:16:12,140 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.393 seconds (process running for 4.144)
+2023-12-04 13:18:19,374 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:18:19,375 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 13:18:19,453 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:20:02,296 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(14)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:20:02,311 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(14)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:20:04,959 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:20:05,360 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 48676 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:20:05,364 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:20:05,840 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:20:05,861 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:20:06,260 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:20:06,596 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1191 ms
+2023-12-04 13:20:07,134 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:20:08,074 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:20:08,083 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:20:08,085 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:20:08,088 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:20:08,133 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:20:08,140 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:20:08,145 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:20:08,184 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:20:08,197 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:20:08,202 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:20:08,203 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:20:08,234 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:20:08,364 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:20:08,539 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:20:08,547 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.527 seconds (process running for 4.283)
+2023-12-04 13:20:52,103 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:20:52,104 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:20:52,184 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:21:35,901 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:21:35,916 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(10)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:21:40,755 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:21:41,132 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 54408 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:21:41,135 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:21:41,651 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:21:41,672 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:21:42,060 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:21:42,388 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1206 ms
+2023-12-04 13:21:42,898 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:21:43,813 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:21:43,823 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:21:43,826 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:21:43,828 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:21:43,872 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:21:43,879 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:21:43,884 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:21:43,922 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:21:43,932 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:21:43,938 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:21:43,939 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:21:43,969 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:21:44,081 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:21:44,248 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:21:44,255 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.435 seconds (process running for 4.211)
+2023-12-04 13:21:52,473 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:21:52,474 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:21:52,559 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:22:48,622 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(9)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:22:48,637 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(9)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:22:50,897 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:22:51,272 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 39928 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:22:51,276 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:22:51,741 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:22:51,761 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:22:52,139 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:22:52,467 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1153 ms
+2023-12-04 13:22:52,987 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:22:53,879 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:22:53,887 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:22:53,889 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:22:53,891 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:22:53,932 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:22:53,939 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:22:53,945 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:22:53,980 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:22:53,986 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:22:53,991 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.Controlador.logger
+2023-12-04 13:22:53,992 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:22:54,022 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:22:54,146 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:22:54,317 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:22:54,325 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.367 seconds (process running for 4.097)
+2023-12-04 13:23:00,259 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:23:00,260 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:23:00,346 WARN  [http-nio-8080-exec-1] Prueba de creacion de archivo logs
+2023-12-04 13:48:00,733 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(32)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:48:00,749 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(32)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:48:02,920 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:48:03,313 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 55868 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:48:03,316 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:48:03,800 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:48:03,821 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:48:04,217 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:48:04,547 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1189 ms
+2023-12-04 13:48:05,077 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:48:05,997 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:48:06,007 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:48:06,009 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:48:06,011 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:48:06,052 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:48:06,059 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:48:06,065 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:48:06,107 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:48:06,119 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:48:06,125 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:48:06,160 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:48:06,276 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:48:06,446 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:48:06,466 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.485 seconds (process running for 4.233)
+2023-12-04 13:48:13,074 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:48:13,075 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:50:54,282 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(12)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:50:54,300 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(12)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:50:56,457 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:50:56,837 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 54552 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:50:56,840 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:50:57,354 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:50:57,376 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:50:57,769 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:50:58,096 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1215 ms
+2023-12-04 13:50:58,605 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:50:59,515 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:50:59,524 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:50:59,527 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:50:59,529 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:50:59,572 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:50:59,579 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:50:59,584 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:50:59,623 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:50:59,629 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:50:59,635 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:50:59,665 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:50:59,803 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:50:59,979 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:50:59,986 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.467 seconds (process running for 4.221)
+2023-12-04 13:51:05,666 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:51:05,667 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 13:52:50,774 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(11)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:52:50,790 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(11)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:52:52,972 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:52:53,344 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 14852 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:52:53,347 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:52:53,832 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:52:53,854 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:52:54,264 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:52:54,595 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1208 ms
+2023-12-04 13:52:55,129 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:52:56,062 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:52:56,073 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:52:56,076 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:52:56,078 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:52:56,118 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:52:56,125 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:52:56,129 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:52:56,166 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:52:56,172 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:52:56,178 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:52:56,210 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:52:56,331 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:52:56,494 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:52:56,501 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.467 seconds (process running for 4.217)
+2023-12-04 13:53:07,363 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:53:07,364 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:56:32,358 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(14)-127.0.0.1] Application shutdown requested.
+2023-12-04 13:56:32,374 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(14)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:56:36,636 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 13:56:37,018 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 59948 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 13:56:37,022 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 13:56:37,513 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 13:56:37,534 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 13:56:37,926 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 13:56:38,255 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1186 ms
+2023-12-04 13:56:38,771 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 13:56:39,669 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 13:56:39,677 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 13:56:39,680 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 13:56:39,681 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 13:56:39,721 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 13:56:39,728 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 13:56:39,733 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 13:56:39,770 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 13:56:39,781 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 13:56:39,787 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 13:56:39,820 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 13:56:39,938 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 13:56:40,099 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 13:56:40,110 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.412 seconds (process running for 4.15)
+2023-12-04 13:56:45,510 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 13:56:45,511 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 13:58:34,200 INFO  [http-nio-8080-exec-5] Llega hasta mandar la id al servicio
+2023-12-04 13:58:34,208 INFO  [http-nio-8080-exec-5] Vemos que contiene la lista de ver pedidos: [Pedido(id=22, id_usuario=19, fecha=2023-12-03T23:26:19, metodo_pago=EFECTIVO, estado=E., num_factura=2023008, total=161.57), Pedido(id=21, id_usuario=19, fecha=2023-12-03T20:18:23, metodo_pago=EFECTIVO, estado=E., num_factura=2023007, total=209.96), Pedido(id=20, id_usuario=19, fecha=2023-12-03T20:14:32, metodo_pago=EFECTIVO, estado=E., num_factura=2023006, total=209.96), Pedido(id=19, id_usuario=19, fecha=2023-12-03T20:09:11, metodo_pago=EFECTIVO, estado=E., num_factura=2023005, total=104.98), Pedido(id=18, id_usuario=19, fecha=2023-11-30T13:25:40, metodo_pago=EFECTIVO, estado=E., num_factura=2023004, total=128.94), Pedido(id=15, id_usuario=19, fecha=2023-11-26T19:07:24, metodo_pago=EFECTIVO, estado=E., num_factura=2023001, total=368.16), Pedido(id=14, id_usuario=19, fecha=2023-11-25T16:09:10, metodo_pago=EFECTIVO, estado=E., num_factura=2023000, total=52.49)]
+2023-12-04 14:23:29,011 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(36)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:23:29,028 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(36)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:23:35,952 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:23:36,326 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 49792 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:23:36,329 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:23:36,824 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:23:36,845 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:23:37,224 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:23:37,540 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1171 ms
+2023-12-04 14:23:38,065 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:23:38,950 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:23:38,959 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:23:38,961 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:23:38,963 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:23:39,003 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:23:39,010 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:23:39,016 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:23:39,057 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:23:39,064 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:23:39,070 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:23:39,099 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:23:39,212 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:23:39,393 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:23:39,400 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.386 seconds (process running for 4.144)
+2023-12-04 14:23:45,906 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:23:45,907 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 14:25:31,040 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(12)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:25:31,055 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(12)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:25:33,253 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:25:33,646 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 10368 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:25:33,650 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:25:34,189 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:25:34,211 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:25:34,614 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:25:34,959 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1260 ms
+2023-12-04 14:25:35,509 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:25:36,459 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:25:36,468 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:25:36,471 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:25:36,472 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:25:36,514 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:25:36,521 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:25:36,526 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:25:36,565 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:25:36,577 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:25:36,583 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:25:36,615 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:25:36,739 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:25:36,925 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:25:36,933 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.614 seconds (process running for 4.385)
+2023-12-04 14:25:56,622 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:25:56,623 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 14:31:10,367 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(14)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:31:10,384 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(14)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:31:12,920 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:31:13,314 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 36240 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:31:13,317 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:31:13,811 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:31:13,831 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:31:14,252 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:31:14,594 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1235 ms
+2023-12-04 14:31:15,147 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:31:16,086 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:31:16,094 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:31:16,097 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:31:16,099 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:31:16,147 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:31:16,154 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:31:16,161 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:31:16,200 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:31:16,211 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:31:16,217 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:31:16,248 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:31:16,366 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:31:16,533 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:31:16,540 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.557 seconds (process running for 4.306)
+2023-12-04 14:31:16,624 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:31:16,625 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 14:31:42,622 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(7)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:31:42,640 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(7)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:31:44,899 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:31:45,329 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 47312 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:31:45,332 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:31:45,869 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:31:45,889 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:31:46,284 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:31:46,612 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1238 ms
+2023-12-04 14:31:47,125 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:31:48,194 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:31:48,209 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:31:48,214 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:31:48,217 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:31:48,268 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:31:48,275 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:31:48,281 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:31:48,335 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:31:48,352 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:31:48,363 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:31:48,407 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:31:48,565 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:31:48,758 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:31:48,766 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.799 seconds (process running for 4.608)
+2023-12-04 14:31:53,453 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:31:53,453 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 14:31:59,253 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(6)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:31:59,273 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(6)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:32:01,479 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:32:01,860 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 36624 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:32:01,863 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:32:02,331 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:32:02,352 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:32:02,736 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:32:03,065 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1159 ms
+2023-12-04 14:32:03,603 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:32:04,553 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:32:04,561 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:32:04,565 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:32:04,566 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:32:04,613 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:32:04,619 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:32:04,624 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:32:04,665 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:32:04,674 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:32:04,682 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:32:04,720 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:32:04,839 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:32:05,013 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:32:05,021 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.481 seconds (process running for 4.219)
+2023-12-04 14:32:08,490 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:32:08,491 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 14:35:04,624 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(11)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:35:04,640 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(11)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:35:07,470 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:35:07,845 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 2100 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:35:07,848 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:35:08,320 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:35:08,340 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:35:08,720 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:35:09,045 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1157 ms
+2023-12-04 14:35:09,568 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:35:10,487 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:35:10,496 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:35:10,500 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:35:10,502 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:35:10,540 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:35:10,547 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:35:10,552 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:35:10,588 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:35:10,599 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:35:10,604 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:35:10,634 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:35:10,746 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:35:10,909 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:35:10,916 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.385 seconds (process running for 4.121)
+2023-12-04 14:35:18,997 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:35:18,998 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 14:47:17,487 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(21)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:47:17,504 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(21)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:47:20,308 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:47:20,687 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 48020 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:47:20,689 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:47:21,176 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:47:21,196 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:47:21,578 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:47:21,902 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1172 ms
+2023-12-04 14:47:22,436 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:47:23,349 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:47:23,357 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:47:23,359 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:47:23,360 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:47:23,400 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:47:23,406 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:47:23,411 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:47:23,460 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:47:23,466 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:47:23,472 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:47:23,502 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:47:23,617 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:47:23,783 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:47:23,790 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.421 seconds (process running for 4.194)
+2023-12-04 14:48:00,331 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:48:00,331 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 14:49:24,798 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:49:24,815 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(10)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:49:27,043 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:49:27,446 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 63820 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:49:27,448 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:49:27,936 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:49:27,958 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:49:28,345 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:49:28,682 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1193 ms
+2023-12-04 14:49:29,210 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:49:30,182 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:49:30,195 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:49:30,198 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:49:30,200 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:49:30,257 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:49:30,268 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:49:30,278 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:49:30,329 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:49:30,337 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:49:30,346 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:49:30,382 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:49:30,513 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:49:30,696 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:49:30,703 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.592 seconds (process running for 4.349)
+2023-12-04 14:49:34,885 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:49:34,886 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 14:50:10,247 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:50:10,264 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:50:12,497 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:50:12,872 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 28396 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:50:12,874 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:50:13,353 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:50:13,376 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:50:13,757 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:50:14,086 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1170 ms
+2023-12-04 14:50:14,598 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:50:15,528 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:50:15,536 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:50:15,538 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:50:15,539 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:50:15,579 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:50:15,585 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:50:15,591 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:50:15,632 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:50:15,646 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:50:15,653 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:50:15,683 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:50:15,803 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:50:15,965 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:50:15,971 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.415 seconds (process running for 4.156)
+2023-12-04 14:50:26,883 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:50:26,883 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 14:51:23,791 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:51:23,807 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:51:26,626 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:51:27,046 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 52792 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:51:27,050 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:51:27,559 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:51:27,581 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:51:27,995 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:51:28,316 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1215 ms
+2023-12-04 14:51:28,818 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:51:29,714 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:51:29,722 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:51:29,724 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:51:29,726 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:51:29,766 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:51:29,773 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:51:29,779 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:51:29,818 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:51:29,823 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:51:29,829 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:51:29,857 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:51:29,971 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:51:30,143 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:51:30,150 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.456 seconds (process running for 4.227)
+2023-12-04 14:51:43,921 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:51:43,922 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 14:56:20,858 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(15)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:56:20,876 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(15)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:56:23,490 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:56:23,963 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 52396 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:56:23,966 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:56:24,504 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:56:24,526 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:56:24,975 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:56:25,309 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1304 ms
+2023-12-04 14:56:25,903 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:56:26,902 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:56:26,921 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:56:26,927 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:56:26,929 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:56:26,977 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:56:26,993 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:56:26,999 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:56:27,042 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:56:27,048 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:56:27,056 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:56:27,091 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:56:27,218 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:56:27,406 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:56:27,413 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.851 seconds (process running for 4.828)
+2023-12-04 14:56:30,245 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(2)-127.0.0.1] Application shutdown requested.
+2023-12-04 14:56:30,261 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(2)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:56:51,438 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 14:56:51,894 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 21768 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 14:56:51,897 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 14:56:52,444 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 14:56:52,466 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 14:56:52,919 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 14:56:53,237 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1303 ms
+2023-12-04 14:56:53,822 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 14:56:54,877 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 14:56:54,892 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 14:56:54,898 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 14:56:54,899 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 14:56:54,949 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 14:56:54,963 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 14:56:54,969 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 14:56:55,013 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 14:56:55,020 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 14:56:55,031 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 14:56:55,064 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 14:56:55,203 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 14:56:55,383 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 14:56:55,391 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.875 seconds (process running for 4.859)
+2023-12-04 14:57:16,893 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 14:57:16,894 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 15:05:56,655 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 15:05:57,037 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 61336 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 15:05:57,040 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 15:05:57,529 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 15:05:57,551 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 15:05:57,949 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 15:05:58,281 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1194 ms
+2023-12-04 15:05:58,798 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 15:05:59,728 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:05:59,739 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 15:05:59,742 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 15:05:59,744 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 15:05:59,785 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 15:05:59,793 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 15:05:59,799 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 15:05:59,841 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 15:05:59,852 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 15:05:59,858 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 15:05:59,894 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 15:06:00,014 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 15:06:00,206 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 15:06:00,213 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.496 seconds (process running for 4.283)
+2023-12-04 15:06:04,785 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 15:06:04,786 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-04 15:08:26,004 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(9)-127.0.0.1] Application shutdown requested.
+2023-12-04 15:08:26,020 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(9)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:08:39,384 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 15:08:39,768 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 47528 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 15:08:39,771 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 15:08:40,295 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 15:08:40,318 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 15:08:40,755 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 15:08:41,131 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1313 ms
+2023-12-04 15:08:41,682 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 15:08:42,634 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:08:42,644 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 15:08:42,648 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 15:08:42,649 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 15:08:42,701 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 15:08:42,709 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 15:08:42,717 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 15:08:42,766 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 15:08:42,772 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 15:08:42,781 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 15:08:42,817 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 15:08:42,937 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 15:08:43,103 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 15:08:43,110 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.664 seconds (process running for 4.418)
+2023-12-04 15:08:47,138 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 15:08:47,138 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 15:16:57,391 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(17)-127.0.0.1] Application shutdown requested.
+2023-12-04 15:16:57,411 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(17)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:16:59,797 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 15:17:00,224 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 40752 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 15:17:00,227 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 15:17:00,760 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 15:17:00,783 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 15:17:01,205 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 15:17:01,556 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1285 ms
+2023-12-04 15:17:02,133 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 15:17:03,140 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:17:03,150 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 15:17:03,153 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 15:17:03,154 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 15:17:03,197 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 15:17:03,204 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 15:17:03,210 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 15:17:03,252 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 15:17:03,258 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 15:17:03,264 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 15:17:03,295 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 15:17:03,417 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 15:17:03,588 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 15:17:03,596 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.731 seconds (process running for 4.504)
+2023-12-04 15:17:06,479 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 15:17:06,480 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 15:20:21,363 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(11)-127.0.0.1] Application shutdown requested.
+2023-12-04 15:20:21,386 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(11)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:20:23,640 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-04 15:20:24,039 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 58100 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-04 15:20:24,042 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-04 15:20:24,560 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-04 15:20:24,583 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-04 15:20:24,996 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-04 15:20:25,331 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1244 ms
+2023-12-04 15:20:25,853 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-04 15:20:26,728 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 15:20:26,737 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-04 15:20:26,739 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-04 15:20:26,740 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-04 15:20:26,779 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-04 15:20:26,787 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-04 15:20:26,794 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-04 15:20:26,834 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-04 15:20:26,840 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-04 15:20:26,847 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.UsuarioControlador.logger
+2023-12-04 15:20:26,881 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 15:20:26,996 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-04 15:20:27,170 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-04 15:20:27,177 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.473 seconds (process running for 4.22)
+2023-12-04 15:20:31,682 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 15:20:31,683 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-04 15:24:48,963 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(13)-127.0.0.1] Application shutdown requested.
+2023-12-04 15:24:48,980 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(13)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'

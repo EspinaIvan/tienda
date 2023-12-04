@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <header class="p-3 text-white cabecera">
 	<div class="container">
 		<div
@@ -8,10 +9,12 @@
 					<ul
 						class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 navegacion">
 						<li><a href="${pageContext.request.contextPath}/"
-							class="nav-link px-2 text-secondary">Inicio</a></li>
+							class="nav-link px-2 text-secondary"><fmt:message
+									key="menu.inicio" /></a></li>
 						<li><a
 							href="${pageContext.request.contextPath}/catalogo/vercatalogo"
-							class="nav-link px-2 text-white">Catalogo</a></li>
+							class="nav-link px-2 text-white"><fmt:message
+									key="menu.catalogo" /></a></li>
 					</ul>
 				</c:when>
 				<c:otherwise>
@@ -22,7 +25,8 @@
 						<c:forEach var="menu"
 							items="${ sessionScope.usuario.roles.opcionesMenu}">
 							<li><a href="${menu.url_opcion}"
-								class="nav-link px-2 text-secondary">${menu.nombre_opcion }</a></li>
+								class="nav-link px-2 text-secondary"><fmt:message
+										key="${menu.nombre_opcion }" /></a></li>
 						</c:forEach>
 					</ul>
 				</c:otherwise>
@@ -66,7 +70,18 @@
 						<span class="cesta-articulo">${fn:length(sessionScope.cesta)}</span>
 					</c:if>
 				</c:if>
-				<div></div>
+				<div>
+					<form method="post"
+						action="${pageContext.request.contextPath}/cambiarIdioma">
+						<select name="lang">
+							<option value="es"
+								<c:if test="${sessionScope.lang eq 'es'}">selected</c:if>>Es</option>
+							<option value="en"
+								<c:if test="${sessionScope.lang eq 'en'}">selected</c:if>>En</option>
+						</select> <input type="submit" value="Cambiar Idioma" />
+					</form>
+					
+				</div>
 			</div>
 		</div>
 	</div>

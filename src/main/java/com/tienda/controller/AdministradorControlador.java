@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.tienda.dao.configuracion.Configuracion;
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
@@ -28,6 +29,7 @@ import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesPedidos;
 import com.tienda.servicios.OperacionesUsuario;
 import com.tienda.servicios.OpereacionesProducto;
+import com.tienda.servicios.ServicioOperacionesConfiguracion;
 import com.tienda.servicios.SubirArchivos;
 
 import jakarta.servlet.http.HttpSession;
@@ -49,6 +51,8 @@ public class AdministradorControlador {
 	private OpereacionesProducto opeProducto;
 	@Autowired
 	private OperacionesAdministrador opeAdministrador;
+	@Autowired
+	private ServicioOperacionesConfiguracion opeConfiguracion;
 
 	@GetMapping("/verlistausuarios")
 	public String verListaUsuarios(HttpSession session, Model modelo) {
@@ -306,4 +310,22 @@ public class AdministradorControlador {
 		return "redirect:/administrador/listapedidos";
 	}
 	
+	@GetMapping("/configuracion")
+	public String Configuracion( HttpSession session, Model modelo) {
+		
+		System.out.println("Llega a la configuracion");
+		List<Configuracion> configuraciones = opeConfiguracion.servicioGetConfiguraciones();
+		modelo.addAttribute("configuraciones", configuraciones);
+		
+		return "administrador/configuracion";
+		
+	}
+	
+	@PostMapping("/cambiarconfiguracion")
+	public String CambiarConfiguracion(@ModelAttribute ("valor") String valor, @ModelAttribute ("id") int id, HttpSession session, Model modelo) {
+		
+		opeConfiguracion.servicioEditarConfiguracion(valor, id);
+		
+		return "redirect:/administrador/configuracion";
+	}
 }
