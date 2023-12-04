@@ -57,6 +57,7 @@ section::before {
 	justify-content: start;
 	flex-direction: column;
 }
+
 .productobaja {
 	background-color: #ff073a;
 	width: 20px;
@@ -76,9 +77,10 @@ section::before {
 }
 
 .imagentabla {
-    width: 30%;
-    min-width: 400px;
+	width: 30%;
+	min-width: 400px;
 }
+
 .cabecera {
 
 	width: 90%;
@@ -181,6 +183,14 @@ section::before {
 	color: white;
 }
 
+.spanañadir {
+	margin-left: 100px;
+}
+
+.nuevoproducto {
+	margin: 20px;
+}
+
 section span {
 	position: relative;
 	display: block;
@@ -202,7 +212,8 @@ section span {
 	border-radius: 4px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 	top: 2%;
-	align-items: flex-start;
+	align-items: center;
+	flex-direction: column;
 }
 
 .pagototal {
@@ -517,3 +528,4 @@ h5 {
 		}
 
 	}
+}

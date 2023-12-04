@@ -46,6 +46,12 @@ section::before {
 	}
 }
 
+.avatar {
+	height: 4rem;
+	border-radius: 50%;
+	margin-top: 0.8rem;
+}
+
 .contenedor {
 	position: relative;
 	z-index: 1000;

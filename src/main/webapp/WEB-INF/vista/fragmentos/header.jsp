@@ -36,7 +36,8 @@
 					</c:when>
 					<c:otherwise>
 						<a href="${pageContext.request.contextPath}/usuario/verperfil">
-							<img class="avatar" src="${ sessionScope.usuario.imagen}"
+							<img class="avatar"
+							src="${pageContext.request.contextPath}/resources/imagenes/usuarios/${ sessionScope.usuario.imagen}"
 							alt="Card image cap">
 						</a>
 					</c:otherwise>

@@ -1,5 +1,6 @@
 package com.tienda.controller;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tienda.dao.cesta.Cesta;
@@ -31,6 +33,7 @@ import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesPedidos;
 import com.tienda.servicios.OperacionesUsuario;
+import com.tienda.servicios.SubirArchivos;
 
 import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.HttpSession;
@@ -199,17 +202,35 @@ public class UsuarioControlador {
 
 	@PostMapping("/actualizarusuario")
 	public String actualizarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado,
-			Model modelo, HttpSession session) {
+			Model modelo, HttpSession session, @RequestParam("imagenavatar") MultipartFile imagen) throws IOException {
 
-		System.out.println("entramos y comprobamo que tiene el uuario " + usuario);
 		Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
-
+System.out.println("miramos el usuario al confirmar cambios perfil: " + usuarioSesion);
 		boolean validado = true;
 
 		if (resultado.hasErrors()) {
 
 			validado = false;
 		}
+
+		// Todo el metodo que manda a la imagen
+
+		if (!imagen.getOriginalFilename().trim().isEmpty()) {
+
+			String nombreOriginal = imagen.getOriginalFilename();
+
+			String extension = SubirArchivos.obtenerExtension(nombreOriginal);
+
+			String nombreArchivo = usuario.getUsuario() + extension;
+
+			usuario.setImagen(nombreArchivo);
+
+			String subirRuta = "src/main/webapp/resources/imagenes/usuarios";
+
+			SubirArchivos.guardarArchivo(subirRuta, nombreArchivo, imagen);
+		}
+
+		// Fin de metodo de imagen
 
 		Usuario comprobarUsuario = opeUsuario.buscarUsuarioNick(usuario);
 		Usuario comprobarEmail = opeUsuario.buscarUsuarioEmail(usuario);
@@ -243,6 +264,7 @@ public class UsuarioControlador {
 			usuario = opeUsuario.actualizarUsuarioService(usuario, usuarioSesion);
 			session.setAttribute("usuario", usuario);
 
+			System.out.println("miramso al confirmar cambios :" + usuario);
 			return "editarperfil";
 
 		} else {
@@ -374,5 +396,16 @@ public class UsuarioControlador {
 		servicioEmail.enviarEmail(remitente, asunto, cuerpo);
 		servicioEmail.llegadaMensaje(asunto, usuario);
 		return "redirect:/usuario/contactanos?enviado=true";
+	}
+	
+	@GetMapping("/verfactura")
+	public String verFactura(@RequestParam("idpedido") int idPedido, Model modelo, HttpSession session) {
+		
+		Pedido pedido = opePedido.servicioGetPedido(idPedido);
+		modelo.addAttribute("pedido", pedido);
+		List<DetallesPedido> listaDetallesPedido = opeUsuario.getDetallesPedido(idPedido);
+		modelo.addAttribute("listaDetallesPedido", listaDetallesPedido);
+		
+		return "factura";
 	}
 }

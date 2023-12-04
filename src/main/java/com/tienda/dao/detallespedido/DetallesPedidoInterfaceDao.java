@@ -9,4 +9,6 @@ public interface DetallesPedidoInterfaceDao {
 	public void insertarDetallesPedidoBD(DetallesPedido detallesPedido);
 
 	public List<DetallesPedido> obtenerDetallesPedido(Pedido pedido);
+	
+	public int getMasVendido();
 }

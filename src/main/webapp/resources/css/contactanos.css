@@ -58,6 +58,49 @@ section::before {
 	flex-direction: column;
 }
 
+.botoncesta {
+	background-color: #5d9536;
+	border-color: #5d9536;
+	color: #000;
+	font-weight: 600;
+}
+.mensaje {
+	
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin: 20px;
+}
+
+input[readonly] {
+    background-color: #333;
+}
+
+.form-control {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.form-control:focus {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.email {
+	width: 60%;
+}
+
+.asunto{
+	width: 75%;
+}
 .cabecera {
 
 	width: 90%;
@@ -273,6 +316,7 @@ p {
 	cursor: pointer;
 	margin-left: 15%;
 }
+
 .enviocorrecto {
 	font-weight: 600;
 	color: #0f0;

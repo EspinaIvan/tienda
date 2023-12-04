@@ -11,12 +11,14 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/listaproductos.css">
+	href="${pageContext.request.contextPath}/resources/css/listaplataformas.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
 </script>
-
+<script
+	src="${pageContext.request.contextPath}/resources/js/listaplataforma.js"
+	defer></script>
 <meta charset="UTF-8">
 <title>Lista Productos</title>
 </head>
@@ -25,8 +27,17 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
-		<div class="nuevoproducto"><a href="nuevaplataforma"> + Agregar Plataforma </a>
-		</div>
+			<div class="nuevoproducto">
+				<a href="#" id="mostrarFormulario" class="añadir"> + Agregar Plataforma </a>
+				<div id="formularioContainer" style="display: none;">
+					<form:form class="form" action="agregarplataforma"
+						modelAttribute="plataforma" method="POST" id="agregarplataforma">
+						<form:input path="nombre" placeholder="Nombre Producto" class="form-control" />
+						<form:input path="imagen" placeholder="url logo" class="form-control" />
+						<input type="submit" value="Agregar Plataforma" class="btn btn-primary botoncesta">
+					</form:form>
+				</div>
+			</div>
 			<div class="contenedor-cards">
 				<table class="tabla">
 					<thead>
@@ -45,7 +56,9 @@
 								<td>
 									<h5>${plataforma.nombre}</h5>
 								</td>
-								<td><a href="${pageContext.request.contextPath}/administrador/borrarplataforma?idproducto=${plataforma.id}">Borrar Plataforma</a></td>
+								<td><a
+									href="${pageContext.request.contextPath}/administrador/borrarplataforma?idplataforma=${plataforma.id}">Borrar
+										Plataforma</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

@@ -83,4 +83,19 @@ public class ProductoDAO implements ProductoInterfaceDAO {
 		return listaBusqueda;
 	}
 
+	@Override
+	@Transactional
+	public List<Producto> getNovedades() {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		
+		String hql = "FROM Producto p ORDER BY p.fecha_alta DESC";
+		
+		List<Producto> listaNovedades = session.createQuery(hql, Producto.class)
+			    .setMaxResults(5)
+			    .getResultList();
+		
+		return listaNovedades;
+	}
+
 }

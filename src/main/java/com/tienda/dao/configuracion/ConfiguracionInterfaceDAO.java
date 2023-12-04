@@ -6,5 +6,6 @@ public interface ConfiguracionInterfaceDAO {
 	public Configuracion getLogo();
 	public Configuracion getDireccion();
 	public Configuracion getCIF();
+	public Configuracion getEmail();
 	
 }

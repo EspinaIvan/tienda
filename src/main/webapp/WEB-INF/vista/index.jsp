@@ -18,18 +18,21 @@
 <title>Inicio</title>
 </head>
 <body>
-<%@ include file="fragmentos/span.jsp" %>
+	<%@ include file="fragmentos/span.jsp"%>
 	<div class="contenedor">
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
-			<h2>llegado bien</h2>
-		
+		<h3>Novedades</h3>
+			<div class="contenedornovedades">
+				<c:forEach var="productoTemp" items="${listanovedades}">
+					<a href="${pageContext.request.contextPath}/catalogo/verproducto?id=${productoTemp.id}"><img alt="${productoTemp.nombre }" src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoTemp.imagen}"></a>
+				</c:forEach>
+			</div>
 			
-			<c:forEach var="productoTemp" items="${catalogo}">
-				<p>${productoTemp.nombre }</p>
-				<p>${productoTemp.precio}</p>
-				<p>${mensaje }</p>
-			</c:forEach>
+			<div class="masvendido">
+				<h2>MAS VENDIDO</h2>
+				<a href="${pageContext.request.contextPath}/catalogo/verproducto?id=${masvendido.id}"><img class="imgmasvendido" alt="${masvendido.nombre }" src="${pageContext.request.contextPath}/resources/imagenes/productos/${ masvendido.imagen}"></a>
+			</div>
 		</div>
 		<%@ include file="fragmentos/footer.jsp"%>
 	</div>

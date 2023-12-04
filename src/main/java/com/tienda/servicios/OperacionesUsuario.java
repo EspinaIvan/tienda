@@ -24,7 +24,7 @@ import jakarta.validation.Valid;
 
 @Service
 public class OperacionesUsuario {
-	
+
 	@Autowired
 	private UsuarioInterfaceDAO usuarioDAO;
 	@Autowired
@@ -35,39 +35,39 @@ public class OperacionesUsuario {
 	private RolesInterfaceDAO rolesDAO;
 	@Autowired
 	static Logger logger = LogManager.getRootLogger();
-	
+
 	public void insertarUsuarioPorDAO(Usuario usuario) {
-		
+
 		Roles rol = rolesDAO.getRol(1);
 		usuario.setRoles(rol);
 		usuario.setBaja(false);
-		usuario.setImagen("https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png");
+		usuario.setImagen("usuariodefecto.jpeg");
 		usuario.setFecha_alta(LocalDate.now());
 		usuarioDAO.insertarUsuario(usuario);
-		
+
 	}
-	
+
 	public Usuario buscarUsuarioNick(Usuario usuario) {
-		
+
 		String nombreUsuario = usuario.getUsuario();
 		usuario = usuarioDAO.buscarUsuarioConUsuario(nombreUsuario);
-		
+
 		return usuario;
-		
+
 	}
-	
-	public Usuario buscarUsuarioEmail (Usuario usuario) {
-		
+
+	public Usuario buscarUsuarioEmail(Usuario usuario) {
+
 		String emailUsuario = usuario.getEmail();
-		
+
 		usuario = usuarioDAO.buscarEmailUsuario(emailUsuario);
-		
+
 		return usuario;
 	}
 
 	public Usuario actualizarUsuarioService(Usuario usuario, Usuario usuarioBD) {
 		// TODO Auto-generated method stub
-		
+
 		usuarioBD.setNombre(usuario.getNombre());
 		usuarioBD.setUsuario(usuario.getUsuario());
 		usuarioBD.setApellido1(usuario.getApellido1());
@@ -76,26 +76,25 @@ public class OperacionesUsuario {
 		usuarioBD.setDni(usuario.getDni());
 		usuarioBD.setLocalidad(usuario.getLocalidad());
 		usuarioBD.setProvincia(usuario.getProvincia());
+		usuarioBD.setRoles(usuario.getRoles());
 		usuarioBD.setTelefono(usuario.getTelefono());
-		System.out.println("Llega al servicio de editarUsuario");
+		usuarioBD.setImagen(usuario.getImagen());
+		System.out.println("Llega al servicio de editarUsuario " + usuarioBD);
 		usuarioDAO.actualizarUsuario(usuarioBD);
-		
+
 		return usuarioBD;
 	}
 
 	public void actualizarClave(Usuario usuario) {
 		// TODO Auto-generated method stub
-		
+
 		usuarioDAO.actualizarUsuario(usuario);
 	}
 
 	public List<Pedido> sacarListaPedidos(int idUsuario, String ordenarFecha) {
-		
-	
-		List <Pedido> pedidos = pedidoDAO.listaPedidos(idUsuario, ordenarFecha);
-		
 
-		
+		List<Pedido> pedidos = pedidoDAO.listaPedidos(idUsuario, ordenarFecha);
+
 		return pedidos;
 	}
 
@@ -106,11 +105,11 @@ public class OperacionesUsuario {
 		pedidoDAO.editarPedido(pedido);
 	}
 
-	public List <DetallesPedido> getDetallesPedido(int idPedido) {
+	public List<DetallesPedido> getDetallesPedido(int idPedido) {
 		// TODO Auto-generated method stub
 		Pedido pedido = pedidoDAO.getPedidoID(idPedido);
 		List<DetallesPedido> listaDetallesPedido = detallesPedidoDAO.obtenerDetallesPedido(pedido);
-				
+
 		return listaDetallesPedido;
 	}
 
@@ -123,14 +122,14 @@ public class OperacionesUsuario {
 	}
 
 	public void borrarUsuarioID(int idUsuario) {
-		
+
 		usuarioDAO.borrarUsuario(idUsuario);
 	}
-	
-	public Usuario getUsuarioId (int idUsuario) {
-		
+
+	public Usuario getUsuarioId(int idUsuario) {
+
 		Usuario usuario = usuarioDAO.getUsuarioId(idUsuario);
-		
+
 		return usuario;
 	}
 }

@@ -25,9 +25,10 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
-		<div class="nuevoproducto"><a href="añadirProducto"> + Agregar Producto </a>
-		<span><a href="añadirPlataforma"> Lista Plataformas </a></span>
-		</div>
+			<div class="nuevoproducto">
+				<a href="añadirProducto"> + Agregar Producto </a> <span class="spanañadir"><a
+					href="listaplataformas"> Lista Plataformas </a></span>
+			</div>
 			<div class="contenedor-cards">
 				<table class="tabla">
 					<thead>
@@ -48,7 +49,8 @@
 						<c:forEach var="producto" items="${listaproductos}">
 							<tr>
 								<td>${producto.fecha_alta }</td>
-								<td class="imagentabla"><img src="${pageContext.request.contextPath}/resources/imagenes/productos/${producto.imagen}"
+								<td class="imagentabla"><img
+									src="${pageContext.request.contextPath}/resources/imagenes/productos/${producto.imagen}"
 									class="img-fluid rounded-3" alt="${producto.nombre}"></td>
 								<td>
 									<h5>${producto.nombre}</h5>
@@ -64,15 +66,24 @@
 											<span class="productobaja"></span>
 										</c:otherwise>
 									</c:choose></td>
-								<td><c:choose>
-										<c:when test="${not producto.baja}">
-											<a href="${pageContext.request.contextPath}/administrador/bajaproducto?idproducto=${producto.id}">Dar de baja</a>
-										</c:when>
-										<c:otherwise>
-											<a href="${pageContext.request.contextPath}/administrador/altaproducto?idproducto=${producto.id}">Dar de alta</a>
-										</c:otherwise>
-									</c:choose></td>
-								<td><a href="${pageContext.request.contextPath}/administrador/editarproducto?idproducto=${producto.id}">Editar Producto</a></td>
+								<td><c:if
+										test="${sessionScope.usuario.roles.id == 3}">
+										<c:choose>
+											<c:when test="${not producto.baja}">
+												<a
+													href="${pageContext.request.contextPath}/administrador/bajaproducto?idproducto=${producto.id}">Dar
+													de baja</a>
+											</c:when>
+											<c:otherwise>
+												<a
+													href="${pageContext.request.contextPath}/administrador/altaproducto?idproducto=${producto.id}">Dar
+													de alta</a>
+											</c:otherwise>
+										</c:choose>
+									</c:if></td>
+								<td><a
+									href="${pageContext.request.contextPath}/administrador/editarproducto?idproducto=${producto.id}">Editar
+										Producto</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

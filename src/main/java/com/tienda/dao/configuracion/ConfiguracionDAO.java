@@ -69,4 +69,18 @@ public class ConfiguracionDAO implements ConfiguracionInterfaceDAO {
 		return configuracion;
 	}
 
+	@Override
+	@Transactional
+	public Configuracion getEmail() {
+		// TODO Auto-generated method stub
+		
+Session session = entityManager.unwrap(Session.class);
+		
+		Configuracion configuracion = session.createQuery("FROM Configuracion WHERE clave = :clave", Configuracion.class)
+                .setParameter("clave", "Email")
+                .getSingleResult();
+		
+		return configuracion;
+	}
+
 }

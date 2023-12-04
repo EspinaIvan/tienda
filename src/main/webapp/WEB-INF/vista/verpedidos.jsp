@@ -28,20 +28,20 @@
 				</c:when>
 				<c:otherwise>
 					<div class="ordenarfecha">
-						<form action="verpedidos" method="get">
+						<form action="verpedidos" method="get" class="formordenar">
 							<label for="ordenarFecha">Ordenar por fecha:</label> <select
-								name="ordenarFecha" id="ordenarFecha">
+								name="ordenarFecha" id="ordenarFecha"
+								class="custom-select form-control">
 								<option value="DESC">Descendente</option>
 								<option value="ASC">Ascendente</option>
 							</select>
-							<button type="submit">Ordenar</button>
+							<button class="btn btn-outline-secondary filtro" type="submit">Ordenar</button>
 						</form>
-						<form action="filtrarfecha" method="POST">
-							<label>Desde:</label>
-							<input type="date" name="fechaDesde" required>
-							<label>Hasta:</label>
-							<input type="date" name="fechaHasta" required>
-							<button type="submit">Buscar</button>
+						<form action="filtrarfecha" method="POST" class="formcalendario">
+							<label>Desde:</label> <input type="date" class="form-control"
+								name="fechaDesde" required> <label>Hasta:</label> <input
+								type="date" class="form-control" name="fechaHasta" required>
+							<button class="btn btn-outline-secondary filtro" type="submit">Buscar</button>
 						</form>
 					</div>
 					<table>
@@ -78,12 +78,12 @@
 										</c:if></td>
 									<td><c:if test="${not empty pedido.num_factura}">
 											<button type="button"
-												onclick="location.href='tu_enlace_factura'"
+												onclick="location.href='${pageContext.request.contextPath}/usuario/verfactura?idpedido=${pedido.id }'"
 												class="btn btn-success">Factura</button>
 										</c:if></td>
 									<td><a
 										href="${pageContext.request.contextPath}/usuario/detallespedido?idpedido=${pedido.id}">Ver
-											Detalles</a>
+											Detalles</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

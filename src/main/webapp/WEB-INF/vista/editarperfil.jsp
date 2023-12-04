@@ -29,11 +29,16 @@
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
-				<div>
-					<h2>Editar foto de perfil</h2>
-				</div>
 				<form:form class="form" action="actualizarusuario"
-					modelAttribute="usuario" method="POST" id="registroForm">
+					modelAttribute="usuario" method="POST" id="registroForm"
+					enctype="multipart/form-data">
+					<div class="contenedorimagen">
+						<img class="imagenfile" alt=""
+							src="${pageContext.request.contextPath}/resources/imagenes/productos/${ sessionScope.imagen}">
+						<label for="imagenavatar">Avatar</label> <input
+							name="imagenavatar" type="file" class="form-control"
+							id="formFile" />
+					</div>
 					<div class="inputBox">
 						<form:input path="usuario" type="text" />
 						<i>Usuario</i>
@@ -84,7 +89,7 @@
 						<i>Direccion</i>
 					</div>
 					<div class="links">
-						<p class="yacuenta">¿Deseas cambiar, la conntraseña?</p>
+						<p class="yacuenta">¿Deseas cambiar, la contraseña?</p>
 						<a class="iniciasession"
 							href="${pageContext.request.contextPath}/usuario/cambiarclave">Cambiar
 							Contraseña</a>
@@ -95,8 +100,8 @@
 				</form:form>
 				<c:if test="${sessionScope.usuario.roles.id == 1}">
 					<div class="inputBox contenedorborrar">
-						<a href="borrarusuario?idusuario=${sessionScope.usuario.id }"><button type="button"
-								class="btn btn-outline-light me-2 botonborrar">Eliminar
+						<a href="borrarusuario?idusuario=${sessionScope.usuario.id }"><button
+								type="button" class="btn btn-outline-light me-2 botonborrar">Eliminar
 								Cuenta</button></a>
 					</div>
 				</c:if>

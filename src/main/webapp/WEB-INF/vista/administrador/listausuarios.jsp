@@ -22,7 +22,13 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
-		<div class="agregarusuario"><a href="/usuario/registro">+ Agregar Nuevo Usuario</a></div>
+			<div class="agregarusuario">
+				<a href="/usuario/registro" class="agregar">+ Agregar Nuevo Usuario</a>
+			</div>
+			<div class="titulousuario">
+				<h3>Usuarios</h3>
+			</div>
+			<hr>
 			<table>
 				<thead>
 					<tr>
@@ -51,14 +57,67 @@
 											<span class="usuariobaja"></span>
 										</c:otherwise>
 									</c:choose></td>
-								<td><a href="${pageContext.request.contextPath}/administrador/verdetallesusuario?idusuario=${usuario.id }">Ver detalles</a></td>	
+								<td><a
+									href="${pageContext.request.contextPath}/administrador/verdetallesusuario?idusuario=${usuario.id }">Ver
+										detalles</a></td>
 								</td>
-								<td><a href="${pageContext.request.contextPath}/usuario/borrarusuario?idusuario=${usuario.id }">Dar de baja</a></td>
+								<td><c:if
+										test="${sessionScope.usuario.roles.id == 3 && not usuario.baja}">
+										<a
+											href="${pageContext.request.contextPath}/usuario/borrarusuario?idusuario=${usuario.id }">Dar
+											de baja</a>
+									</c:if></td>
 							</tr>
 						</c:if>
 					</c:forEach>
 				</tbody>
 			</table>
+			<c:if test="${sessionScope.usuario.roles.id == 3}">
+				<div class="tituloadministradores">
+					<h3>Administradores</h3>
+				</div>
+				<hr>
+				<table>
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Usuario</th>
+							<th>Email</th>
+							<th>Fecha de Alta</th>
+							<th>Baja
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="usuario" items="${listausuarios}">
+							<c:if test="${usuario.roles.id == 2}">
+								<tr>
+									<td>${usuario.id }</td>
+									<td>${usuario.usuario}</td>
+									<td>${usuario.email}</td>
+									<td>${usuario.fecha_alta}</td>
+									<td><c:choose>
+											<c:when test="${not usuario.baja}">
+												<span class="usuarioactivo"></span>
+											</c:when>
+											<c:otherwise>
+												<span class="usuariobaja"></span>
+											</c:otherwise>
+										</c:choose></td>
+									<td><a
+										href="${pageContext.request.contextPath}/administrador/verdetallesusuario?idusuario=${usuario.id }">Ver
+											detalles</a></td>
+									</td>
+									<td><a
+										href="${pageContext.request.contextPath}/usuario/borrarusuario?idusuario=${usuario.id }">Dar
+											de baja</a></td>
+								</tr>
+							</c:if>
+						</c:forEach>
+					</tbody>
+				</table>
+			</c:if>
 		</div>
 		<%@ include file="../fragmentos/footer.jsp"%>
 	</div>

@@ -43,4 +43,11 @@ public class ServicioOperacionesConfiguracion {
 		return configuracion;
 
 	}
+	
+	public Configuracion servicioGetEmail() {
+		
+		Configuracion configuracion = configuracionDAO.getEmail();
+		
+		return configuracion;
+	}
 }

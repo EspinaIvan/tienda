@@ -30,22 +30,20 @@ public class Controlador {
 	
 	@GetMapping(value = "")
 	public String mostrarSaludo(HttpSession session, Model modelo) {
-		// Agregar datos al modelo
 		
 		session.setAttribute("nombre", opeConfiguracion.servicioGetNombre());
 		session.setAttribute("logo", opeConfiguracion.servicioGetLogo());
 		session.setAttribute("direccion", opeConfiguracion.servicioGetDireccion());
 		session.setAttribute("CIF", opeConfiguracion.servicioGetCIF());
+		session.setAttribute("email", opeConfiguracion.servicioGetEmail());
 		
-		System.out.println("Miramos logo: " + opeConfiguracion.servicioGetLogo());
-		modelo.addAttribute("mensaje", "Hola desde GIT");
 		Map<Integer, Cesta> cesta;
 		
 		if(session.getAttribute("cesta") == null) {
 			
 			cesta = new HashMap<>();
-			
-			logger.info("Creacion de la cesta al dectectar que no exite");
+			String mensaje= "Prueba de creacion de archivo logs";
+			logger.warn(mensaje);
 		
 			
 		} else {
@@ -54,12 +52,11 @@ public class Controlador {
 			
 		}
 		
+		Producto productoMasVendido = opeCatalogo.servicioGetMasVendido();
 		session.setAttribute("cesta", cesta);
-		List<Producto> catalogo = opeCatalogo.catalogoCompletoServicio();
-		modelo.addAttribute("catalogo", catalogo);
-		// Devolver el nombre de la vista (sin extensión)
-
-		System.out.println();
+		List<Producto> listaNovedades = opeCatalogo.servicioObtenerNovedades();
+		modelo.addAttribute("listanovedades", listaNovedades);
+		modelo.addAttribute("masvendido", productoMasVendido);
 		return "index";
 	}
 

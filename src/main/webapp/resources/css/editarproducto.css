@@ -99,6 +99,42 @@ section::before {
 	margin-left: 1rem;
 }
 
+.form-control {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.inputBox {
+	margin: 15px;
+	color: White;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255); /* Cambia el color del marcador de posición a gris */
+}
+.contenedorimagen {
+	margin: 15px;
+	color: White;
+}
+
+.form-control:focus {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.selecttextbox {
+	display: flex;
+	width: 100%;
+}
+
 .cesta-articulo {
 	width: 20px;
 	height: 20px;

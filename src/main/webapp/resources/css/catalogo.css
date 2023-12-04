@@ -58,10 +58,58 @@ section::before {
 	flex-direction: column;
 }
 
+.form-control {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+	padding-left: 35px;
+}
+
+.form-control:focus {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+	padding-left: 35px;
+}
+
+.input-group-append {
+	margin-left: -1px;
+	top: 0px;
+	position: absolute;
+	right: -83px;
+	background: #333;
+}
+.botonselect{
+	top:10px;
+}
+
+.contenedorfiltro {
+	display: flex;
+	width: 90%;
+	margin-left: 25%;
+}
+
+.lupa {
+	position: absolute;
+	font-size: 25px;
+	left: 15px;
+}
+
+form {
+	position: relative;
+}
+
 .sinsctok {
 	color: #ff073a;
 	font-weight: 600;
 }
+
 .imagenplataforma {
 	width: 30px;
 	height: 30px;
@@ -72,9 +120,11 @@ section::before {
 .lupa {
 	color: white;
 }
+
 .contenedorprecioplataforma {
 	display: flex;
 }
+
 .cabecera {
 
 	width: 90%;

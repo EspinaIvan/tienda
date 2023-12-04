@@ -29,8 +29,9 @@
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="content">
-				<h2>Registro Producto</h2>
-				<form:form class="form" action="${producto.id == 0 ? 'ingresarProducto' : 'procesarproducto'}"
+				<h2>${producto.id == 0 ? 'Registar Producto' : 'Editar Producto'}</h2>
+				<form:form class="form"
+					action="${producto.id == 0 ? 'ingresarProducto' : 'procesarproducto'}"
 					modelAttribute="producto" method="POST"
 					enctype="multipart/form-data">
 					<div class="inputBox">
@@ -49,27 +50,34 @@
 						<form:input path="impuesto" type="text" />
 						<i>Impuestos</i>
 					</div>
-					<form:hidden path="id"/>
+					<form:hidden path="id" />
 					<div class="selecttextbox">
 						<div class="inputBox">
-							<label for="plataforma.id">Plataforma</label>
-							<form:select path="plataforma.id">
-								<form:options items="${listaplataforma}" itemValue="id" itemLabel="nombre" />
+						<label for="plataforma.id">Plataforma</label>
+							<form:select path="plataforma.id"
+								class="custom-select form-control">
+								<form:options items="${listaplataforma}" itemValue="id"
+									itemLabel="nombre" />
 							</form:select>
 						</div>
 						<div class="inputBox">
-							<form:textarea path="descripcion" placeholder="Descripcion"></form:textarea>
+							<form:textarea path="descripcion" placeholder="Descripcion"
+								class="form-control"></form:textarea>
 						</div>
-						<div>
+						<div class="contenedorimagen">
 							<c:if test="${not empty producto.imagen}">
-								<img class="imagenfile" alt="" src="${pageContext.request.contextPath}/resources/imagenes/productos/${ producto.imagen}">
+								<img class="imagenfile" alt=""
+									src="${pageContext.request.contextPath}/resources/imagenes/productos/${ producto.imagen}">
 							</c:if>
-							<input name="imagenproducto" type="file" />
+							<label for="imagenproducto">Imagen</label>
+							<input name="imagenproducto" type="file" class="form-control"
+								id="formFile" />
 						</div>
 					</div>
 					<div class="inputBox botonregistro">
-					
-						<input type="submit" value="${producto.id == 0 ? 'Registar Producto' : 'Actualizar Producto'}">
+
+						<input type="submit"
+							value="${producto.id == 0 ? 'Registar Producto' : 'Actualizar Producto'}">
 					</div>
 				</form:form>
 			</div>

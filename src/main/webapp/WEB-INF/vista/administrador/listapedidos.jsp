@@ -22,17 +22,6 @@
 	<div class="contenedor">
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
-			<div class="ordenarfecha">
-				<form action="verpedidos" method="get">
-					<label for="ordenarFecha">Ordenar por fecha:</label> <select
-						name="ordenarFecha" id="ordenarFecha">
-						<option value="DESC">Descendente</option>
-						<option value="ASC">Ascendente</option>
-					</select>
-					<button type="submit">Ordenar</button>
-				</form>
-
-			</div>
 			<table>
 				<thead>
 					<tr>
@@ -62,11 +51,21 @@
 									<c:otherwise> --------
 									</c:otherwise>
 								</c:choose></td>
-							<td><c:if test="${pedido.estado eq 'P.E.'}">
-									<a
-										href="${pageContext.request.contextPath}/administrador/enviarpedido?idpedido=${pedido.id}">Aceptar
-										Pedido</a>
-								</c:if></td>
+							<td><c:choose>
+									<c:when test="${pedido.estado eq 'P.E.'}">
+										<a
+											href="${pageContext.request.contextPath}/administrador/enviarpedido?idpedido=${pedido.id}">Aceptar
+											Pedido</a>
+									</c:when>
+									<c:when
+										test="${sessionScope.usuario.roles.id == 3 && pedido.estado eq 'P.C.'}">
+										<a
+											href="${pageContext.request.contextPath}/administrador/aceptarcancelarpedido?idpedido=${pedido.id}">Cancelar
+											Pedido</a>
+									</c:when>
+									<c:otherwise>
+									</c:otherwise>
+								</c:choose></td>
 							<td><c:if test="${not empty pedido.num_factura}">
 									<button type="button"
 										onclick="location.href='tu_enlace_factura'"

@@ -30,6 +30,18 @@ public class SubirArchivos {
             throw new IOException("No se puede guardar el archivo: " + nombreArchivo, ioe);
         }
     }
+	
+	public static String obtenerExtension(String nombreArchivo) {
+		
+	    int lastDotIndex = nombreArchivo.lastIndexOf(".");
+	    
+	    if (lastDotIndex != -1) {
+	    	
+	        return nombreArchivo.substring(lastDotIndex);
+	    }
+	    
+	    return "";
+	}
 
 }
 

@@ -12,4 +12,5 @@ public interface ProductoInterfaceDAO {
 	public void actualizarProducto(Producto producto);
 	public List<Producto> busquedaPalabra(String busqueda);
 	public List<Producto> busquedaPlataforma(Plataforma plataforma);
+	public List<Producto> getNovedades();
 }

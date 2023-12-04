@@ -20,7 +20,9 @@ import org.springframework.web.multipart.MultipartFile;
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
+import com.tienda.dao.roles.Roles;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.OperacionesAdministrador;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesContraseña;
 import com.tienda.servicios.OperacionesPedidos;
@@ -45,6 +47,8 @@ public class AdministradorControlador {
 	private OperacionesCatalogo opeCatalogo;
 	@Autowired
 	private OpereacionesProducto opeProducto;
+	@Autowired
+	private OperacionesAdministrador opeAdministrador;
 
 	@GetMapping("/verlistausuarios")
 	public String verListaUsuarios(HttpSession session, Model modelo) {
@@ -62,7 +66,11 @@ public class AdministradorControlador {
 
 		modelo.addAttribute("usuario", usuario);
 
-		System.out.println("vemos el usuario antes de mandar el formulario de editar: " + usuario);
+		List<Roles> listaRoles = opeAdministrador.servicioGetRoles();
+		modelo.addAttribute("listaroles", listaRoles);
+	
+		System.out.println("miurtamos la lista de roles: " + listaRoles);
+		
 		return "administrador/editarusuarioadmin";
 
 	}
@@ -70,8 +78,11 @@ public class AdministradorControlador {
 	@PostMapping("/editarusuario")
 	public String editarUsuarioAdmin(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado,
 			Model modelo, HttpSession session) {
+		
+		
+		
+		
 
-		System.out.println(usuario);
 		Usuario usuarioBD = opeUsuario.getUsuarioId(usuario.getId());
 		boolean validado = true;
 
@@ -191,8 +202,8 @@ public class AdministradorControlador {
 	@GetMapping("/editarproducto")
 	public String editarProducto(@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
 
+		Producto producto = opeProducto.obtenerProducto(idProducto);	
 		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
-		Producto producto = opeProducto.obtenerProducto(idProducto);
 		modelo.addAttribute("producto", producto);
 		modelo.addAttribute("listaplataforma", listaPlataformas);
 		return "administrador/editarproducto";
@@ -226,6 +237,8 @@ public class AdministradorControlador {
 	@GetMapping("/añadirProducto")
 	public String agregarProducto(HttpSession session, Model modelo) {
 		
+		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
+		modelo.addAttribute("listaplataforma", listaPlataformas);
 		Producto producto = new Producto();
 		modelo.addAttribute(producto);
 		
@@ -257,13 +270,40 @@ public class AdministradorControlador {
 		
 	}
 	
-	@GetMapping("/añadirPlataforma") 
+	@GetMapping("/listaplataformas") 
 	public String listaPlataformas (Model modelo) {
 		
 		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
+		Plataforma plataforma = new Plataforma();
+		modelo.addAttribute("plataforma", plataforma);
 		modelo.addAttribute("listaplataformas", listaPlataformas);
 		
 		return "administrador/listaplataformas";
+	}
+	
+	@PostMapping("/agregarplataforma")
+	public String agregarPlataforma(@ModelAttribute ("plataforma") Plataforma plataforma) {
+		
+		opeProducto.servicioAgregarPlataforma(plataforma);
+		
+		return "redirect:/administrador/listaplataformas";
+		
+	}
+	
+	@GetMapping("/borrarplataforma")
+	public String borrarPlataforma(@RequestParam("idplataforma") int idPlataforma) {
+		
+		opeProducto.servicioBorrarPlataforma(idPlataforma);
+		
+		return "redirect:/administrador/listaplataformas";
+	}
+	
+	@GetMapping("/aceptarcancelarpedido")
+	public String AceptarCancelarPedido (@RequestParam("idpedido") int idPedido, HttpSession session, Model modelo) {
+		
+		opePedidos.cancelarPedido(idPedido);
+
+		return "redirect:/administrador/listapedidos";
 	}
 	
 }

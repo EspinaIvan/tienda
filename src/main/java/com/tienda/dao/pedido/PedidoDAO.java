@@ -102,4 +102,38 @@ public class PedidoDAO implements PedidoInterfaceDAO {
 
 		return listaPedidos;
 	}
+
+	@Override
+	@Transactional
+	public List<Pedido> obtenerPedidosPendientes(String estadoActual) {
+		// TODO Auto-generated method stub
+
+		Session session = entityManager.unwrap(Session.class);
+
+		String hql = "FROM Pedido WHERE estado = :estadoActual";
+
+		Query<Pedido> query = session.createQuery(hql, Pedido.class);
+		query.setParameter("estadoActual", estadoActual);
+
+		List<Pedido> pedidosPendientes = query.getResultList();
+
+		return pedidosPendientes;
+	}
+
+	@Override
+	@Transactional
+	public List<String> getUltimaFactura() {
+			
+		Session session = entityManager.unwrap(Session.class);
+		
+		 String hql = "SELECT p.num_factura FROM Pedido p WHERE p.estado = 'E.' ORDER BY p.num_factura DESC";
+		 
+	        Query<String> query = session.createQuery(hql, String.class);
+	        query.setMaxResults(1);
+	        List<String> factura = query.getResultList();
+	        System.out.println("factura del DAO" + factura);
+		
+		return factura;
+	}
+
 }

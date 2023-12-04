@@ -37,8 +37,9 @@
 							<div class="d-flex justify-content-between">
 								<div class="d-flex flex-row align-items-center">
 									<div style="width: 50%;">
-										<img src="${producto.imagen}" class="img-fluid rounded-3"
-											alt="${producto.imagen}">
+										<img
+											src="${pageContext.request.contextPath}/resources/imagenes/productos/${producto.imagen}"
+											class="img-fluid rounded-3" alt="${producto.nombre}">
 									</div>
 									<div class="ms-3">
 										<h5>${producto.nombre}</h5>
@@ -77,15 +78,18 @@
 				<form:form modelAttribute="pedido" method="post"
 					action="${pageContext.request.contextPath}/cesta/procesarpago">
 					<div class="mensajestock">${noStock }</div>
-					<label for="metodoPago">Método de Pago:</label>
-					<form:select path="metodo_pago" id="metodoPago">
-						<form:option value="EFECTIVO" label="Efectivo" />
-						<form:option value="TARJETA_CREDITO" label="Tarjeta de Crédito" />
-						<form:option value="TRANSFERENCIA" label="Transferencia Bancaria" />
-						<form:option value="PAYPAL" label="PayPal" />
+					<div class="metodopago">
+						<label for="metodoPago">Método de Pago:</label>
+						<form:select path="metodo_pago" id="metodoPago"
+							class="custom-select form-control">
+							<form:option value="EFECTIVO" label="Efectivo" />
+							<form:option value="TARJETA_CREDITO" label="Tarjeta de Crédito" />
+							<form:option value="TRANSFERENCIA" label="Transferencia Bancaria" />
+							<form:option value="PAYPAL" label="PayPal" />
 
-					</form:select>
-					<div>
+						</form:select>
+					</div>
+					<div class="subtotal">
 						Subtotal:
 						<fmt:formatNumber value="${subtotal}" type="currency"
 							currencyCode="EUR" pattern="#,##€0.00" />
@@ -105,7 +109,8 @@
 					<c:set var="total" value="${subtotal + impuestos }" />
 					<form:hidden path="total" id="total" value="${total }" />
 
-					<input type="submit" value="Enviar" />
+					<input type="submit" class="btn btn-outline-secondary"
+						value="Enviar" />
 				</form:form>
 			</div>
 		</div>

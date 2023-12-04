@@ -26,4 +26,39 @@ public class PlataformaDAO implements PlataformaInterfaceDAO {
 		return listaPlataforma;
 	}
 
+	@Override
+	@Transactional
+	public void agregarPlataforma(Plataforma plataforma) {
+		// TODO Auto-generated method stub
+		Session session = entityManager.unwrap(Session.class);
+		
+		session.merge(plataforma);
+		
+	}
+
+	@Override
+	@Transactional
+	public void borrarPlataforma(Plataforma plataforma) {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+		
+		session.remove(plataforma);
+		
+	}
+
+	@Override
+	@Transactional
+	public Plataforma getPlataformaID(int idPlataforma) {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+		
+		Plataforma plataforma = session.get(Plataforma.class, idPlataforma);
+				
+		return plataforma;
+	}
+	
+	
+
 }

@@ -46,6 +46,49 @@ section::before {
 	}
 }
 
+.titulousuario {
+	color: white;
+}
+
+.tituloadministradores {
+	color: white;
+}
+
+.agregarusuario {
+	background-color: #333;
+	color: White;
+	border-radius: 5px;
+	height: 50px;
+	margin: 20px;
+	display: flex;
+	width: 200px;
+	align-content: center;
+	justify-content: center;
+	padding-top: 10px;
+}
+.agregar {
+	
+	color: #5d9536;
+}
+
+a {
+	color: #0077cc;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+a:hover {
+
+	text-decoration: underline;
+	color: #0077cc;
+
+}
+
+hr {
+	color: white;
+}
+
 .contenedor {
 	position: relative;
 	z-index: 1000;

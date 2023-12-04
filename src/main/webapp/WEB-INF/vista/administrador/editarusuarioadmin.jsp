@@ -83,7 +83,15 @@
 						<form:input path="direccion" type="text" />
 						<i>Direccion</i>
 					</div>
-					<form:hidden path="id" value="${usuario.id }"/>
+					<c:if test="${sessionScope.usuario.roles.id == 3}">
+						<div class=inputrol>
+							<form:select path="roles.id">
+								<form:options items="${listaroles}" itemValue="id"
+									itemLabel="rol" />
+							</form:select>
+						</div>
+					</c:if>
+					<form:hidden path="id" value="${usuario.id }" />
 					<div class="links">
 						<p class="yacuenta">¿Deseas cambiar, la conntraseña?</p>
 						<a class="iniciasession"

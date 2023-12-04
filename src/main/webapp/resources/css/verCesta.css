@@ -36,6 +36,37 @@ section::before {
 	animation: animate 5s linear infinite;
 }
 
+.form-control {
+	background-color: #222;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+	width: 45%;
+}
+
+.subtotal {
+
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+	height: 150px;
+}
+
+.metodopago {
+	display: flex;
+}
+
+.form-control:focus {
+	background-color: #222;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+
 @keyframes animate {
 	0% {
 		transform: translateY(-100%);
@@ -120,6 +151,7 @@ section::before {
 
 	margin-right: 35%;
 }
+
 .cestavacia {
 	color: #ff073a;
 	font-size: larger;
@@ -127,10 +159,11 @@ section::before {
 	text-transform: uppercase;
 	display: contents;
 }
+
 .iconocestavacia {
 	color: white;
-  font-size: 20rem;
-  margin-right: 14rem;
+	font-size: 20rem;
+	margin-right: 14rem;
 }
 
 .pie {
@@ -179,14 +212,26 @@ section span {
 }
 
 .pagototal {
-	background-color: #5d9536;
-	width: 60%;
+	background-color: #333;
+	width: 40%;
+	margin-top: 20px;
+	border-radius: 15px;
+	padding: 10px;
+	height: 90%;
+	margin-right: 10px;
+	color: white;
+}
+
+label {
+	width: 20%;
+	margin-top: 15px;
 }
 
 .contenedor-cards {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	margin: 20px;
 }
 
 
@@ -382,11 +427,15 @@ input[type="submit"]:hover {
 .contenedortarjeta {
 	background-color: #333;
 	flex: 1;
-	/* Para que los cards se expandan para ocupar el espacio disponible */
-	margin: 0 10px 10px 0;
-	/* Ajusta los márgenes entre los cards */
+	margin: 10px;
+	border-radius: 5px;
 }
 
+.btn-outline-secondary {
+	background-color: #5d9536;
+	color: #000;
+	border-color: #5d9536;
+}
 
 .catalogo {
 

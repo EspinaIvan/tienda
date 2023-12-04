@@ -23,19 +23,22 @@
 		<%@ include file="fragmentos/header.jsp"%>
 		<div class="signin">
 			<c:if test="${param.enviado == 'true'}">
-				<p class="enviocorrecto">Mensaje Enviado Correctamente</p>
+				<h3 class="enviocorrecto">Mensaje Enviado Correctamente</h3>
 			</c:if>
-			<form action="enviarCorreo" method="post">
-				<label for="destinatario">Tu Email:</label> <input type="text"
-					id="destinatario" name="remitente"
-					value="${sessionScope.usuario.email }" readonly="readonly">
-				<br> <label for="asunto">Asunto:</label> <input type="text"
-					id="asunto" name="asunto" required> <br> <label
-					for="cuerpo">Cuerpo:</label>
-				<textarea id="cuerpo" name="cuerpo" required></textarea>
-				<br>
-				<button type="submit">Enviar Correo</button>
-			</form>
+			<div class="mensaje">
+				<form action="enviarCorreo" method="post">
+					<input type="text" id="destinatario" name="remitente"
+						value="${sessionScope.usuario.email }" class="form-control email" placeholder="Email de contacto">
+						 <input class="form-control asunto"
+						type="text" id="asunto" name="asunto" placeholder="Asunto"
+						required>
+					<textarea id="cuerpo" name="cuerpo" class="form-control"
+						placeholder="Mensaje a escribir" required></textarea>
+					<br>
+					<button type="submit" class="btn btn-primary botoncesta">Enviar
+						Correo</button>
+				</form>
+			</div>
 		</div>
 		<%@ include file="fragmentos/footer.jsp"%>
 	</div>

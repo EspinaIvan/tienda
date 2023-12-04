@@ -69,4 +69,19 @@ public class OpereacionesProducto {
 		return listaPlataformas;
 		
 	}
+
+	public void servicioAgregarPlataforma(Plataforma plataforma) {
+		// TODO Auto-generated method stub
+		
+		plataformaDAO.agregarPlataforma(plataforma);
+		
+	}
+
+	public void servicioBorrarPlataforma(int idPlataforma) {
+		// TODO Auto-generated method stub
+		
+		Plataforma plataforma = plataformaDAO.getPlataformaID(idPlataforma);
+		plataformaDAO.borrarPlataforma(plataforma);
+		
+	}
 }
