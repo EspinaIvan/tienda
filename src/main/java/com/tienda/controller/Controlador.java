@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.productos.Producto;
+import com.tienda.servicios.OperacionesAdministrador;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.ServicioOperacionesConfiguracion;
 
@@ -24,10 +25,13 @@ public class Controlador {
 	private OperacionesCatalogo opeCatalogo;
 	@Autowired
 	private ServicioOperacionesConfiguracion opeConfiguracion;
+	@Autowired
+	private OperacionesAdministrador opeAdministrador;
 	
 	@GetMapping(value = "")
 	public String mostrarSaludo(HttpSession session, Model modelo) {
 		
+		opeAdministrador.ComprobarAdministrador();
 		session.setAttribute("nombre", opeConfiguracion.servicioGetNombre());
 		session.setAttribute("logo", opeConfiguracion.servicioGetLogo());
 		session.setAttribute("direccion", opeConfiguracion.servicioGetDireccion());

@@ -68,7 +68,7 @@ section::before {
 
 .contenedorimagen {
 
-	flex: -moz-available;
+	width: 80%;
 }
 
 
@@ -180,6 +180,12 @@ section::before {
 	color: aliceblue;
 }
 
+.imagenfile {
+	width: 20%;
+	margin-left: 40%;
+	margin-bottom: 10px;
+}
+
 section span {
 	position: relative;
 	display: block;
@@ -228,6 +234,7 @@ section span {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 25px;
+	justify-content: center;
 }
 
 .contenedor .signin .content .form .inputBox {

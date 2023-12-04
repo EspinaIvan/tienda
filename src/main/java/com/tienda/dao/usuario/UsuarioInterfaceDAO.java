@@ -13,4 +13,5 @@ public interface UsuarioInterfaceDAO {
 	public void actualizarUsuario(Usuario usuario);
 	public void borrarUsuario(int idUsuario);
 	public Usuario getUsuarioId (int idUsuario);
+	public List<Usuario> getAdministrador();
 }

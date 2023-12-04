@@ -57,4 +57,19 @@ public class OperacionesContraseña {
 
 		return false;
 	}
+
+	public static boolean desencriptarContraseñaAdmin(Usuario usuario) {
+
+		StrongPasswordEncryptor encriptado = new StrongPasswordEncryptor();
+
+		if (encriptado.checkPassword("admin", usuario.getClave())) {
+
+			System.out.println("Contraseñas coinciden");
+
+			return true;
+		}
+
+		return false;
+
+	}
 }

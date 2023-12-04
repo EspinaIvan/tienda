@@ -110,4 +110,19 @@ public class UsuarioDAO implements UsuarioInterfaceDAO {
 		return usuario;
 	}
 
+	@Override
+	@Transactional
+	public List<Usuario> getAdministrador() {
+		// TODO Auto-generated method stub
+		
+		Session session = entityManager.unwrap(Session.class);
+
+	    Query<Usuario> query = session.createQuery("SELECT u FROM Usuario u JOIN u.roles r WHERE r.id = :roleId", Usuario.class);
+	    query.setParameter("roleId", 3);
+
+	    List<Usuario> administradores = query.getResultList();
+		
+		return administradores;
+	}
+
 }

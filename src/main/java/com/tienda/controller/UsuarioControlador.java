@@ -127,13 +127,21 @@ public class UsuarioControlador {
 	}
 
 	@PostMapping("/iniciarSesion")
-	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, HttpSession session, Model modelo) {
+	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, HttpSession session, Model modelo, RedirectAttributes atributoredirigido) {
 
 		String comprando = (String) session.getAttribute("comprando");
 		Usuario usuarioBD = opeUsuario.buscarUsuarioNick(usuario);
 		System.out.println("Usuario base de datos: " + usuarioBD + " usuario mandado " + usuario);
+		
 		if (usuarioBD != null) {
-
+			
+			if (OperacionesContraseña.desencriptarContraseñaAdmin(usuarioBD)) {
+				
+				session.setAttribute("admin", usuarioBD);
+				
+				return "redirect:/administrador/primeravezadmin";
+			}
+			
 			if (OperacionesContraseña.desencriptarContraseña(usuario, usuarioBD)) {
 
 				session.setAttribute("usuario", usuarioBD);

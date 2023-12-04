@@ -72,9 +72,9 @@ public class AdministradorControlador {
 
 		List<Roles> listaRoles = opeAdministrador.servicioGetRoles();
 		modelo.addAttribute("listaroles", listaRoles);
-	
+
 		System.out.println("miurtamos la lista de roles: " + listaRoles);
-		
+
 		return "administrador/editarusuarioadmin";
 
 	}
@@ -82,10 +82,6 @@ public class AdministradorControlador {
 	@PostMapping("/editarusuario")
 	public String editarUsuarioAdmin(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado,
 			Model modelo, HttpSession session) {
-		
-		
-		
-		
 
 		Usuario usuarioBD = opeUsuario.getUsuarioId(usuario.getId());
 		boolean validado = true;
@@ -206,7 +202,7 @@ public class AdministradorControlador {
 	@GetMapping("/editarproducto")
 	public String editarProducto(@RequestParam("idproducto") int idProducto, HttpSession session, Model modelo) {
 
-		Producto producto = opeProducto.obtenerProducto(idProducto);	
+		Producto producto = opeProducto.obtenerProducto(idProducto);
 		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
 		modelo.addAttribute("producto", producto);
 		modelo.addAttribute("listaplataforma", listaPlataformas);
@@ -218,9 +214,9 @@ public class AdministradorControlador {
 			@RequestParam("imagenproducto") MultipartFile imagen, Model modelo) throws IOException {
 
 		// Todo el metodo que manda a la imagen
-		
+
 		if (!imagen.getOriginalFilename().trim().isEmpty()) {
-			
+
 			String nombreArchivo = StringUtils.cleanPath(imagen.getOriginalFilename());
 
 			producto.setImagen(nombreArchivo);
@@ -229,34 +225,33 @@ public class AdministradorControlador {
 
 			SubirArchivos.guardarArchivo(subirRuta, nombreArchivo, imagen);
 		}
-		
+
 		// Fin de metodo de imagen
 
 		opeProducto.editarProducto(producto);
 
 		return "redirect:/administrador/listaproductos";
-		
+
 	}
-	
+
 	@GetMapping("/añadirProducto")
 	public String agregarProducto(HttpSession session, Model modelo) {
-		
+
 		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
 		modelo.addAttribute("listaplataforma", listaPlataformas);
 		Producto producto = new Producto();
 		modelo.addAttribute(producto);
-		
+
 		return "administrador/editarproducto";
-		
+
 	}
-	
+
 	@PostMapping("/ingresarProducto")
 	public String registarProducto(@ModelAttribute("producto") Producto producto,
 			@RequestParam("imagenproducto") MultipartFile imagen, Model modelo) throws IOException {
-		
 
 		if (!imagen.getOriginalFilename().trim().isEmpty()) {
-			
+
 			String nombreArchivo = StringUtils.cleanPath(imagen.getOriginalFilename());
 
 			producto.setImagen(nombreArchivo);
@@ -264,68 +259,94 @@ public class AdministradorControlador {
 			String subirRuta = "src/main/webapp/resources/imagenes/productos";
 
 			SubirArchivos.guardarArchivo(subirRuta, nombreArchivo, imagen);
-			
+
 		}
-		
+
 		opeProducto.registarProducto(producto);
 
-		
-		return"redirect:/administrador/listaproductos";
-		
+		return "redirect:/administrador/listaproductos";
+
 	}
-	
-	@GetMapping("/listaplataformas") 
-	public String listaPlataformas (Model modelo) {
-		
+
+	@GetMapping("/listaplataformas")
+	public String listaPlataformas(Model modelo) {
+
 		List<Plataforma> listaPlataformas = opeProducto.servicioListaPlataformas();
 		Plataforma plataforma = new Plataforma();
 		modelo.addAttribute("plataforma", plataforma);
 		modelo.addAttribute("listaplataformas", listaPlataformas);
-		
+
 		return "administrador/listaplataformas";
 	}
-	
+
 	@PostMapping("/agregarplataforma")
-	public String agregarPlataforma(@ModelAttribute ("plataforma") Plataforma plataforma) {
-		
+	public String agregarPlataforma(@ModelAttribute("plataforma") Plataforma plataforma) {
+
 		opeProducto.servicioAgregarPlataforma(plataforma);
-		
+
 		return "redirect:/administrador/listaplataformas";
-		
+
 	}
-	
+
 	@GetMapping("/borrarplataforma")
 	public String borrarPlataforma(@RequestParam("idplataforma") int idPlataforma) {
-		
+
 		opeProducto.servicioBorrarPlataforma(idPlataforma);
-		
+
 		return "redirect:/administrador/listaplataformas";
 	}
-	
+
 	@GetMapping("/aceptarcancelarpedido")
-	public String AceptarCancelarPedido (@RequestParam("idpedido") int idPedido, HttpSession session, Model modelo) {
-		
+	public String AceptarCancelarPedido(@RequestParam("idpedido") int idPedido, HttpSession session, Model modelo) {
+
 		opePedidos.cancelarPedido(idPedido);
 
 		return "redirect:/administrador/listapedidos";
 	}
-	
+
 	@GetMapping("/configuracion")
-	public String Configuracion( HttpSession session, Model modelo) {
-		
+	public String Configuracion(HttpSession session, Model modelo) {
+
 		System.out.println("Llega a la configuracion");
 		List<Configuracion> configuraciones = opeConfiguracion.servicioGetConfiguraciones();
 		modelo.addAttribute("configuraciones", configuraciones);
-		
+
 		return "administrador/configuracion";
-		
+
 	}
-	
+
 	@PostMapping("/cambiarconfiguracion")
-	public String CambiarConfiguracion(@ModelAttribute ("valor") String valor, @ModelAttribute ("id") int id, HttpSession session, Model modelo) {
-		
+	public String CambiarConfiguracion(@ModelAttribute("valor") String valor, @ModelAttribute("id") int id,
+			HttpSession session, Model modelo) {
+
 		opeConfiguracion.servicioEditarConfiguracion(valor, id);
-		
+
 		return "redirect:/administrador/configuracion";
+	}
+
+	@GetMapping("/primeravezadmin")
+	public String PrimeraVezAdmin(HttpSession session, Model modelo) {
+
+		Usuario usuario = (Usuario) session.getAttribute("admin");
+
+		modelo.addAttribute("idusuario", usuario.getId());
+
+		return "administrador/admincambiarclave";
+	}
+
+	@PostMapping("/admincambioclave")
+	public String CambioClaveAdmin(@RequestParam("nuevaclave") String nuevaClave,
+			@RequestParam("repetirnuevaclave") String repetirNuevaClave, @RequestParam("idusuario") int idUsuario,
+			HttpSession session, Model modelo) {
+
+		Usuario usuario = opeUsuario.getUsuarioId(idUsuario);
+		usuario.setClave(nuevaClave);
+		usuario.setRepetirClave(repetirNuevaClave);
+
+		usuario = OperacionesContraseña.encriptarContraseña(usuario);
+		logger.info("Contraseña cambiada con exito");
+		opeUsuario.actualizarClave(usuario);
+
+		return "redirect:/usuario/login";
 	}
 }

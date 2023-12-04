@@ -35,8 +35,8 @@
 				<c:choose>
 					<c:when test="${empty sessionScope.usuario}">
 						<a href="${pageContext.request.contextPath}/usuario/login"><button
-								type="button" class="btn btn-outline-light me-2 inicioboton">Iniciar
-								Session</button></a>
+								type="button" class="btn btn-outline-light me-2 inicioboton"><fmt:message
+									key="menu.login" /></button></a>
 					</c:when>
 					<c:otherwise>
 						<a href="${pageContext.request.contextPath}/usuario/verperfil">
@@ -50,8 +50,8 @@
 					<c:choose>
 						<c:when test="${empty sessionScope.usuario}">
 							<a href="${pageContext.request.contextPath}/usuario/registro">
-								<button type="button" class="btn btn-warning registroboton">
-									Registro</button>
+								<button type="button" class="btn btn-warning registroboton"><fmt:message
+									key="menu.registrarse" /></button>
 							</a>
 						</c:when>
 						<c:otherwise>
@@ -71,7 +71,7 @@
 					</c:if>
 				</c:if>
 				<div>
-					<form method="post"
+					<form method="get"
 						action="${pageContext.request.contextPath}/cambiarIdioma">
 						<select name="lang">
 							<option value="es"

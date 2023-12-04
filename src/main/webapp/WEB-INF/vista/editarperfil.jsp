@@ -34,9 +34,8 @@
 					enctype="multipart/form-data">
 					<div class="contenedorimagen">
 						<img class="imagenfile" alt=""
-							src="${pageContext.request.contextPath}/resources/imagenes/productos/${ sessionScope.imagen}">
-						<label for="imagenavatar">Avatar</label> <input
-							name="imagenavatar" type="file" class="form-control"
+							src="${pageContext.request.contextPath}/resources/imagenes/usuarios/${ sessionScope.usuario.imagen}">
+						<input name="imagenavatar" type="file" class="form-control"
 							id="formFile" />
 					</div>
 					<div class="inputBox">
