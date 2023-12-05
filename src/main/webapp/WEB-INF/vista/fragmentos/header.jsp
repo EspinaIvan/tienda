@@ -1,5 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+	<script>
+						function cambiarIdioma() {
+							var form = document
+									.getElementById("cambiarIdiomaForm");
+							form.submit();
+						}
+					</script>
+
 <header class="p-3 text-white cabecera">
 	<div class="container">
 		<div
@@ -35,8 +43,9 @@
 				<c:choose>
 					<c:when test="${empty sessionScope.usuario}">
 						<a href="${pageContext.request.contextPath}/usuario/login"><button
-								type="button" class="btn btn-outline-light me-2 inicioboton"><fmt:message
-									key="menu.login" /></button></a>
+								type="button" class="btn btn-outline-light me-2 inicioboton">
+								<fmt:message key="menu.login" />
+							</button></a>
 					</c:when>
 					<c:otherwise>
 						<a href="${pageContext.request.contextPath}/usuario/verperfil">
@@ -50,8 +59,9 @@
 					<c:choose>
 						<c:when test="${empty sessionScope.usuario}">
 							<a href="${pageContext.request.contextPath}/usuario/registro">
-								<button type="button" class="btn btn-warning registroboton"><fmt:message
-									key="menu.registrarse" /></button>
+								<button type="button" class="btn btn-warning registroboton">
+									<fmt:message key="menu.registrarse" />
+								</button>
 							</a>
 						</c:when>
 						<c:otherwise>
@@ -72,15 +82,15 @@
 				</c:if>
 				<div>
 					<form method="get"
-						action="${pageContext.request.contextPath}/cambiarIdioma">
-						<select name="lang">
+						action="${pageContext.request.contextPath}/cambiarIdioma"
+						id="cambiarIdiomaForm">
+						<select name="lang" onchange="cambiarIdioma()" class="">
 							<option value="es"
 								<c:if test="${sessionScope.lang eq 'es'}">selected</c:if>>Es</option>
 							<option value="en"
 								<c:if test="${sessionScope.lang eq 'en'}">selected</c:if>>En</option>
-						</select> <input type="submit" value="Cambiar Idioma" />
+						</select>
 					</form>
-					
 				</div>
 			</div>
 		</div>

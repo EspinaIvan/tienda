@@ -26,8 +26,9 @@
 		<%@ include file="../fragmentos/header.jsp"%>
 		<div class="signin">
 			<div class="nuevoproducto">
-				<a href="añadirProducto"> + Agregar Producto </a> <span class="spanañadir"><a
-					href="listaplataformas"> Lista Plataformas </a></span>
+				<a href="añadirProducto"> + Agregar Producto </a> <span
+					class="spanañadir"><a href="listaplataformas"> Lista
+						Plataformas </a></span>
 			</div>
 			<div class="contenedor-cards">
 				<table class="tabla">
@@ -66,8 +67,7 @@
 											<span class="productobaja"></span>
 										</c:otherwise>
 									</c:choose></td>
-								<td><c:if
-										test="${sessionScope.usuario.roles.id == 3}">
+								<td><c:if test="${sessionScope.usuario.roles.id == 3}">
 										<c:choose>
 											<c:when test="${not producto.baja}">
 												<a
@@ -88,6 +88,20 @@
 						</c:forEach>
 					</tbody>
 				</table>
+				<div class="exportacion">
+					<button type="button" class="btn btn-outline-light exportar">
+						<a
+							href="${pageContext.request.contextPath}/administrador/exportar">Exportar
+							Lista Productos</a>
+					</button>
+					<c:if test="${sessionScope.usuario.roles.id == 3}">
+						<button type="button" class="btn btn-outline-light importar">
+							<a
+								href="${pageContext.request.contextPath}/administrador/importar">Importar
+								Lista Productos</a>
+						</button>
+					</c:if>
+				</div>
 			</div>
 		</div>
 		<%@ include file="../fragmentos/footer.jsp"%>

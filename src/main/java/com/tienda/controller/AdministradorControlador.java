@@ -23,6 +23,8 @@ import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.roles.Roles;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.Exportacion;
+import com.tienda.servicios.Importacion;
 import com.tienda.servicios.OperacionesAdministrador;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesContraseña;
@@ -53,6 +55,8 @@ public class AdministradorControlador {
 	private OperacionesAdministrador opeAdministrador;
 	@Autowired
 	private ServicioOperacionesConfiguracion opeConfiguracion;
+	@Autowired
+	private Importacion importar;
 
 	@GetMapping("/verlistausuarios")
 	public String verListaUsuarios(HttpSession session, Model modelo) {
@@ -348,5 +352,24 @@ public class AdministradorControlador {
 		opeUsuario.actualizarClave(usuario);
 
 		return "redirect:/usuario/login";
+	}
+	
+	@GetMapping("/exportar")
+	public String exportarProductos() throws IOException {
+		
+		List<Producto> listaProductos = opeCatalogo.catalogoCompletoServicio();
+		
+		Exportacion.exportProductData(listaProductos);
+		
+		return "redirect:/administrador/listaproductos";
+		
+	}
+	
+	@GetMapping("/importar")
+	public String importarProductos() throws IOException {
+		
+		importar.importarDatosDesdeExcel();
+		
+		return "redirect:/administrador/listaproductos";
 	}
 }
