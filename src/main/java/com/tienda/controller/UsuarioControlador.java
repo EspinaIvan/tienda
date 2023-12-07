@@ -130,7 +130,6 @@ public class UsuarioControlador {
 
 		String comprando = (String) session.getAttribute("comprando");
 		Usuario usuarioBD = opeUsuario.buscarUsuarioNick(usuario);
-		System.out.println("Usuario base de datos: " + usuarioBD + " usuario mandado " + usuario);
 
 		if (usuarioBD != null) {
 
@@ -149,7 +148,7 @@ public class UsuarioControlador {
 				List<Cesta> cestaBD = opeCesta.recuperarCesta(usuarioBD.getId());
 				// RECUPERAR LA CESTA SI TIENE UNA GUARDADA EN LA BD
 
-				if (cestaBD != null || !cestaBD.isEmpty()) {
+				if (cestaBD != null && !cestaBD.isEmpty()) {
 
 					Map<Integer, Cesta> cestaRecuperada = new HashMap<Integer, Cesta>();
 					
@@ -160,7 +159,12 @@ public class UsuarioControlador {
 					}
 					
 					session.setAttribute("cesta", cestaRecuperada);
-					System.out.println("M;iramos la cesta recuperada al iniciar sesion: " + cestaRecuperada);
+					
+				} else {
+					
+					//Registrar en la BD la cesta invitado
+					opeCesta.registarCestaInvitado(cesta, usuarioBD);
+					
 				}
 
 				if (usuarioBD.isBaja()) {

@@ -6419,3 +6419,1291 @@ org.hibernate.UnknownEntityTypeException: Unable to locate persister: java.util.
 2023-12-07 17:51:59,202 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-12-07 17:51:59,202 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2023-12-07 17:51:59,203 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-07 17:57:55,620 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(14)-127.0.0.1] Application shutdown requested.
+2023-12-07 17:57:55,635 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(14)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:57:55,636 INFO o.a.c.c.StandardService [RMI TCP Connection(14)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 17:57:55,637 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(14)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 17:57:55,638 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(14)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:57:55,640 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(14)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:57:55,642 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(14)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 17:57:55,643 INFO c.z.h.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 17:57:55,650 INFO c.z.h.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 17:57:58,211 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 17:57:58,624 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 17:57:58,669 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 45804 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 17:57:58,674 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 17:57:59,279 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 17:57:59,301 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-07 17:57:59,801 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 17:57:59,810 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:57:59,811 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 17:57:59,812 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 17:58:00,169 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 17:58:00,200 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 17:58:00,200 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1486 ms
+2023-12-07 17:58:00,339 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 17:58:00,497 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ea48c37
+2023-12-07 17:58:00,498 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 17:58:00,530 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 17:58:00,582 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 17:58:00,584 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 17:58:00,844 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 17:58:00,922 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 17:58:01,947 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 17:58:01,950 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 17:58:01,963 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 17:58:01,971 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 17:58:01,973 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 17:58:02,028 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 17:58:02,045 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 17:58:02,054 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 17:58:02,106 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 17:58:02,119 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 17:58:02,199 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 17:58:02,381 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 17:58:02,561 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 17:58:02,587 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 17:58:02,596 INFO c.t.TiendaApplication [main] Started TiendaApplication in 4.289 seconds (process running for 5.343)
+2023-12-07 17:58:06,911 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 17:58:06,912 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-12-07 17:58:06,913 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 0 ms
+2023-12-07 18:01:54,037 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:01:54,367 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:01:54,401 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 47468 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:01:54,404 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:01:55,034 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:01:55,057 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:01:55,510 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:01:55,519 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:01:55,521 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:01:55,521 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:01:55,854 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:01:55,884 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:01:55,884 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1430 ms
+2023-12-07 18:01:55,991 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:01:56,114 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ce267cc
+2023-12-07 18:01:56,116 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:01:56,146 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:01:56,194 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:01:56,196 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:01:56,447 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:01:56,513 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:01:57,427 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:01:57,432 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:01:57,442 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:01:57,445 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:01:57,447 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:01:57,491 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:01:57,497 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:01:57,502 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:01:57,539 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:01:57,547 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:01:57,594 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:01:57,729 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:01:57,887 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:01:57,909 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:01:57,918 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.817 seconds (process running for 4.625)
+2023-12-07 18:02:08,546 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:02:08,546 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:02:08,547 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-07 18:02:23,500 ERROR o.a.c.c.C.[.[.[.[jsp] [http-nio-8080-exec-7] Servlet.service() for servlet [jsp] threw exception
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:02:23,508 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session] with root cause
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:03:10,710 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(11)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:03:10,721 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(11)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:03:10,721 INFO o.a.c.c.StandardService [RMI TCP Connection(11)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:03:10,723 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(11)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 18:03:10,725 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(11)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:03:10,726 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(11)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:03:10,728 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(11)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:03:10,730 INFO c.z.h.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:03:10,734 INFO c.z.h.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:03:13,119 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:03:13,448 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:03:13,481 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 64472 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:03:13,484 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:03:14,062 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:03:14,086 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:03:14,527 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:03:14,537 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:03:14,539 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:03:14,540 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:03:14,860 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:03:14,889 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:03:14,889 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1365 ms
+2023-12-07 18:03:14,998 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:03:15,128 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fb7ab9c
+2023-12-07 18:03:15,129 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:03:15,160 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:03:15,205 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:03:15,207 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:03:15,453 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:03:15,528 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:03:16,403 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:03:16,406 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:03:16,413 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:03:16,417 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:03:16,418 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:03:16,465 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:03:16,471 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:03:16,476 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:03:16,515 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:03:16,523 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:03:16,567 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:03:16,695 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:03:16,852 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:03:16,875 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:03:16,883 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.699 seconds (process running for 4.524)
+2023-12-07 18:03:23,344 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:03:23,344 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:03:23,346 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-07 18:03:35,576 ERROR o.a.c.c.C.[.[.[.[jsp] [http-nio-8080-exec-4] Servlet.service() for servlet [jsp] threw exception
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:03:35,583 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session] with root cause
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:04:27,875 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:04:27,885 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(8)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:04:27,885 INFO o.a.c.c.StandardService [RMI TCP Connection(8)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:04:27,886 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(8)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 18:04:27,887 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(8)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:04:27,889 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(8)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:04:27,891 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:04:27,893 INFO c.z.h.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:04:27,899 INFO c.z.h.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:04:30,122 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:04:30,511 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:04:30,548 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 4712 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:04:30,552 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:04:31,131 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:04:31,152 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:04:31,668 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:04:31,677 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:04:31,679 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:04:31,679 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:04:31,995 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:04:32,026 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:04:32,027 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1437 ms
+2023-12-07 18:04:32,155 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:04:32,313 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11e834ad
+2023-12-07 18:04:32,315 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:04:32,353 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:04:32,410 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:04:32,412 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:04:32,683 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:04:32,750 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:04:33,749 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:04:33,751 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:04:33,766 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:04:33,776 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:04:33,778 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:04:33,825 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:04:33,841 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:04:33,847 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:04:33,893 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:04:33,902 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:04:33,962 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:04:34,111 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:04:34,288 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:04:34,315 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:04:34,323 INFO c.t.TiendaApplication [main] Started TiendaApplication in 4.12 seconds (process running for 5.121)
+2023-12-07 18:04:38,399 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:04:38,399 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:04:38,400 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-07 18:07:41,547 ERROR o.a.c.c.C.[.[.[.[jsp] [http-nio-8080-exec-3] Servlet.service() for servlet [jsp] threw exception
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:07:41,929 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session] with root cause
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:11:18,566 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:11:18,913 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:11:18,947 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 55820 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:11:18,950 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:11:19,489 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:11:19,510 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:11:19,950 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:11:19,958 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:11:19,959 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:11:19,960 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:11:20,274 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:11:20,313 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:11:20,313 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1324 ms
+2023-12-07 18:11:20,422 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:11:20,546 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ce267cc
+2023-12-07 18:11:20,548 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:11:20,578 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:11:20,633 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:11:20,635 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:11:20,917 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:11:20,984 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:11:21,886 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:11:21,889 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:11:21,896 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:11:21,899 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:11:21,901 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:11:21,939 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:11:21,950 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:11:21,955 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:11:21,993 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:11:21,999 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:11:22,046 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:11:22,174 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:11:22,322 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:11:22,346 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:11:22,354 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.72 seconds (process running for 4.528)
+2023-12-07 18:11:28,805 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:11:28,806 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:11:28,806 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2023-12-07 18:11:39,722 ERROR o.a.c.c.C.[.[.[.[jsp] [http-nio-8080-exec-5] Servlet.service() for servlet [jsp] threw exception
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:11:39,728 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session] with root cause
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:12:14,302 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:12:14,312 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(10)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:12:14,312 INFO o.a.c.c.StandardService [RMI TCP Connection(10)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:12:14,314 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(10)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 18:12:14,315 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(10)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:12:14,317 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(10)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:12:14,319 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(10)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:12:14,320 INFO c.z.h.HikariDataSource [RMI TCP Connection(10)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:12:14,326 INFO c.z.h.HikariDataSource [RMI TCP Connection(10)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:12:16,735 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:12:17,102 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:12:17,137 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 52988 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:12:17,140 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:12:17,724 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:12:17,746 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:12:18,256 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:12:18,267 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:12:18,269 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:12:18,269 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:12:18,596 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:12:18,629 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:12:18,630 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1447 ms
+2023-12-07 18:12:18,743 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:12:18,883 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51eb0e84
+2023-12-07 18:12:18,884 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:12:18,919 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:12:18,969 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:12:18,970 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:12:19,218 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:12:19,336 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:12:20,247 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:12:20,250 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:12:20,256 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:12:20,259 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:12:20,260 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:12:20,298 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:12:20,304 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:12:20,309 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:12:20,347 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:12:20,353 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:12:20,392 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:12:20,524 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:12:20,687 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:12:20,715 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:12:20,722 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.922 seconds (process running for 4.763)
+2023-12-07 18:12:27,936 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:12:27,936 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:12:27,937 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-07 18:12:37,751 ERROR o.a.c.c.C.[.[.[.[jsp] [http-nio-8080-exec-4] Servlet.service() for servlet [jsp] threw exception
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) [spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:12:37,757 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session] with root cause
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.tienda.dao.roles.Roles.opcionesMenu: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371) ~[hibernate-core-6.2.13.Final.jar:6.2.13.Final]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:345) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:221) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:152) ~[jakarta.servlet.jsp.jstl-2.0.0.jar:2.0.0]
+	at jakarta.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:229) ~[jakarta.servlet.jsp.jstl-api-2.0.0.jar:2.0.0]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fforEach_005f0(index_jsp.java:612) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fotherwise_005f0(index_jsp.java:575) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspx_meth_c_005fchoose_005f0(index_jsp.java:439) ~[?:?]
+	at org.apache.jsp.WEB_002dINF.vista.index_jsp._jspService(index_jsp.java:307) ~[?:?]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.15.jar:10.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2023-12-07 18:14:56,790 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(13)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:14:56,802 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(13)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:14:56,802 INFO o.a.c.c.StandardService [RMI TCP Connection(13)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:14:56,804 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(13)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 18:14:56,805 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(13)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:14:56,807 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(13)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:14:56,809 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(13)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:14:56,811 INFO c.z.h.HikariDataSource [RMI TCP Connection(13)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:14:56,816 INFO c.z.h.HikariDataSource [RMI TCP Connection(13)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:15:00,110 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:15:00,435 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:15:00,467 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 3576 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:15:00,470 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:15:01,008 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:15:01,032 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:15:01,469 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:15:01,477 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:15:01,479 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:15:01,479 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:15:01,798 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:15:01,830 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:15:01,831 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1324 ms
+2023-12-07 18:15:01,950 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:15:02,081 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51eb0e84
+2023-12-07 18:15:02,082 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:15:02,114 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:15:02,165 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:15:02,167 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:15:02,409 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:15:02,474 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:15:03,410 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:15:03,413 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:15:03,419 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:15:03,423 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:15:03,427 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:15:03,468 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:15:03,475 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:15:03,480 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:15:03,518 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:15:03,526 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:15:03,566 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:15:03,698 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:15:03,882 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:15:03,908 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:15:03,916 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.734 seconds (process running for 4.556)
+2023-12-07 18:15:14,121 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:15:14,121 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:15:14,122 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-07 18:16:03,876 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:16:03,888 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(8)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:16:03,888 INFO o.a.c.c.StandardService [RMI TCP Connection(8)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:16:03,890 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(8)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 18:16:03,892 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(8)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:16:03,894 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(8)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:16:03,896 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:16:03,899 INFO c.z.h.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:16:03,904 INFO c.z.h.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:16:06,331 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:16:06,670 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:16:06,706 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 34820 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:16:06,709 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:16:07,254 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:16:07,276 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:16:07,805 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:16:07,820 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:16:07,825 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:16:07,826 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:16:08,247 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:16:08,280 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:16:08,280 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1534 ms
+2023-12-07 18:16:08,390 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:16:08,523 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fb7ab9c
+2023-12-07 18:16:08,524 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:16:08,557 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:16:08,605 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:16:08,607 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:16:08,878 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:16:08,940 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:16:09,892 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:16:09,896 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:16:09,905 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:16:09,908 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:16:09,911 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:16:09,958 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:16:09,967 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:16:09,987 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:16:10,069 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:16:10,076 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:16:10,115 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:16:10,245 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:16:10,391 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:16:10,416 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:16:10,425 INFO c.t.TiendaApplication [main] Started TiendaApplication in 4.027 seconds (process running for 4.882)
+2023-12-07 18:16:13,983 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:16:13,983 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:16:13,984 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-12-07 18:25:36,725 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(19)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:25:36,736 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(19)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:25:36,736 INFO o.a.c.c.StandardService [RMI TCP Connection(19)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:25:36,737 INFO o.a.c.c.C.[.[.[/] [RMI TCP Connection(19)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-07 18:25:36,740 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(19)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:25:36,741 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(19)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:25:36,744 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(19)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:25:36,745 INFO c.z.h.HikariDataSource [RMI TCP Connection(19)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:25:36,750 INFO c.z.h.HikariDataSource [RMI TCP Connection(19)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:25:43,110 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:25:43,432 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:25:43,464 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 7156 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:25:43,467 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:25:44,009 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:25:44,035 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:25:44,542 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:25:44,550 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:25:44,552 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:25:44,552 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:25:44,886 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:25:44,919 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:25:44,920 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1416 ms
+2023-12-07 18:25:45,049 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:25:45,175 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fb7ab9c
+2023-12-07 18:25:45,176 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:25:45,206 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:25:45,259 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:25:45,261 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:25:45,509 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:25:45,577 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:25:46,517 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:25:46,519 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:25:46,528 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:25:46,530 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:25:46,531 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:25:46,572 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:25:46,580 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:25:46,584 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:25:46,629 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:25:46,637 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:25:46,692 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:25:46,823 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:25:46,986 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:25:47,012 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:25:47,019 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.844 seconds (process running for 4.684)
+2023-12-07 18:32:52,545 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(14)-127.0.0.1] Application shutdown requested.
+2023-12-07 18:32:52,557 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(14)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:32:52,558 INFO o.a.c.c.StandardService [RMI TCP Connection(14)-127.0.0.1] Stopping service [Tomcat]
+2023-12-07 18:32:52,561 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(14)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:32:52,564 INFO o.a.c.h.Http11NioProtocol [RMI TCP Connection(14)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:32:52,566 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(14)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:32:52,568 INFO c.z.h.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2023-12-07 18:32:52,573 INFO c.z.h.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2023-12-07 18:32:55,533 INFO c.t.TiendaApplication [main] Iniciando logs
+2023-12-07 18:32:55,908 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-12-07 18:32:55,945 INFO c.t.TiendaApplication [main] Starting TiendaApplication using Java 17.0.8.1 with PID 60712 (C:\Users\Usuario\Downloads\tienda\tienda\target\classes started by Usuario in C:\Users\Usuario\Downloads\tienda\tienda)
+2023-12-07 18:32:55,950 INFO c.t.TiendaApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 18:32:56,548 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 18:32:56,570 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-12-07 18:32:57,062 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-12-07 18:32:57,073 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:32:57,075 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-07 18:32:57,075 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07 18:32:57,411 INFO o.a.j.s.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-07 18:32:57,445 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-07 18:32:57,445 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1451 ms
+2023-12-07 18:32:57,563 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-07 18:32:57,689 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42730828
+2023-12-07 18:32:57,691 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-07 18:32:57,724 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 18:32:57,772 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07 18:32:57,774 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-07 18:32:58,028 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07 18:32:58,094 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-07 18:32:59,035 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07 18:32:59,041 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 18:32:59,048 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.AdministradorControlador.logger
+2023-12-07 18:32:59,050 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.servicios.OperacionesUsuario.logger
+2023-12-07 18:32:59,054 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.usuario.UsuarioDAO.logger
+2023-12-07 18:32:59,096 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.pedido.PedidoDAO.logger
+2023-12-07 18:32:59,104 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.detallespedido.DetallesPedidoDAO.logger
+2023-12-07 18:32:59,109 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.roles.RolesDAO.logger
+2023-12-07 18:32:59,153 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.dao.configuracion.ConfiguracionDAO.logger
+2023-12-07 18:32:59,163 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static org.apache.logging.log4j.Logger com.tienda.controller.CatalogoControlador.logger
+2023-12-07 18:32:59,207 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 18:32:59,350 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2023-12-07 18:32:59,511 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07 18:32:59,535 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07 18:32:59,542 INFO c.t.TiendaApplication [main] Started TiendaApplication in 3.925 seconds (process running for 4.889)
+2023-12-07 18:33:08,597 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 18:33:08,598 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-07 18:33:08,599 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms

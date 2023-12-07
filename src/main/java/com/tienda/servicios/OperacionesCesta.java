@@ -50,23 +50,23 @@ public class OperacionesCesta {
 		articulo.setUsuario(usuario);
 		Cesta producto = cestaDAO.getProductoCesta(usuario.getId(), articulo.getProducto().getId());
 		boolean bandera = false;
-			
-			if (producto != null && (producto.getProducto().getId() == articulo.getProducto().getId())) {
 
-				producto.setCantidad(producto.getCantidad() + articulo.getCantidad());
-				cestaDAO.insertarCestaBD(producto);
-				bandera = true;
-			}
-		
+		if (producto != null && (producto.getProducto().getId() == articulo.getProducto().getId())) {
+
+			producto.setCantidad(producto.getCantidad() + articulo.getCantidad());
+			cestaDAO.insertarCestaBD(producto);
+			bandera = true;
+		}
+
 		if (bandera == false) {
 
 			cestaDAO.insertarCestaBD(articulo);
 		}
 
 	}
-	
-	public void modificarDesdeCesta(Cesta articulo)  {
-		
+
+	public void modificarDesdeCesta(Cesta articulo) {
+
 		cestaDAO.insertarCestaBD(articulo);
 	}
 
@@ -117,14 +117,28 @@ public class OperacionesCesta {
 
 		return cestaBD;
 	}
-	
+
 	public void borrarCesta(int idProducto, int idUsuario) {
-		
+
 		cestaDAO.borrarCesta(idProducto, idUsuario);
 	}
-	
+
 	public void eliminarCesta(int idUsuario) {
-		
+
 		cestaDAO.eliminarCesta(idUsuario);
+	}
+
+	public void registarCestaInvitado(Map<Integer, Cesta> cesta, Usuario usuarioBD) {
+		// TODO Auto-generated method stub
+
+		Collection<Cesta> articulos = cesta.values();
+
+		for (Cesta articulo : articulos) {
+
+			Producto producto = productoDAO.getProductoId(articulo.getId());
+			articulo.setUsuario(usuarioBD);
+			cestaDAO.insertarCestaBD(articulo);
+
+		}
 	}
 }
