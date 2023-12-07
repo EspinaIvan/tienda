@@ -84,6 +84,13 @@ public class CestaControlador {
 		Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
 		cesta.remove(id);
 
+
+		if (session.getAttribute("usuario") != null) {
+
+			Usuario usuario = (Usuario)session.getAttribute("usuario");
+			opeCesta.borrarCesta(id, usuario.getId());
+		}
+
 		return "redirect:/cesta/vercesta";
 	}
 
@@ -103,6 +110,11 @@ public class CestaControlador {
 			cesta.put(id, cestaRecuperada);
 			session.setAttribute("cesta", cesta);
 
+			if (session.getAttribute("usuario") != null) {
+
+				opeCesta.modificarDesdeCesta(cestaRecuperada);
+			}
+
 		} else if (valor.equals("restar")) {
 
 			Cesta cestaRecuperada = cesta.get(id);
@@ -115,14 +127,19 @@ public class CestaControlador {
 				session.setAttribute("cesta", cesta);
 			}
 
-			System.out.println("Restar articulo: " + cesta + cantidadCesta + cestaRecuperada + "id" + id);
+			if (session.getAttribute("usuario") != null) {
+
+				opeCesta.modificarDesdeCesta(cestaRecuperada);
+			}
+
 		}
 
 		return "redirect:/cesta/vercesta";
 	}
 
 	@PostMapping("/procesarpago")
-	public String procesarPago(@ModelAttribute("pedido") Pedido pedido, HttpSession session, Model modelo, RedirectAttributes redirigir) {
+	public String procesarPago(@ModelAttribute("pedido") Pedido pedido, HttpSession session, Model modelo,
+			RedirectAttributes redirigir) {
 
 		Usuario usuario = (Usuario) session.getAttribute("usuario");
 		Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
@@ -153,11 +170,11 @@ public class CestaControlador {
 			}
 		}
 
-		
 		opeCatalogo.modificarStock(cesta);
 		opeCesta.finalizarCompra(pedido, usuario.getId());
 		session.removeAttribute("cesta");
 		opeCesta.agregarUltimoDetallesPedido(cesta);
+		opeCesta.eliminarCesta(usuario.getId());
 
 		return "finalizarcompra";
 	}

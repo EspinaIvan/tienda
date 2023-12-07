@@ -84,7 +84,7 @@
 					<form method="get"
 						action="${pageContext.request.contextPath}/cambiarIdioma"
 						id="cambiarIdiomaForm">
-						<select name="lang" onchange="cambiarIdioma()" class="">
+						<select name="lang" onchange="cambiarIdioma()" class="form-control">
 							<option value="es"
 								<c:if test="${sessionScope.lang eq 'es'}">selected</c:if>>Es</option>
 							<option value="en"

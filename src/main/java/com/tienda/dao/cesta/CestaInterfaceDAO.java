@@ -8,4 +8,10 @@ public interface CestaInterfaceDAO {
 
 	public List<Cesta> getCesta(int id);
 	
+	public Cesta getProductoCesta(int idUsuario, int idProducto);
+
+	public void borrarCesta(int idProducto, int idUsuario);
+
+	public void eliminarCesta(int idUsuario);
+	
 }

@@ -516,6 +516,7 @@ h5 {
 .card-body {
 	width: 70%;
 	min-width: 250px;
+	height: 190px;
 }
 
 @media (max-width: 900px) {

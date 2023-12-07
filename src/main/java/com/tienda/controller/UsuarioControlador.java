@@ -2,6 +2,7 @@ package com.tienda.controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -48,9 +49,6 @@ public class UsuarioControlador {
 
 	@Autowired
 	private OperacionesPedidos opePedido;
-
-	@Autowired
-	static Logger logger = LogManager.getRootLogger();
 
 	@GetMapping("/registro")
 	public String formularioRegistro(Model modelo) {
@@ -127,33 +125,43 @@ public class UsuarioControlador {
 	}
 
 	@PostMapping("/iniciarSesion")
-	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, HttpSession session, Model modelo, RedirectAttributes atributoredirigido) {
+	public String iniciarSesion(@ModelAttribute("usuario") Usuario usuario, HttpSession session, Model modelo,
+			RedirectAttributes atributoredirigido) {
 
 		String comprando = (String) session.getAttribute("comprando");
 		Usuario usuarioBD = opeUsuario.buscarUsuarioNick(usuario);
 		System.out.println("Usuario base de datos: " + usuarioBD + " usuario mandado " + usuario);
-		
+
 		if (usuarioBD != null) {
-			
+
 			if (OperacionesContraseña.desencriptarContraseñaAdmin(usuarioBD)) {
-				
+
 				session.setAttribute("admin", usuarioBD);
-				
+
 				return "redirect:/administrador/primeravezadmin";
 			}
-			
+
 			if (OperacionesContraseña.desencriptarContraseña(usuario, usuarioBD)) {
 
 				session.setAttribute("usuario", usuarioBD);
 				Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
 
+				List<Cesta> cestaBD = opeCesta.recuperarCesta(usuarioBD.getId());
 				// RECUPERAR LA CESTA SI TIENE UNA GUARDADA EN LA BD
 
-//				if(cesta != null) {
-//					
-//					opeCesta.insertarCesta(cesta, usuarioBD);
-//				
-//				}
+				if (cestaBD != null || !cestaBD.isEmpty()) {
+
+					Map<Integer, Cesta> cestaRecuperada = new HashMap<Integer, Cesta>();
+					
+					for ( Cesta articulo: cestaBD) {
+					
+					cestaRecuperada.put(articulo.getProducto().getId(), articulo);
+					
+					}
+					
+					session.setAttribute("cesta", cestaRecuperada);
+					System.out.println("M;iramos la cesta recuperada al iniciar sesion: " + cestaRecuperada);
+				}
 
 				if (usuarioBD.isBaja()) {
 
@@ -296,7 +304,6 @@ public class UsuarioControlador {
 		if (claveOK) {
 
 			usuario = OperacionesContraseña.encriptarContraseña(usuario);
-			logger.info("Contraseña cambiada con exito");
 			session.setAttribute("usuario", usuario);
 			opeUsuario.actualizarClave(usuario);
 			return "redirect:/usuario/verperfil";
@@ -318,7 +325,6 @@ public class UsuarioControlador {
 
 			modelo.addAttribute("pedidos", pedidos);
 
-			logger.info("Vemos que contiene la lista de ver pedidos: " + pedidos);
 			return "verpedidos";
 
 		}
@@ -329,12 +335,10 @@ public class UsuarioControlador {
 			ordenarFecha = "ASC";
 
 		}
-		logger.info("Llega hasta mandar la id al servicio");
 		List<Pedido> pedidos = opeUsuario.sacarListaPedidos(usuario.getId(), ordenarFecha);
 
 		modelo.addAttribute("pedidos", pedidos);
 
-		logger.info("Vemos que contiene la lista de ver pedidos: " + pedidos);
 		return "verpedidos";
 	}
 

@@ -47,11 +47,27 @@ public class OperacionesCesta {
 
 	public void insertarArticuloCesta(Cesta articulo, Usuario usuario) {
 
-		System.out.println("en el servicio para insertar la cesta por un articulo");
-
 		articulo.setUsuario(usuario);
-		cestaDAO.insertarCestaBD(articulo);
+		Cesta producto = cestaDAO.getProductoCesta(usuario.getId(), articulo.getProducto().getId());
+		boolean bandera = false;
+			
+			if (producto != null && (producto.getProducto().getId() == articulo.getProducto().getId())) {
 
+				producto.setCantidad(producto.getCantidad() + articulo.getCantidad());
+				cestaDAO.insertarCestaBD(producto);
+				bandera = true;
+			}
+		
+		if (bandera == false) {
+
+			cestaDAO.insertarCestaBD(articulo);
+		}
+
+	}
+	
+	public void modificarDesdeCesta(Cesta articulo)  {
+		
+		cestaDAO.insertarCestaBD(articulo);
 	}
 
 	public double calcularImpuestosPorProducto(double precio, int cantidad, double impuesto) {
@@ -74,13 +90,12 @@ public class OperacionesCesta {
 
 	public void agregarUltimoDetallesPedido(Map<Integer, Cesta> cesta) {
 
-		
 		Pedido pedido = pedidoDAO.getUltimoPedido();
-		
+
 		Collection<Cesta> articulos = cesta.values();
-		
+
 		for (Cesta articulo : articulos) {
-			
+
 			DetallesPedido detallesPedido = new DetallesPedido();
 			Producto producto = productoDAO.getProductoId(articulo.getProducto().getId());
 			detallesPedido.setPedido(pedido);
@@ -89,17 +104,27 @@ public class OperacionesCesta {
 			detallesPedido.setPrecio_unidad(producto.getPrecio());
 			detallesPedido.setTotal(producto.getPrecio() * articulo.getCantidad());
 			detallesPedido.setUnidades(articulo.getCantidad());
-			
+
 			detallesPedidoDAO.insertarDetallesPedidoBD(detallesPedido);
-			System.out.println( "Articulo desde el for "+ articulo);
+			System.out.println("Articulo desde el for " + articulo);
 		}
 	}
 
 	public List<Cesta> recuperarCesta(int id) {
 		// TODO Auto-generated method stub
-		
+
 		List<Cesta> cestaBD = cestaDAO.getCesta(id);
-		
+
 		return cestaBD;
+	}
+	
+	public void borrarCesta(int idProducto, int idUsuario) {
+		
+		cestaDAO.borrarCesta(idProducto, idUsuario);
+	}
+	
+	public void eliminarCesta(int idUsuario) {
+		
+		cestaDAO.eliminarCesta(idUsuario);
 	}
 }
