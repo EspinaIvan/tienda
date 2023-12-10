@@ -87,6 +87,7 @@
 						<form:input path="direccion" type="text" />
 						<i>Direccion</i>
 					</div>
+					<form:hidden path="roles"/>
 					<div class="links">
 						<p class="yacuenta">¿Deseas cambiar, la contraseña?</p>
 						<a class="iniciasession"

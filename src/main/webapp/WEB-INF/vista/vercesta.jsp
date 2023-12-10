@@ -16,6 +16,20 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
 </script>
+<script>
+	function validarNumero(input) {
+		// Eliminar los caracteres no numéricos
+		input.value = input.value.replace(/[^0-9]/g, '');
+
+		if (input.value > 99) {
+			input.value = 99;
+		}
+
+		if (input.value == "") {
+			input.value = 1;
+		}
+	}
+</script>
 
 <meta charset="UTF-8">
 <title>Inicio</title>
@@ -53,7 +67,8 @@
 										</button>
 										<input path="cantidad" class="cantidad-valor" type="text"
 											id="cantidad${producto.id}" name="cantidad"
-											value="${sessionScope.cesta[producto.id].cantidad}" />
+											value="${sessionScope.cesta[producto.id].cantidad}"
+											oninput="validarNumero(this)" />
 										<button class="cantidad-mas" type="button">
 											<span class="icono-mas"><a
 												href="${pageContext.request.contextPath}/cesta/modificarcantidad?id=${producto.id}&valor=sumar">+</a></span>

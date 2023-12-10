@@ -84,10 +84,14 @@ public class CatalogoControlador {
 	@PostMapping("/añadirProducto")
 	public String añadirProducto(@ModelAttribute("producto") Cesta producto, HttpSession session, Model modelo) {
 
-		//Metodo para comprobar el stock
-		
-		
+		// Metodo para comprobar el stock
+
 		Map<Integer, Cesta> cesta = (Map<Integer, Cesta>) session.getAttribute("cesta");
+
+		if (producto.getCantidad() <= 0) {
+
+			return "redirect:/catalogo/vercatalogo";
+		}
 
 		if (producto.getProducto() != null) {
 
@@ -107,10 +111,10 @@ public class CatalogoControlador {
 
 		// INSERTAR EL PRODUCTO EN LA CESTA DE LA BD
 
-		if (session.getAttribute("usuario") != null ) {
-			
+		if (session.getAttribute("usuario") != null) {
+
 			Usuario usuario = (Usuario) session.getAttribute("usuario");
-			
+
 			opeCesta.insertarArticuloCesta(producto, usuario);
 		}
 		opeStock.miramosStock(producto.getProducto().getId());

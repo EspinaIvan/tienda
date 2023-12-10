@@ -17,6 +17,20 @@
 </script>
 <script
 	src="${pageContext.request.contextPath}/resources/js/Catalogo.js" defer></script>
+<script>
+        function validarNumero(input) {
+            // Eliminar los caracteres no numéricos
+            input.value = input.value.replace(/[^0-9]/g, '');
+            
+            if(input.value > 99) {
+            	input.value=99;
+            }
+            
+            if(input.value == "") {
+            	input.value=1;
+            }
+        }
+    </script>
 <meta charset="UTF-8">
 <title>Detalles Producto</title>
 </head>
@@ -27,7 +41,8 @@
 		<div class="signin">
 			<div class="card-deck contenedorcarta">
 				<div class="catalogo">
-					<img class="card-img-top img-catalogo" src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoBD.imagen}"
+					<img class="card-img-top img-catalogo"
+						src="${pageContext.request.contextPath}/resources/imagenes/productos/${ productoBD.imagen}"
 						alt="Card image cap" width="">
 					<div class="card-body">
 						<h3 class="card-title titulo">${ productoBD.nombre}</h3>
@@ -47,7 +62,8 @@
 											<span class="icono-menos">-</span>
 										</button>
 										<form:input path="cantidad" class="cantidad-valor" type="text"
-											id="cantidad${ productoBD.id}" name="cantidad" value="1" />
+											id="cantidad${ productoBD.id}" name="cantidad" value="1"
+											oninput="validarNumero(this)" />
 										<button class="cantidad-mas" type="button"
 											onclick="sumarCantidad(${ productoBD.id})">
 											<span class="icono-mas">+</span>

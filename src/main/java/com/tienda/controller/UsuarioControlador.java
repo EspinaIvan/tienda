@@ -64,8 +64,9 @@ public class UsuarioControlador {
 
 	@PostMapping("/insertarUsuario")
 	public String insertarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult resultado,
-			Model modelo) {
+			Model modelo,  HttpSession session) {
 
+		Usuario usuarioBD = (Usuario) session.getAttribute("usuario");
 		boolean validado = true;
 
 		if (resultado.hasErrors()) {
@@ -73,14 +74,6 @@ public class UsuarioControlador {
 			validado = false;
 		}
 
-		if (OperacionesContraseña.validarContraseña(usuario)) {
-
-			usuario = OperacionesContraseña.encriptarContraseña(usuario);
-
-		} else {
-
-			validado = false;
-		}
 
 		Usuario comprobarUsuario = opeUsuario.buscarUsuarioNick(usuario);
 		Usuario comprobarEmail = opeUsuario.buscarUsuarioEmail(usuario);
@@ -101,11 +94,20 @@ public class UsuarioControlador {
 
 		}
 
+		if (OperacionesContraseña.validarContraseña(usuario) && validado) {
+
+			usuario = OperacionesContraseña.encriptarContraseña(usuario);
+
+		} else {
+
+			validado = false;
+		}
+		
 		if (validado) {
 
 			opeUsuario.insertarUsuarioPorDAO(usuario);
 
-			if (usuario == null) {
+			if (usuarioBD == null) {
 
 				return "redirect:/";
 

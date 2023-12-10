@@ -15,6 +15,20 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
 	
 </script>
+<script>
+        function validarNumero(input) {
+            // Eliminar los caracteres no numéricos
+            input.value = input.value.replace(/[^0-9]/g, '');
+            
+            if(input.value > 99) {
+            	input.value=99;
+            }
+            
+            if(input.value == "") {
+            	input.value=1;
+            }
+        }
+    </script>
 <script
 	src="${pageContext.request.contextPath}/resources/js/Catalogo.js" defer></script>
 <meta charset="UTF-8">
@@ -89,7 +103,7 @@
 												</button>
 												<form:input path="cantidad" class="cantidad-valor"
 													type="text" id="cantidad${ productoTemp.id}"
-													name="cantidad" value="1" />
+													name="cantidad" value="1" oninput="validarNumero(this)" />
 												<button class="cantidad-mas" type="button"
 													onclick="sumarCantidad(${ productoTemp.id})">
 													<span class="icono-mas">+</span>

@@ -78,7 +78,9 @@ public class OperacionesUsuario {
 		usuarioBD.setProvincia(usuario.getProvincia());
 		usuarioBD.setRoles(usuario.getRoles());
 		usuarioBD.setTelefono(usuario.getTelefono());
-		usuarioBD.setImagen(usuario.getImagen());
+		if (usuario.getImagen() != null) {
+			usuarioBD.setImagen(usuario.getImagen());
+		}
 		System.out.println("Llega al servicio de editarUsuario " + usuarioBD);
 		usuarioDAO.actualizarUsuario(usuarioBD);
 
