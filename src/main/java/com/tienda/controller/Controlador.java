@@ -54,6 +54,7 @@ public class Controlador {
 		
 		Producto productoMasVendido = opeCatalogo.servicioGetMasVendido();
 		session.setAttribute("cesta", cesta);
+		modelo.addAttribute("cesta", cesta);
 		List<Producto> listaNovedades = opeCatalogo.servicioObtenerNovedades();
 		modelo.addAttribute("listanovedades", listaNovedades);
 		modelo.addAttribute("masvendido", productoMasVendido);

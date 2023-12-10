@@ -84,4 +84,19 @@ public class CestaDAO implements CestaInterfaceDAO {
 		query.executeUpdate();
 	}
 
+	@Override
+	@Transactional
+	public int mirarStock(int idProducto) {
+		// TODO Auto-generated method stub
+
+		Session session = entityManager.unwrap(Session.class);
+
+		Long cantidadTotal = (Long) session
+				.createQuery("SELECT COALESCE(SUM(cantidad), 0) " + "FROM Cesta " + "WHERE producto.id = :idProducto")
+				.setParameter("idProducto", idProducto).uniqueResult();
+
+		
+		return cantidadTotal.intValue();
+	}
+
 }

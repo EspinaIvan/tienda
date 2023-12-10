@@ -24,6 +24,7 @@ import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.detallespedido.DetallesPedido;
 import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.ComprobarStock;
 import com.tienda.servicios.EnviarCorreo;
 import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OperacionesContraseña;
@@ -49,6 +50,7 @@ public class UsuarioControlador {
 
 	@Autowired
 	private OperacionesPedidos opePedido;
+
 
 	@GetMapping("/registro")
 	public String formularioRegistro(Model modelo) {

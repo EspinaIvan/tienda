@@ -53,7 +53,27 @@ section::before {
 	flex-direction: column;
 	height: 150px;
 }
+.formlenguaje {
+		background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+.formlenguaje:focus {
+	background-color: #333;
+	border: none;
+	margin: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
 
+.boronregistro {
+
+  margin-top: -8px;
+}
 .metodopago {
 	display: flex;
 }

@@ -13,5 +13,7 @@ public interface CestaInterfaceDAO {
 	public void borrarCesta(int idProducto, int idUsuario);
 
 	public void eliminarCesta(int idUsuario);
+
+	public int mirarStock(int idProducto);
 	
 }

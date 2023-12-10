@@ -23,6 +23,7 @@ import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.roles.Roles;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.ComprobarStock;
 import com.tienda.servicios.Exportacion;
 import com.tienda.servicios.Importacion;
 import com.tienda.servicios.OperacionesAdministrador;
@@ -57,6 +58,10 @@ public class AdministradorControlador {
 	private ServicioOperacionesConfiguracion opeConfiguracion;
 	@Autowired
 	private Importacion importar;
+	@Autowired
+	private SocketControlador socket;
+	@Autowired
+	private ComprobarStock opeStock;
 
 	@GetMapping("/verlistausuarios")
 	public String verListaUsuarios(HttpSession session, Model modelo) {
@@ -353,23 +358,44 @@ public class AdministradorControlador {
 
 		return "redirect:/usuario/login";
 	}
-	
+
 	@GetMapping("/exportar")
 	public String exportarProductos() throws IOException {
-		
+
 		List<Producto> listaProductos = opeCatalogo.catalogoCompletoServicio();
-		
+
 		Exportacion.exportProductData(listaProductos);
-		
+
 		return "redirect:/administrador/listaproductos";
-		
+
 	}
-	
+
 	@GetMapping("/importar")
 	public String importarProductos() throws IOException {
-		
+
 		importar.importarDatosDesdeExcel();
-		
+
 		return "redirect:/administrador/listaproductos";
+	}
+
+	@GetMapping("/prueba")
+	public String PruebaSocket() {
+
+		opeStock.miramosStock(25);
+		return "prueba";
+
+	}
+
+	@GetMapping("/prueba2")
+	public String pruebaSocket2() {
+		realizarAccion("Prueba mensaje shocket");
+		System.out.println("Prueba desde prueba 2");
+		return "redirect:/";
+	}
+
+	private void realizarAccion(String mensaje) {
+		System.out.println("Prueba desde método realizarAccion");
+
+
 	}
 }

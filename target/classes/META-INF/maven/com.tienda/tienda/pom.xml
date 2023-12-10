@@ -107,8 +107,12 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>5.1.0</version> <!-- Ajusta la versión según la última
-			disponible -->
+			<version>5.1.0</version>
+		</dependency>
+		<!-- Los del Socket-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 	</dependencies>
 

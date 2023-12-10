@@ -20,6 +20,7 @@ import com.tienda.dao.pedido.Pedido;
 import com.tienda.dao.pedido.PedidoInterfaceDAO;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.ComprobarStock;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesCesta;
 
@@ -34,6 +35,9 @@ public class CestaControlador {
 
 	@Autowired
 	private OperacionesCesta opeCesta;
+	
+	@Autowired
+	private ComprobarStock opeStock;
 
 	@GetMapping("/vercesta")
 	public String verCesta(HttpSession session, Model modelo) {
@@ -110,6 +114,7 @@ public class CestaControlador {
 			cesta.put(id, cestaRecuperada);
 			session.setAttribute("cesta", cesta);
 
+			opeStock.miramosStock(id);
 			if (session.getAttribute("usuario") != null) {
 
 				opeCesta.modificarDesdeCesta(cestaRecuperada);
@@ -125,6 +130,7 @@ public class CestaControlador {
 				cestaRecuperada.setCantidad(cantidadCesta - 1);
 				cesta.put(id, cestaRecuperada);
 				session.setAttribute("cesta", cesta);
+				
 			}
 
 			if (session.getAttribute("usuario") != null) {

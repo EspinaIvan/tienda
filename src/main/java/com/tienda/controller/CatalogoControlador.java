@@ -20,6 +20,7 @@ import com.tienda.dao.cesta.Cesta;
 import com.tienda.dao.plataforma.Plataforma;
 import com.tienda.dao.productos.Producto;
 import com.tienda.dao.usuario.Usuario;
+import com.tienda.servicios.ComprobarStock;
 import com.tienda.servicios.OperacionesCatalogo;
 import com.tienda.servicios.OperacionesCesta;
 import com.tienda.servicios.OpereacionesProducto;
@@ -39,6 +40,8 @@ public class CatalogoControlador {
 	private OperacionesCesta opeCesta;
 	@Autowired
 	private OpereacionesProducto opeProducto;
+	@Autowired
+	private ComprobarStock opeStock;
 
 	@GetMapping("/vercatalogo")
 	public String mostarCatalogo(HttpSession session, Model modelo) {
@@ -110,7 +113,7 @@ public class CatalogoControlador {
 			
 			opeCesta.insertarArticuloCesta(producto, usuario);
 		}
-
+		opeStock.miramosStock(producto.getProducto().getId());
 		session.setAttribute("cesta", cesta);
 		return "redirect:/catalogo/vercatalogo";
 	}
